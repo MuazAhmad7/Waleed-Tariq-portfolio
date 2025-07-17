@@ -327,7 +327,7 @@ export default function Home() {
               whileHover={{ scale: 1.05, rotate: 2 }}
             >
               <Image
-                src="/dei2.jpg"
+                src="/dei2.JPG"
                 alt="Professional presentation"
                 width={400}
                 height={300}

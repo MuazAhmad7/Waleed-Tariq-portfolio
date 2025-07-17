@@ -5,63 +5,108 @@ import Link from 'next/link';
 import styles from './GameGridLogo.module.scss';
 
 export const GameGridLogo: React.FC = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
   const logoRef = useRef<SVGSVGElement>(null);
   const gridLinesRef = useRef<SVGGElement>(null);
   const logoTextRef = useRef<SVGGElement>(null);
 
+  // IntersectionObserver to trigger animation on scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the component is visible
+        rootMargin: '0px 0px -100px 0px' // Trigger slightly before fully visible
+      }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Set initial hidden state
   useEffect(() => {
     if (!logoRef.current) return;
 
-    const tl = gsap.timeline({ paused: true });
+    // Set initial hidden state for grid lines
+    gsap.set(gridLinesRef.current?.children || [], {
+      strokeDasharray: '1000 1000',
+      strokeDashoffset: 1000,
+      opacity: 0,
+    });
 
-    // Animate grid lines building up
-    tl.fromTo(
-      gridLinesRef.current?.children || [],
-      {
-        strokeDasharray: '1000 1000',
-        strokeDashoffset: 1000,
-        opacity: 0,
-      },
-      {
-        strokeDashoffset: 0,
-        opacity: 1,
-        duration: 1,
-        stagger: 0.1,
-        ease: 'power2.out',
-      }
-    )
-      // Animate text appearing
-      .fromTo(
+    // Set initial hidden state for text
+    gsap.set(logoTextRef.current?.children || [], {
+      y: 20,
+      opacity: 0,
+    });
+  }, []);
+
+  // Animate in/out based on scroll position
+  useEffect(() => {
+    if (!logoRef.current) return;
+
+    const tl = gsap.timeline();
+
+    if (isInView) {
+      // Animate in
+      tl.to(
+        gridLinesRef.current?.children || [],
+        {
+          strokeDashoffset: 0,
+          opacity: 1,
+          duration: 1,
+          stagger: 0.1,
+          ease: 'power2.out',
+        }
+      )
+        // Animate text appearing
+        .to(
+          logoTextRef.current?.children || [],
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            stagger: 0.05,
+            ease: 'power2.out',
+          },
+          '-=0.2'
+        );
+    } else {
+      // Animate out (reverse)
+      tl.to(
         logoTextRef.current?.children || [],
         {
           y: 20,
           opacity: 0,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.6,
-          stagger: 0.05,
-          ease: 'power2.out',
-        },
-        '-=0.2'
-      );
-
-    if (isHovered) {
-      tl.play();
-    } else {
-      tl.reverse();
+          duration: 0.4,
+          stagger: 0.03,
+          ease: 'power2.in',
+        }
+      )
+        .to(
+          gridLinesRef.current?.children || [],
+          {
+            strokeDashoffset: 1000,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.05,
+            ease: 'power2.in',
+          },
+          '-=0.2'
+        );
     }
-  }, [isHovered]);
+  }, [isInView]);
 
   return (
-    <div className={styles.gameGridContainer}>
-      <div
-        className={styles.logoContainer}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+    <div className={styles.gameGridContainer} ref={containerRef}>
+      <div className={styles.logoContainer}>
         <svg
           ref={logoRef}
           width="400"

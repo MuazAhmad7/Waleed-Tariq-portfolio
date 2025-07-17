@@ -15,8 +15,7 @@ cmds = [
   "npm config set @typescript-eslint:registry https://registry.npmjs.org/",
   "npm config set audit false",
   "npm config set fund false",
-  "npm config list",
-  "npm install --no-cache --registry https://registry.npmjs.org/"
+  "npm ci --registry https://registry.npmjs.org/"
 ]
 
 [phases.build]

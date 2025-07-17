@@ -12,7 +12,6 @@ cmds = [
   "npm config set @eslint:registry https://registry.npmjs.org/",
   "npm config set @stylistic:registry https://registry.npmjs.org/",
   "npm config set @typescript-eslint:registry https://registry.npmjs.org/",
-  "npm config set always-auth false",
   "npm config set audit false",
   "npm config set fund false",
   "npm ci"

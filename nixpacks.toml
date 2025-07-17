@@ -3,8 +3,6 @@ nixPkgs = ["nodejs_20"]
 
 [phases.install]
 cmds = [
-  "rm -rf ~/.npm",
-  "rm -rf ~/.npmrc",
   "npm cache clean --force",
   "npm config set registry https://registry.npmjs.org/",
   "npm config set @fortawesome:registry https://registry.npmjs.org/",

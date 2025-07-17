@@ -6,7 +6,6 @@ import React, {
   useState,
   ReactNode,
 } from 'react';
-import { Observer } from 'gsap/Observer';
 import { gsap } from 'gsap';
 import { useReducedMotion } from './ReducedMotionContext';
 import type {
@@ -15,8 +14,6 @@ import type {
   ScrollState,
   WindowSize,
 } from '@/types/app/interaction';
-
-gsap.registerPlugin(Observer);
 
 const defaultMouse: MouseState = {
   x: 0,
@@ -61,42 +58,115 @@ export const InteractionProvider: React.FC<{ children: ReactNode }> = ({
     ...defaultWindow,
   });
 
-  // Mouse/scroll observer
+  // Mouse/touch event listeners (replacing GSAP Observer)
   useEffect(() => {
     if (prefersReducedMotion) return;
-    const observer = Observer.create({
-      target: window,
-      type: 'pointer, wheel, touch',
-      onMove: (self) => {
+
+    let lastX = 0;
+    let lastY = 0;
+    let lastTime = Date.now();
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const currentTime = Date.now();
+      const deltaTime = currentTime - lastTime;
+      const deltaX = e.clientX - lastX;
+      const deltaY = e.clientY - lastY;
+      
+      const velocityX = deltaTime > 0 ? deltaX / deltaTime : 0;
+      const velocityY = deltaTime > 0 ? deltaY / deltaTime : 0;
+
+      mouseRef.current = {
+        ...mouseRef.current,
+        x: e.clientX,
+        y: e.clientY,
+        velocityX: velocityX * 100, // Scale to match GSAP Observer values
+        velocityY: velocityY * 100,
+        hasMouseMoved: true,
+      };
+      setMouse({ ...mouseRef.current });
+
+      lastX = e.clientX;
+      lastY = e.clientY;
+      lastTime = currentTime;
+    };
+
+    const handleMouseDown = () => {
+      mouseRef.current.isPressed = true;
+      setMouse({ ...mouseRef.current });
+    };
+
+    const handleMouseUp = () => {
+      mouseRef.current.isPressed = false;
+      mouseRef.current.isDragging = false;
+      setMouse({ ...mouseRef.current });
+    };
+
+    const handleDragStart = () => {
+      if (mouseRef.current.isPressed) {
+        mouseRef.current.isDragging = true;
+        setMouse({ ...mouseRef.current });
+      }
+    };
+
+    // Touch event handlers
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        const currentTime = Date.now();
+        const deltaTime = currentTime - lastTime;
+        const deltaX = touch.clientX - lastX;
+        const deltaY = touch.clientY - lastY;
+        
+        const velocityX = deltaTime > 0 ? deltaX / deltaTime : 0;
+        const velocityY = deltaTime > 0 ? deltaY / deltaTime : 0;
+
         mouseRef.current = {
           ...mouseRef.current,
-          x: self.x,
-          y: self.y,
-          velocityX: self.velocityX,
-          velocityY: self.velocityY,
+          x: touch.clientX,
+          y: touch.clientY,
+          velocityX: velocityX * 100,
+          velocityY: velocityY * 100,
           hasMouseMoved: true,
         };
         setMouse({ ...mouseRef.current });
-      },
-      onPress: () => {
-        mouseRef.current.isPressed = true;
-        setMouse({ ...mouseRef.current });
-      },
-      onRelease: () => {
-        mouseRef.current.isPressed = false;
-        mouseRef.current.isDragging = false;
-        setMouse({ ...mouseRef.current });
-      },
-      onDragStart: () => {
-        mouseRef.current.isDragging = true;
-        setMouse({ ...mouseRef.current });
-      },
-      onDragEnd: () => {
-        mouseRef.current.isDragging = false;
-        setMouse({ ...mouseRef.current });
-      },
-    });
-    return () => observer.kill();
+
+        lastX = touch.clientX;
+        lastY = touch.clientY;
+        lastTime = currentTime;
+      }
+    };
+
+    const handleTouchStart = () => {
+      mouseRef.current.isPressed = true;
+      setMouse({ ...mouseRef.current });
+    };
+
+    const handleTouchEnd = () => {
+      mouseRef.current.isPressed = false;
+      mouseRef.current.isDragging = false;
+      setMouse({ ...mouseRef.current });
+    };
+
+    // Add event listeners
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousedown', handleMouseDown);
+    window.addEventListener('mouseup', handleMouseUp);
+    window.addEventListener('mousemove', handleDragStart);
+    
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
+    window.addEventListener('touchstart', handleTouchStart);
+    window.addEventListener('touchend', handleTouchEnd);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mousedown', handleMouseDown);
+      window.removeEventListener('mouseup', handleMouseUp);
+      window.removeEventListener('mousemove', handleDragStart);
+      
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchend', handleTouchEnd);
+    };
   }, [prefersReducedMotion]);
 
   // Scroll tracking

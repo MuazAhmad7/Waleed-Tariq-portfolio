@@ -12,7 +12,6 @@ echo "Setting up fresh npm configuration..."
 npm config set registry https://registry.npmjs.org/
 npm config set @fortawesome:registry https://registry.npmjs.org/
 npm config set @atproto:registry https://registry.npmjs.org/
-npm config set @gsap:registry https://registry.npmjs.org/
 npm config set @types:registry https://registry.npmjs.org/
 npm config set @vercel:registry https://registry.npmjs.org/
 npm config set @eslint:registry https://registry.npmjs.org/

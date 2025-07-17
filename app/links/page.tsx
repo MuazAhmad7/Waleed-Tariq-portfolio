@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Styles from './page.module.css';
 export default function page() {
   const size = 128;
-  const avatarUrl = '/darian-square.jpg';
+  const avatarUrl = '/autobiography.JPG';
 
   return (
     <section className={`${Styles.linktree} content`}>
@@ -23,10 +23,10 @@ export default function page() {
             style={{ height: size, width: size }}
           />
         </Link>
-        <div className={Styles.flag}>
-          <h5>Darian Rosebrook</h5>
-          <p className={Styles.flagText}>Product Designer</p>
-          <p>Design Systems</p>
+                  <div className={Styles.flag}>
+            <h5>Waleed Tariq</h5>
+            <p className={Styles.flagText}>Senior Financial Analyst</p>
+            <p>Healthcare Finance & Data Analytics</p>
         </div>
       </div>
     </section>

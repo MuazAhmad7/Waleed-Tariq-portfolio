@@ -22,8 +22,11 @@
   left: 50%;
   display: flex;
   align-items: center;
+  gap: 0.5rem; /* Add subtle spacing between items */
   transition: gap 2.5s;
   transform: translateX(-50%);
+  will-change: transform;
+  contain: layout style paint; // Optimize rendering
 }
 
 .isometricContainer {
@@ -32,10 +35,114 @@
   color: var(--colorSwatch-color-text, #000);
   font-family: sans-serif;
   transition: all ease-in-out 0.5s;
+  will-change: transform;
+  transform: translate3d(0, 0, 0); // Force GPU acceleration
+  backface-visibility: hidden; // Prevent flickering
 }
 
 .isometricContainer:hover {
   transform: translateY(-4rem);
+}
+
+/* Enhanced hover effect for image swatches */
+.imageSwatchHover {
+  cursor: pointer;
+  transition: transform 0.3s ease-out, filter 0.3s ease-out;
+}
+
+.imageSwatchHover:not(.centered) {
+  cursor: pointer;
+}
+
+.imageSwatchHover.centered {
+  cursor: default;
+}
+
+/* Overlay image that appears above the text */
+.overlayImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  animation: overlayAppear 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.overlayImage img {
+  display: block;
+  width: 500px;
+  height: 375px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+@keyframes overlayAppear {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Close button */
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  cursor: pointer;
+  z-index: 1003;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.closeButton:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
+/* Subtle hover effect - slides out to the right */
+.imageSwatchHover:hover {
+  transform: translateX(4rem) scale(1.02);
+  filter: brightness(1.05);
+  z-index: 10;
+  transition: all 0.2s ease-out;
+}
+
+/* Backdrop when centered */
+.colorSwatchContainer.has-lightbox::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+
+.colorSwatchContainer::before {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .isometricText {
@@ -61,6 +168,51 @@
   }
 }
 
+// Wave text section positioned below the wave
+.waveTextSection {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  pointer-events: none;
+  max-width: 600px;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.textContent {
+  padding: 2rem;
+}
+
+.leagueTitle {
+  font-size: var(--heading-05);
+  font-weight: 700;
+  color: var(--color-foreground-accent);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.leagueDescription {
+  font-size: var(--body-02);
+  color: var(--color-foreground-primary);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  
+  strong {
+    color: var(--color-foreground-accent);
+    font-weight: 600;
+  }
+}
+
+.leagueQuote {
+  font-size: var(--body-03);
+  color: var(--color-foreground-secondary);
+  font-style: italic;
+  margin: 0;
+  line-height: 1.5;
+}
+
 @media screen and (width <= 768px) {
   .gridContainer {
     transform: scale(0.8);
@@ -68,5 +220,28 @@
 
   .colorSwatchContainer {
     gap: 3rem;
+  }
+  
+  .waveTextSection {
+    max-width: 95%;
+    padding-bottom: 1rem;
+  }
+  
+  .textContent {
+    padding: 1rem;
+  }
+  
+  .leagueTitle {
+    font-size: var(--heading-06);
+    margin-bottom: 0.75rem;
+  }
+  
+  .leagueDescription {
+    font-size: var(--body-03);
+    margin-bottom: 0.75rem;
+  }
+  
+  .leagueQuote {
+    font-size: var(--caption-01);
   }
 }

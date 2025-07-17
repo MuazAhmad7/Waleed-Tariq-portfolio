@@ -4,7 +4,7 @@ import { headers } from 'next/headers';
 
 import { createClient } from '@/utils/supabase/server';
 
-import { byPrefixAndName } from '@awesome.me/kit-0ba7f5fefb/icons';
+import { faThLarge, faNewspaper, faFlask, faIdCard, faSlidersH } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import Icon from '@/components/Icon';
 
@@ -19,11 +19,11 @@ export default async function PrivateRoute({
     redirect('/');
   }
 
-  const dashboard = byPrefixAndName['far']['grid-2'];
-  const articles = byPrefixAndName['far']['newspaper'];
-  const caseStudies = byPrefixAndName['far']['flask'];
-  const account = byPrefixAndName['far']['id-card'];
-  const settings = byPrefixAndName['far']['sliders-h'];
+  const dashboard = faThLarge;
+  const articles = faNewspaper;
+  const caseStudies = faFlask;
+  const account = faIdCard;
+  const settings = faSlidersH;
   const tabs = [
     { name: 'Dashboard', url: '/dashboard', icon: dashboard, active: false },
     {

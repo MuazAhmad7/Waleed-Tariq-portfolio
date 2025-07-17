@@ -15,3 +15,103 @@
 .status svg {
   fill: var(--color-foreground-accent);
 }
+
+.statusLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.clickable {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.clickable::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #22c55e, #10b981, #059669, #047857);
+  border-radius: var(--radius-full);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.clickable:hover::before {
+  opacity: 1;
+}
+
+.clickable:hover {
+  border-color: transparent;
+  box-shadow: 
+    0 0 20px rgba(34, 197, 94, 0.4),
+    0 0 40px rgba(34, 197, 94, 0.2),
+    0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.clickable p {
+  position: relative;
+  overflow: hidden;
+  height: 1.2em;
+}
+
+.defaultText,
+.hoverText {
+  display: inline-block;
+  position: relative;
+}
+
+.hoverText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.letter {
+  display: inline-block;
+  transition: transform 0.4s ease;
+  transform-origin: center;
+  transform-style: preserve-3d;
+}
+
+.defaultLetter {
+  transform: rotateX(0deg);
+}
+
+.hoverLetter {
+  transform: rotateX(90deg);
+}
+
+.clickable:hover .defaultLetter {
+  transform: rotateX(-90deg);
+  animation: flipOut 0.4s ease forwards;
+}
+
+.clickable:hover .hoverLetter {
+  transform: rotateX(0deg);
+  animation: flipIn 0.4s ease forwards;
+}
+
+@keyframes flipOut {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flipIn {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}

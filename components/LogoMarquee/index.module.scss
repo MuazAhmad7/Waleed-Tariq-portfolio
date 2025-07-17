@@ -8,7 +8,7 @@
   position: absolute;
   top: 50%;
   display: flex;
-  gap: var(--size-10);
+  gap: var(--size-06);
   align-items: center;
   overflow: hidden;
   width: fit-content;
@@ -20,9 +20,18 @@
   transform: translateY(-50%);
 }
 
-.box svg {
-  max-height: 100px;
+.box .logo {
+  max-height: 180px;  /* Increased from 150px */
 }
+
+/* Make specific logos bigger - target by use href */
+.logo use[href="#gamegrid"] {
+  transform: scale(1.5); /* 300px / 180px = 1.67 scale factor */
+  transform-origin: center;
+}
+
+
+/* United Health Group logo - no filters needed with new logo */
 
 .cover {
   top: 0;
@@ -39,10 +48,16 @@
 
 @media (width <= 768px) {
   .marquee {
-    gap: var(--size-04);
+    gap: var(--size-03);
   }
 
-  .box svg {
-    max-height: 50px;
+  .box .logo {
+    max-height: 100px;  /* Increased from 80px */
+  }
+
+  /* Make specific logos bigger on mobile too */
+  .logo use[href="#gamegrid"] {
+    transform: scale(1.2); /* 150px / 100px = 1.5 scale factor */
+    transform-origin: center;
   }
 }

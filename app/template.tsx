@@ -6,7 +6,6 @@ import { useGSAP } from '@gsap/react';
 import { ReducedMotionProvider, InteractionProvider } from '@/context';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import SlinkyCursor from '@/components/SlinkyCursor';
 import { User } from '@supabase/supabase-js';
 
 type TemplateProps = {
@@ -24,10 +23,10 @@ const Template: React.FC<TemplateProps> = ({ children, user }) => {
    * @type {{ name: string; path: string; admin: boolean }[]}
    */
   const pages = [
-    { name: 'Blueprints', path: 'blueprints', admin: false },
-    { name: 'Articles', path: 'articles', admin: false },
-    { name: 'Work', path: 'work', admin: false },
-    { name: 'Design Tools', path: 'tools', admin: false },
+    { name: 'Experience', path: 'work', admin: false },
+    { name: 'Community', path: 'blueprints', admin: false },
+    { name: 'Certifications', path: 'tools', admin: false },
+    { name: 'Contact Me', path: 'contact', admin: false },
   ];
   useEffect(() => {
     if (!handleSelectionChange.current) {
@@ -97,7 +96,6 @@ const Template: React.FC<TemplateProps> = ({ children, user }) => {
         <Navbar id={id} pages={pages} />
         <main ref={ref}>{children}</main>
         <Footer />
-        <SlinkyCursor />
       </InteractionProvider>
     </ReducedMotionProvider>
   );

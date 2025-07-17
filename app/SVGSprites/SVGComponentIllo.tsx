@@ -1,683 +1,2093 @@
 export const SVGComponentIllo = (
   <svg style={{ display: 'none' }} id="DSSPRITE">
-    <symbol viewBox="0 0 216 97" id="pin">
+    <symbol viewBox="0 0 320 200" id="codeEditor">
+      {/* Code Editor Window */}
       <rect
-        width="100"
-        height="20"
-        rx="4"
-        fill="var(--color-background-inverse)"
-      />
-      <rect
-        y="85"
-        width="100"
-        height="12"
-        rx="4"
-        fill="var(--color-foreground-secondary)"
-      />
-      <rect
-        x="0.5"
-        y="28.5"
-        width="47"
-        height="47"
-        rx="7.5"
-        fill="var(--color-background-secondary)"
-        stroke="var(--color-foreground-tertiary)"
-      />
-      <rect
-        x="56.5"
-        y="28.5"
-        width="47"
-        height="47"
-        rx="7.5"
-        fill="var(--color-background-secondary)"
-        stroke="var(--color-border-bold)"
-      />
-      <rect
-        x="112.5"
-        y="28.5"
-        width="47"
-        height="47"
-        rx="7.5"
-        fill="var(--color-background-secondary)"
-        stroke="var(--color-border-bold)"
-      />
-      <rect
-        x="168.5"
-        y="28.5"
-        width="47"
-        height="47"
-        rx="7.5"
-        fill="var(--color-background-secondary)"
-        stroke="var(--color-border-bold)"
-      />
-      <rect
-        x="15"
-        y="66"
-        width="18"
-        height="2"
-        rx="1"
-        fill="var(--color-foreground-placeholder)"
-      />
-      <rect
-        x="71"
-        y="66"
-        width="18"
-        height="2"
-        rx="1"
-        fill="var(--color-foreground-placeholder)"
-      />
-      <rect
-        x="127"
-        y="66"
-        width="18"
-        height="2"
-        rx="1"
-        fill="var(--color-foreground-placeholder)"
-      />
-      <rect
-        x="183"
-        y="66"
-        width="18"
-        height="2"
-        rx="1"
-        fill="var(--color-foreground-placeholder)"
-      />
-    </symbol>
-    <symbol viewBox="0 0 327 56" id="input">
-      <rect
-        height="55"
-        width="326"
+        width="318"
+        height="198"
+        rx="8"
         fill="var(--color-background-primary)"
-        rx="3.5"
-        x="0.5"
-        y="0.5"
-      />
-      <rect
-        height="55"
-        width="326"
-        rx="3.5"
-        fill="none"
-        stroke="var(--color-foreground-tertiary)"
-        x="0.5"
-        y="0.5"
-      />
-      <rect
-        height="24"
-        width="24"
-        fill="var(--color-foreground-tertiary)"
-        rx="4"
-        x="16"
-        y="16"
-      />
-      <rect
-        height="16"
-        width="86"
-        fill="var(--color-background-inverse)"
-        rx="4"
-        x="48"
-        y="20"
-      />
-      <rect
-        height="16"
-        width="38"
-        fill="var(--color-background-inverse)"
-        rx="4"
-        x="136"
-        y="20"
-      />
-      <rect
-        height="40"
-        width="1"
-        fill="var(--color-foreground-placeholder)"
-        transform="translate(278 8)"
-      />
-      <rect
-        height="24"
-        width="24"
-        fill="var(--color-foreground-tertiary)"
-        rx="4"
-        x="246"
-        y="16"
-      />
-      <rect
-        height="24"
-        width="24"
-        fill="var(--color-foreground-tertiary)"
-        rx="4"
-        x="287"
-        y="16"
-      />
-    </symbol>
-    <symbol viewBox="0 0 300 241" id="modal">
-      <rect
-        height="238.696"
-        width="299.348"
-        fill="var(--color-background-primary)"
-        rx="4.8913"
-        x="0.326087"
-        y="1.26066"
-        stroke="#CCCCCC"
-        strokeWidth="0.652174"
-      />
-      <rect
-        height="23.4783"
-        width="94.5652"
-        fill="var(--color-background-inverse)"
-        rx="11.7391"
-        x="189.783"
-        y="201.152"
-      />
-      <rect
-        height="52.1739"
-        width="268.696"
-        fill="var(--color-background-tertiary)"
-        rx="5.21739"
-        x="15.6523"
-        y="117.674"
-      />
-      <rect
-        height="45.6522"
-        width="298.043"
-        fill="var(--color-background-primary)"
-        transform="translate(0.652344 56.3691)"
-      />
-      <rect
-        height="0.652174"
-        width="298.043"
-        fill="var(--color-border-subtle)"
-        x="0.652344"
-        y="101.37"
-      />
-      <rect
-        height="1.30435"
-        width="34.5652"
-        fill="var(--color-background-inverse)"
-        x="16.3047"
-        y="100.718"
-      />
-      <rect
-        height="15.6522"
-        width="34.5652"
-        fill="var(--color-background-inverse)"
-        rx="2.6087"
-        x="15.6528"
-        y="73.979"
-      />
-      <rect
-        height="15.6522"
-        width="43.6957"
-        fill="var(--color-background-inverse)"
-        rx="2.6087"
-        x="74.3481"
-        y="73.979"
-      />
-      <rect
-        height="10.4348"
-        width="50.2174"
-        fill="var(--color-foreground-primary)"
-        rx="2.6087"
-        x="28.6958"
-        y="130.717"
-      />
-      <rect
-        height="10.4348"
-        width="50.2174"
-        fill="var(--color-foreground-primary)"
-        rx="2.6087"
-        x="105.652"
-        y="146.369"
-      />
-      <rect
-        height="10.4348"
-        width="72.3913"
-        fill="var(--color-foreground-primary)"
-        rx="2.6087"
-        x="83.478"
-        y="130.717"
-      />
-      <rect
-        height="10.4348"
-        width="72.3913"
-        fill="var(--color-foreground-primary)"
-        rx="2.6087"
-        x="28.0435"
-        y="146.369"
-      />
-      <rect
-        height="10.4348"
-        width="72.3913"
-        fill="var(--color-foreground-primary)"
-        rx="2.6087"
-        x="161.087"
-        y="130.717"
-      />
-      <rect
-        height="10.4348"
-        width="32.6087"
-        fill="var(--color-background-primary)"
-        rx="2.6087"
-        x="200.87"
-        y="207.674"
-      />
-      <rect
-        height="10.4348"
-        width="39.1304"
-        fill="var(--color-background-primary)"
-        rx="2.6087"
-        x="237.391"
-        y="207.674"
-      />
-      <rect
-        height="15.6522"
-        width="172.174"
-        fill="var(--color-background-inverse)"
-        rx="2.6087"
-        x="15.6523"
-        y="20.5"
-      />
-      <rect
-        height="10.4348"
-        width="10.4348"
-        fill="var(--color-foreground-primary)"
-        rx="2.6087"
-        x="266.087"
-        y="23.1084"
-      />
-      <line
-        stroke="var(--color-border-subtle)"
-        strokeWidth="0.652174"
-        x1="-2.85074e-08"
-        x2="298.696"
-        y1="55.3912"
-        y2="55.3912"
-      />
-      <line
-        stroke="var(--color-border-subtle)"
-        strokeWidth="0.652174"
-        x1="-2.85074e-08"
-        x2="300"
-        y1="185.174"
-        y2="185.174"
-      />
-      <circle
-        cx="271.305"
-        cy="28.326"
-        fill="#F5F5F5"
-        r="11.413"
         stroke="var(--color-border-bold)"
-        strokeWidth="0.652174"
+        strokeWidth="2"
+        x="1"
+        y="1"
       />
-    </symbol>
-    <symbol viewBox="0 0 289 48" id="toggleButtonGroup">
+      
+      {/* Title Bar */}
       <rect
-        height="47"
-        width="288"
-        rx="23.5"
-        stroke="var(--color-border-bold)"
-        fill="none"
-        x="0.5"
-        y="0.5"
-      />
-      <rect
-        height="40"
-        width="140"
-        fill="var(--color-background-inverse)"
-        rx="20"
-        x="4"
-        y="4"
-      />
-      <rect
-        height="16"
-        width="83"
-        fill="var(--color-foreground-placeholder)"
-        rx="4"
-        x="168"
-        y="16"
-      />
-    </symbol>
-    <symbol viewBox="0 0 334 194" id="timeline">
-      <path
-        d="M24 3C26.2091 3 28 4.79086 28 7C28 9.20914 26.2091 11 24 11C21.7909 11 20 9.20914 20 7C20 4.79086 21.7909 3 24 3Z"
-        fill="var(--color-foreground-placeholder)"
-        fillRule="evenodd"
-      />
-      <path
-        d="M24 79C26.2091 79 28 80.7909 28 83C28 85.2091 26.2091 87 24 87C21.7909 87 20 85.2091 20 83C20 80.7909 21.7909 79 24 79Z"
-        fill="var(--color-foreground-placeholder)"
-        fillRule="evenodd"
-      />
-      <rect
-        height="16"
-        width="246"
-        fill="var(--color-foreground-primary)"
-        rx="4"
-        x="36"
-        y="76"
-      />
-      <rect
-        height="16"
-        width="113"
-        fill="var(--color-foreground-secondary)"
-        rx="4"
-        x="36"
-        y="94"
-      />
-      <rect
-        height="16"
-        width="246"
-        fill="var(--color-foreground-primary)"
-        rx="4"
-        x="36"
-      />
-      <rect
-        height="16"
-        width="113"
-        fill="var(--color-foreground-secondary)"
-        rx="4"
-        x="36"
-        y="18"
-      />
-      <rect
-        height="0.999998"
-        width="48"
-        fill="var(--color-foreground-placeholder)"
-        transform="translate(24 21) rotate(90)"
-      />
-      <rect
-        height="0.999998"
-        width="48"
-        fill="var(--color-foreground-placeholder)"
-        transform="translate(24 97) rotate(90)"
-      />
-      <rect
-        height="64"
-        width="334"
-        fill="var(--color-background-secondary)"
-        rx="32"
-        y="130"
-      />
-      <rect
-        height="40"
-        width="40"
-        fill="var(--color-foreground-primary)"
-        rx="20"
-        x="12"
-        y="142"
-      />
-      <rect
-        height="16"
-        width="16"
-        fill="var(--color-foreground-inverse)"
-        rx="4"
-        x="24"
-        y="154"
-      />
-      <rect
-        height="16"
-        width="246"
-        fill="var(--color-foreground-primary)"
-        rx="4"
-        x="64"
-        y="145"
-      />
-      <rect
-        height="16"
-        width="113"
-        fill="var(--color-foreground-secondary)"
-        rx="4"
-        x="64"
-        y="163"
-      />
-    </symbol>
-    <symbol viewBox="0 0 103 85" id="tooltip">
-      <circle
-        cx="52"
-        cy="65"
-        r="19.4444"
-        fill="none"
-        stroke="var(--color-border-bold)"
-        strokeWidth="1.11111"
-      />
-      <rect
-        height="17.9995"
-        width="17.9995"
-        fill="var(--color-border-bold)"
-        rx="4.49986"
-        x="43"
-        y="56"
-      />
-      <rect
-        height="32"
-        width="103"
+        x="1"
+        y="1"
+        width="318"
+        height="30"
         fill="var(--color-background-secondary)"
         rx="8"
       />
-      <path
-        d="M40 31.3135L51.3137 19.9998L62.6274 31.3135L52.7279 41.213C51.9469 41.994 50.6805 41.994 49.8995 41.213L40 31.3135Z"
+      
+      {/* Window Controls */}
+      <circle cx="18" cy="16" r="5" fill="#FF5F57" />
+      <circle cx="38" cy="16" r="5" fill="#FFBD2E" />
+      <circle cx="58" cy="16" r="5" fill="#28CA42" />
+      
+      {/* File Tabs */}
+      <rect x="80" y="6" width="70" height="18" fill="var(--color-background-primary)" rx="3" />
+      <rect x="85" y="10" width="60" height="6" fill="var(--color-foreground-primary)" rx="2" />
+      <rect x="85" y="18" width="20" height="3" fill="var(--color-foreground-tertiary)" rx="1" />
+      
+      <rect x="155" y="6" width="70" height="18" fill="var(--color-background-tertiary)" rx="3" />
+      <rect x="160" y="10" width="55" height="6" fill="var(--color-foreground-secondary)" rx="2" />
+      
+      {/* Line Numbers Column */}
+      <rect
+        x="12"
+        y="31"
+        width="30"
+        height="135"
+        fill="var(--color-background-tertiary)"
+      />
+      
+      {/* Line Numbers */}
+      <text x="20" y="50" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">1</text>
+      <text x="20" y="62" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">2</text>
+      <text x="20" y="74" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">3</text>
+      <text x="20" y="86" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">4</text>
+      <text x="20" y="98" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">5</text>
+      <text x="20" y="110" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">6</text>
+      <text x="20" y="122" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">7</text>
+      <text x="20" y="134" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">8</text>
+      
+      {/* Code Content with better syntax highlighting */}
+      {/* Line 1: function declaration */}
+      <rect x="50" y="46" width="40" height="4" fill="var(--color-foreground-accent)" rx="1" />
+      <rect x="95" y="46" width="60" height="4" fill="var(--color-foreground-primary)" rx="1" />
+      <rect x="160" y="46" width="8" height="4" fill="var(--color-foreground-secondary)" rx="1" />
+      <rect x="175" y="46" width="20" height="4" fill="var(--color-foreground-tertiary)" rx="1" />
+      
+      {/* Line 2: indented variable */}
+      <rect x="58" y="58" width="30" height="4" fill="var(--color-foreground-secondary)" rx="1" />
+      <rect x="93" y="58" width="80" height="4" fill="var(--color-foreground-primary)" rx="1" />
+      <rect x="178" y="58" width="40" height="4" fill="var(--color-foreground-accent)" rx="1" />
+      
+      {/* Line 3: conditional */}
+      <rect x="58" y="70" width="20" height="4" fill="var(--color-foreground-accent)" rx="1" />
+      <rect x="83" y="70" width="45" height="4" fill="var(--color-foreground-primary)" rx="1" />
+      <rect x="133" y="70" width="15" height="4" fill="var(--color-foreground-secondary)" rx="1" />
+      <rect x="153" y="70" width="35" height="4" fill="var(--color-foreground-primary)" rx="1" />
+      
+      {/* Line 4: nested code */}
+      <rect x="66" y="82" width="50" height="4" fill="var(--color-foreground-primary)" rx="1" />
+      <rect x="121" y="82" width="25" height="4" fill="var(--color-foreground-secondary)" rx="1" />
+      <rect x="151" y="82" width="30" height="4" fill="var(--color-foreground-accent)" rx="1" />
+      
+      {/* Line 5: return statement */}
+      <rect x="58" y="94" width="35" height="4" fill="var(--color-foreground-accent)" rx="1" />
+      <rect x="98" y="94" width="70" height="4" fill="var(--color-foreground-primary)" rx="1" />
+      
+      {/* Line 6: closing brace */}
+      <rect x="50" y="106" width="8" height="4" fill="var(--color-foreground-secondary)" rx="1" />
+      
+      {/* Line 7: empty line (just cursor) */}
+      
+      {/* Line 8: export statement */}
+      <rect x="50" y="130" width="40" height="4" fill="var(--color-foreground-accent)" rx="1" />
+      <rect x="95" y="130" width="50" height="4" fill="var(--color-foreground-primary)" rx="1" />
+      
+      {/* Active cursor */}
+      <rect
+        x="110"
+        y="118"
+        width="1"
+        height="10"
+        fill="var(--color-foreground-accent)"
+      />
+      
+      {/* Minimap */}
+      <rect
+        x="290"
+        y="35"
+        width="25"
+        height="130"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect x="292" y="40" width="20" height="2" fill="var(--color-foreground-tertiary)" opacity="0.6" />
+      <rect x="292" y="45" width="18" height="2" fill="var(--color-foreground-tertiary)" opacity="0.6" />
+      <rect x="292" y="50" width="21" height="2" fill="var(--color-foreground-tertiary)" opacity="0.6" />
+      <rect x="292" y="55" width="19" height="2" fill="var(--color-foreground-tertiary)" opacity="0.6" />
+      
+      {/* Status Bar */}
+      <rect
+        x="1"
+        y="170"
+        width="318"
+        height="29"
         fill="var(--color-background-secondary)"
       />
+      <rect x="15" y="180" width="50" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      <rect x="80" y="180" width="40" height="6" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="140" y="180" width="60" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      <rect x="260" y="180" width="30" height="6" fill="var(--color-foreground-secondary)" rx="2" />
     </symbol>
-    <symbol fill="none" viewBox="0 0 300 36" id="pagination">
-      <circle cx="16" cy="18" fill="var(--color-background-inverse)" r="16" />
-      <circle cx="284" cy="18" fill="var(--color-background-inverse)" r="16" />
+    <symbol viewBox="0 0 350 250" id="input">
+      {/* Spreadsheet Window */}
       <rect
-        height="16"
-        width="16"
-        fill="var(--color-foreground-inverse)"
-        rx="4"
-        x="8"
-        y="10"
-      />
-      <rect
-        height="16"
-        width="16"
-        fill="var(--color-foreground-inverse)"
-        rx="4"
-        x="276"
-        y="10"
-      />
-      <rect
-        height="16"
-        width="12"
-        fill="var(--color-foreground-primary)"
-        rx="4"
-        x="56"
-        y="10"
-      />
-      <rect
-        height="16"
-        width="12"
-        fill="var(--color-foreground-secondary)"
-        rx="4"
-        x="100"
-        y="10"
-      />
-      <rect
-        height="16"
-        width="12"
-        fill="var(--color-foreground-secondary)"
-        rx="4"
-        x="144"
-        y="10"
-      />
-      <rect
-        height="16"
-        width="12"
-        fill="var(--color-foreground-secondary)"
-        rx="4"
-        x="232"
-        y="10"
-      />
-
-      <path
-        d="M72 31C72 31.5523 71.5523 32 71 32H53C52.4477 32 52 31.5523 52 31V31C52 30.4477 52.4477 30 53 30H71C71.5523 30 72 30.4477 72 31V31Z"
-        fill="var(--color-foreground-primary)"
-        fillRule="evenodd"
-      />
-      <path
-        d="M197.5 18C197.5 18.8284 198.172 19.5 199 19.5C199.828 19.5 200.5 18.8284 200.5 18C200.5 17.1716 199.828 16.5 199 16.5C198.172 16.5 197.5 17.1716 197.5 18Z"
-        fill="var(--color-foreground-secondary)"
-      />
-      <path
-        d="M187.5 18C187.5 18.8284 188.172 19.5 189 19.5C189.828 19.5 190.5 18.8284 190.5 18C190.5 17.1716 189.828 16.5 189 16.5C188.172 16.5 187.5 17.1716 187.5 18Z"
-        fill="var(--color-foreground-secondary)"
-      />
-      <path
-        d="M194 19.5C193.172 19.5 192.5 18.8284 192.5 18C192.5 17.1716 193.172 16.5 194 16.5C194.828 16.5 195.5 17.1716 195.5 18C195.5 18.8284 194.828 19.5 194 19.5Z"
-        fill="var(--color-foreground-secondary)"
-      />
-    </symbol>
-    <symbol viewBox="0 0 375 205" id="metrics">
-      <rect
-        height="205"
-        width="375"
-        stroke="var(--color-border-bold)"
-        rx="4"
+        width="348"
+        height="248"
+        rx="8"
         fill="var(--color-background-primary)"
+        stroke="var(--color-border-bold)"
+        strokeWidth="2"
+        x="1"
+        y="1"
       />
+      
+      {/* Title Bar */}
       <rect
-        height="1"
-        width="375"
-        fill="var(--color-border-bold)"
-        transform="translate(0 137)"
-      />
-      <rect
-        height="16"
-        width="57"
-        fill="var(--color-foreground-placeholder)"
-        rx="4"
-        x="300"
-        y="105"
-      />
-      <rect
-        height="47"
-        width="47"
+        x="1"
+        y="1"
+        width="348"
+        height="25"
         fill="var(--color-background-secondary)"
-        rx="7.5"
+        rx="8"
+      />
+      <rect
+        x="15"
+        y="8"
+        width="60"
+        height="10"
+        fill="var(--color-foreground-primary)"
+        rx="4"
+      />
+      
+      {/* Toolbar */}
+      <rect
+        x="1"
+        y="26"
+        width="348"
+        height="20"
+        fill="var(--color-background-tertiary)"
+      />
+      <rect
+        x="10"
+        y="30"
+        width="15"
+        height="12"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="30"
+        y="30"
+        width="15"
+        height="12"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="50"
+        y="30"
+        width="15"
+        height="12"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      
+      {/* Formula Bar */}
+      <rect
+        x="1"
+        y="46"
+        width="348"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="10"
+        y="50"
+        width="25"
+        height="12"
+        fill="var(--color-background-tertiary)"
+        rx="2"
+      />
+      <rect
+        x="40"
+        y="50"
+        width="100"
+        height="12"
+        fill="var(--color-background-secondary)"
+        rx="2"
+      />
+      
+      {/* Column Headers */}
+      <rect
+        x="40"
+        y="66"
+        width="60"
+        height="20"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="100"
+        y="66"
+        width="60"
+        height="20"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="160"
+        y="66"
+        width="60"
+        height="20"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="220"
+        y="66"
+        width="60"
+        height="20"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="280"
+        y="66"
+        width="60"
+        height="20"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      
+      {/* Column Labels */}
+      <text x="70" y="79" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle" fontWeight="600">A</text>
+      <text x="130" y="79" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle" fontWeight="600">B</text>
+      <text x="190" y="79" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle" fontWeight="600">C</text>
+      <text x="250" y="79" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle" fontWeight="600">D</text>
+      <text x="310" y="79" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle" fontWeight="600">E</text>
+      
+      {/* Row Headers */}
+      <rect
+        x="10"
+        y="86"
+        width="30"
+        height="20"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="10"
+        y="106"
+        width="30"
+        height="20"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="10"
+        y="126"
+        width="30"
+        height="20"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="10"
+        y="146"
+        width="30"
+        height="20"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="10"
+        y="166"
+        width="30"
+        height="20"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="10"
+        y="186"
+        width="30"
+        height="20"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="10"
+        y="206"
+        width="30"
+        height="20"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      
+      {/* Row Numbers */}
+      <text x="25" y="99" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle">1</text>
+      <text x="25" y="119" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle">2</text>
+      <text x="25" y="139" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle">3</text>
+      <text x="25" y="159" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle">4</text>
+      <text x="25" y="179" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle">5</text>
+      <text x="25" y="199" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle">6</text>
+      <text x="25" y="219" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle">7</text>
+      
+      {/* Data Cells - Row 1 (Headers) */}
+      <rect x="40" y="86" width="60" height="20" fill="var(--color-background-secondary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="100" y="86" width="60" height="20" fill="var(--color-background-secondary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="160" y="86" width="60" height="20" fill="var(--color-background-secondary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="220" y="86" width="60" height="20" fill="var(--color-background-secondary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="280" y="86" width="60" height="20" fill="var(--color-background-secondary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      
+      {/* Header Content */}
+      <rect x="45" y="91" width="30" height="6" fill="var(--color-foreground-primary)" rx="2" />
+      <rect x="105" y="91" width="25" height="6" fill="var(--color-foreground-primary)" rx="2" />
+      <rect x="165" y="91" width="35" height="6" fill="var(--color-foreground-primary)" rx="2" />
+      <rect x="225" y="91" width="20" height="6" fill="var(--color-foreground-primary)" rx="2" />
+      <rect x="285" y="91" width="40" height="6" fill="var(--color-foreground-primary)" rx="2" />
+      
+      {/* Data Cells - Row 2 */}
+      <rect x="40" y="106" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="100" y="106" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="160" y="106" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="220" y="106" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="280" y="106" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      
+      {/* Row 2 Content */}
+      <rect x="45" y="111" width="35" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="105" y="111" width="15" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="165" y="111" width="25" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="225" y="111" width="30" height="5" fill="var(--color-foreground-accent)" rx="2" />
+      <rect x="285" y="111" width="20" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      
+      {/* Data Cells - Row 3 */}
+      <rect x="40" y="126" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="100" y="126" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="160" y="126" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="220" y="126" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="280" y="126" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      
+      {/* Row 3 Content */}
+      <rect x="45" y="131" width="40" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="105" y="131" width="20" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="165" y="131" width="30" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="225" y="131" width="25" height="5" fill="var(--color-foreground-accent)" rx="2" />
+      <rect x="285" y="131" width="35" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      
+      {/* Data Cells - Row 4 (Selected) */}
+      <rect x="40" y="146" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="100" y="146" width="60" height="20" fill="var(--color-background-accent)" stroke="var(--color-foreground-accent)" strokeWidth="2" />
+      <rect x="160" y="146" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="220" y="146" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="280" y="146" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      
+      {/* Row 4 Content */}
+      <rect x="45" y="151" width="25" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="105" y="151" width="18" height="5" fill="var(--color-foreground-primary)" rx="2" />
+      <rect x="165" y="151" width="20" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="225" y="151" width="35" height="5" fill="var(--color-foreground-accent)" rx="2" />
+      <rect x="285" y="151" width="25" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      
+      {/* Data Cells - Row 5 */}
+      <rect x="40" y="166" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="100" y="166" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="160" y="166" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="220" y="166" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="280" y="166" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      
+      {/* Row 5 Content */}
+      <rect x="45" y="171" width="30" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="105" y="171" width="25" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="165" y="171" width="35" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="225" y="171" width="20" height="5" fill="var(--color-foreground-accent)" rx="2" />
+      <rect x="285" y="171" width="40" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      
+      {/* Data Cells - Row 6 */}
+      <rect x="40" y="186" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="100" y="186" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="160" y="186" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="220" y="186" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="280" y="186" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      
+      {/* Row 6 Content */}
+      <rect x="45" y="191" width="20" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="105" y="191" width="30" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="165" y="191" width="15" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="225" y="191" width="40" height="5" fill="var(--color-foreground-accent)" rx="2" />
+      <rect x="285" y="191" width="30" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      
+      {/* Data Cells - Row 7 */}
+      <rect x="40" y="206" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="100" y="206" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="160" y="206" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="220" y="206" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="280" y="206" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      
+      {/* Row 7 Content */}
+      <rect x="45" y="211" width="35" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="105" y="211" width="20" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="165" y="211" width="25" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect x="225" y="211" width="30" height="5" fill="var(--color-foreground-accent)" rx="2" />
+      <rect x="285" y="211" width="25" height="5" fill="var(--color-foreground-secondary)" rx="2" />
+      
+      {/* Status Bar */}
+      <rect
+        x="1"
+        y="226"
+        width="348"
+        height="23"
+        fill="var(--color-background-secondary)"
+      />
+      <rect x="10" y="232" width="40" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      <rect x="60" y="232" width="30" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      <rect x="280" y="232" width="50" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+    </symbol>
+    <symbol viewBox="0 0 320 280" id="modal">
+      {/* Calendar Window */}
+      <rect
+        width="318"
+        height="278"
+        rx="8"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-bold)"
+        strokeWidth="2"
+        x="1"
+        y="1"
+      />
+      
+      {/* Header */}
+      <rect
+        x="1"
+        y="1"
+        width="318"
+        height="40"
+        fill="var(--color-background-secondary)"
+        rx="8"
+      />
+      
+      {/* Navigation Arrows */}
+      <rect
+        x="15"
+        y="15"
+        width="25"
+        height="12"
+        fill="var(--color-background-tertiary)"
+        rx="4"
+      />
+      <rect
+        x="280"
+        y="15"
+        width="25"
+        height="12"
+        fill="var(--color-background-tertiary)"
+        rx="4"
+      />
+      
+      {/* Month/Year Display */}
+      <rect
+        x="120"
+        y="12"
+        width="80"
+        height="18"
+        fill="var(--color-foreground-primary)"
+        rx="4"
+      />
+      
+      {/* Day Headers */}
+      <rect
+        x="1"
+        y="41"
+        width="318"
+        height="25"
+        fill="var(--color-background-tertiary)"
+      />
+      
+      {/* Day Labels */}
+      <text x="35" y="57" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle" fontWeight="600">S</text>
+      <text x="80" y="57" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle" fontWeight="600">M</text>
+      <text x="125" y="57" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle" fontWeight="600">T</text>
+      <text x="170" y="57" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle" fontWeight="600">W</text>
+      <text x="215" y="57" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle" fontWeight="600">T</text>
+      <text x="260" y="57" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle" fontWeight="600">F</text>
+      <text x="305" y="57" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle" fontWeight="600">S</text>
+      
+      {/* Week 1 */}
+      <rect x="10" y="66" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="55" y="66" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="100" y="66" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="145" y="66" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="190" y="66" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="235" y="66" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="280" y="66" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      
+      {/* Week 1 Numbers */}
+      <text x="27" y="84" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">29</text>
+      <text x="72" y="84" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">30</text>
+      <text x="117" y="84" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">1</text>
+      <text x="162" y="84" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">2</text>
+      <text x="207" y="84" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">3</text>
+      <text x="252" y="84" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">4</text>
+      <text x="297" y="84" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">5</text>
+      
+      {/* Week 2 */}
+      <rect x="10" y="96" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="55" y="96" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="100" y="96" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="145" y="96" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="190" y="96" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="235" y="96" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="280" y="96" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      
+      {/* Week 2 Numbers */}
+      <text x="27" y="114" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">6</text>
+      <text x="72" y="114" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">7</text>
+      <text x="117" y="114" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">8</text>
+      <text x="162" y="114" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">9</text>
+      <text x="207" y="114" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">10</text>
+      <text x="252" y="114" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">11</text>
+      <text x="297" y="114" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">12</text>
+      
+      {/* Week 3 */}
+      <rect x="10" y="126" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="55" y="126" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="100" y="126" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="145" y="126" width="35" height="30" fill="var(--color-background-accent)" stroke="var(--color-foreground-accent)" strokeWidth="2" />
+      <rect x="190" y="126" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="235" y="126" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="280" y="126" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      
+      {/* Week 3 Numbers */}
+      <text x="27" y="144" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">13</text>
+      <text x="72" y="144" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">14</text>
+      <text x="117" y="144" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">15</text>
+      <text x="162" y="144" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle" fontWeight="600">16</text>
+      <text x="207" y="144" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">17</text>
+      <text x="252" y="144" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">18</text>
+      <text x="297" y="144" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">19</text>
+      
+      {/* Event Indicator on 16th */}
+      <circle cx="167" cy="150" r="2" fill="var(--color-foreground-accent)" />
+      
+      {/* Week 4 */}
+      <rect x="10" y="156" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="55" y="156" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="100" y="156" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="145" y="156" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="190" y="156" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="235" y="156" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="280" y="156" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      
+      {/* Week 4 Numbers */}
+      <text x="27" y="174" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">20</text>
+      <text x="72" y="174" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">21</text>
+      <text x="117" y="174" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">22</text>
+      <text x="162" y="174" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">23</text>
+      <text x="207" y="174" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">24</text>
+      <text x="252" y="174" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">25</text>
+      <text x="297" y="174" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">26</text>
+      
+      {/* Event Indicators */}
+      <circle cx="77" cy="180" r="2" fill="var(--color-foreground-secondary)" />
+      <circle cx="252" cy="180" r="2" fill="var(--color-foreground-secondary)" />
+      
+      {/* Week 5 */}
+      <rect x="10" y="186" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="55" y="186" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="100" y="186" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="145" y="186" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="190" y="186" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="235" y="186" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="280" y="186" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      
+      {/* Week 5 Numbers */}
+      <text x="27" y="204" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">27</text>
+      <text x="72" y="204" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">28</text>
+      <text x="117" y="204" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">29</text>
+      <text x="162" y="204" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">30</text>
+      <text x="207" y="204" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">31</text>
+      <text x="252" y="204" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">1</text>
+      <text x="297" y="204" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">2</text>
+      
+      {/* Week 6 */}
+      <rect x="10" y="216" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="55" y="216" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="100" y="216" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="145" y="216" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="190" y="216" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="235" y="216" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      <rect x="280" y="216" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
+      
+      {/* Week 6 Numbers */}
+      <text x="27" y="234" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">3</text>
+      <text x="72" y="234" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">4</text>
+      <text x="117" y="234" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">5</text>
+      <text x="162" y="234" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">6</text>
+      <text x="207" y="234" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">7</text>
+      <text x="252" y="234" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">8</text>
+      <text x="297" y="234" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">9</text>
+      
+      {/* Today Indicator (circle around current day) */}
+      <circle cx="162" cy="144" r="12" fill="none" stroke="var(--color-foreground-accent)" strokeWidth="2" />
+      
+      {/* Mini Calendar Controls */}
+      <rect
+        x="1"
+        y="246"
+        width="318"
+        height="33"
+        fill="var(--color-background-secondary)"
+      />
+      <rect x="15" y="255" width="60" height="15" fill="var(--color-foreground-tertiary)" rx="4" />
+      <rect x="90" y="255" width="40" height="15" fill="var(--color-foreground-tertiary)" rx="4" />
+      <rect x="245" y="255" width="60" height="15" fill="var(--color-foreground-tertiary)" rx="4" />
+    </symbol>
+    <symbol viewBox="0 0 300 200" id="toggleButtonGroup">
+      {/* Camera Icon Background */}
+      <rect
+        width="298"
+        height="198"
+        rx="8"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-bold)"
+        strokeWidth="2"
+        x="1"
+        y="1"
+      />
+      
+      {/* Main Camera Body */}
+      <rect
+        x="50"
+        y="70"
+        width="200"
+        height="100"
+        rx="12"
+        fill="var(--color-background-secondary)"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="3"
+      />
+      
+      {/* Camera Top Section */}
+      <rect
+        x="80"
+        y="50"
+        width="140"
+        height="30"
+        rx="6"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="2"
+      />
+      
+      {/* Viewfinder Hump */}
+      <rect
+        x="120"
+        y="40"
+        width="60"
+        height="20"
+        rx="4"
+        fill="var(--color-background-secondary)"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="2"
+      />
+      
+      {/* Main Lens */}
+      <circle
+        cx="150"
+        cy="120"
+        r="35"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="3"
+      />
+      
+      {/* Lens Inner Ring */}
+      <circle
+        cx="150"
+        cy="120"
+        r="28"
+        fill="none"
+        stroke="var(--color-foreground-tertiary)"
+        strokeWidth="2"
+      />
+      
+      {/* Lens Center */}
+      <circle
+        cx="150"
+        cy="120"
+        r="15"
+        fill="var(--color-background-tertiary)"
         stroke="var(--color-foreground-secondary)"
-        x="233.5"
-        y="147.5"
+        strokeWidth="2"
+      />
+      
+      {/* Lens Aperture Blades */}
+      <path
+        d="M150 105 L165 120 L150 135 L135 120 Z"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="1"
+      />
+      
+      {/* Flash */}
+      <rect
+        x="200"
+        y="85"
+        width="25"
+        height="15"
+        rx="3"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="2"
+      />
+      
+      {/* Flash Bulb */}
+      <circle
+        cx="212"
+        cy="92"
+        r="4"
+        fill="var(--color-foreground-accent)"
+      />
+      
+      {/* Shutter Button */}
+      <circle
+        cx="190"
+        cy="65"
+        r="8"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="2"
+      />
+      <circle
+        cx="190"
+        cy="65"
+        r="5"
+        fill="var(--color-foreground-secondary)"
+      />
+      
+      {/* Mode Dial */}
+      <circle
+        cx="110"
+        cy="65"
+        r="12"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="2"
+      />
+      
+      {/* Mode Dial Markings */}
+      <path
+        d="M110 53 L110 58 M122 65 L117 65 M110 77 L110 72 M98 65 L103 65"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      
+      {/* Mode Dial Pointer */}
+      <circle
+        cx="110"
+        cy="57"
+        r="2"
+        fill="var(--color-foreground-accent)"
+      />
+      
+      {/* LCD Screen */}
+      <rect
+        x="70"
+        y="140"
+        width="40"
+        height="20"
+        rx="2"
+        fill="var(--color-background-inverse)"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="1"
+      />
+      
+      {/* LCD Content */}
+      <rect
+        x="75"
+        y="145"
+        width="30"
+        height="3"
+        fill="var(--color-foreground-primary)"
+        rx="1"
       />
       <rect
-        height="26"
-        width="16"
-        fill="var(--color-foreground-placeholder)"
+        x="75"
+        y="150"
+        width="20"
+        height="3"
+        fill="var(--color-foreground-primary)"
+        rx="1"
+      />
+      
+      {/* Control Buttons */}
+      <circle
+        cx="200"
+        cy="140"
+        r="6"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="1"
+      />
+      <circle
+        cx="220"
+        cy="140"
+        r="6"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="1"
+      />
+      
+      {/* Lens Brand Text */}
+      <rect
+        x="135"
+        y="95"
+        width="30"
+        height="4"
+        fill="var(--color-foreground-primary)"
+        rx="2"
+      />
+      
+      {/* Camera Strap Lugs */}
+      <rect
+        x="45"
+        y="85"
+        width="8"
+        height="12"
+        rx="2"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="1"
+      />
+      <rect
+        x="247"
+        y="85"
+        width="8"
+        height="12"
+        rx="2"
+        fill="var(--color-background-tertiary)"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="1"
+      />
+      
+      {/* Lens Reflection */}
+      <ellipse
+        cx="140"
+        cy="110"
+        rx="8"
+        ry="12"
+        fill="var(--color-background-primary)"
+        opacity="0.6"
+      />
+    </symbol>
+    <symbol viewBox="0 0 300 250" id="timeline">
+      {/* To-Do List Window */}
+      <rect
+        width="298"
+        height="248"
+        rx="8"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-bold)"
+        strokeWidth="2"
+        x="1"
+        y="1"
+      />
+      
+      {/* Header */}
+      <rect
+        x="1"
+        y="1"
+        width="298"
+        height="35"
+        fill="var(--color-background-secondary)"
+        rx="8"
+      />
+      <rect
+        x="15"
+        y="12"
+        width="60"
+        height="12"
+        fill="var(--color-foreground-primary)"
         rx="4"
-        x="249"
-        y="159"
+      />
+      
+      {/* Add Task Button */}
+      <rect
+        x="220"
+        y="10"
+        width="60"
+        height="16"
+        fill="var(--color-foreground-accent)"
+        rx="8"
+      />
+      
+      {/* Task List Container */}
+      <rect
+        x="10"
+        y="45"
+        width="280"
+        height="190"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="4"
+      />
+      
+      {/* Task Item 1 - Completed */}
+      <rect
+        x="15"
+        y="55"
+        width="270"
+        height="30"
+        fill="var(--color-background-secondary)"
+        rx="4"
+      />
+      {/* Checkbox - Checked */}
+      <rect
+        x="25"
+        y="65"
+        width="12"
+        height="12"
+        fill="var(--color-foreground-accent)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="2"
+      />
+      {/* Checkmark */}
+      <path
+        d="M28 69 L30 71 L34 67"
+        stroke="var(--color-background-primary)"
+        strokeWidth="1.5"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Task Text - Strikethrough */}
+      <rect
+        x="45"
+        y="68"
+        width="120"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+        opacity="0.6"
       />
       <rect
-        height="16"
-        width="32"
+        x="45"
+        y="70"
+        width="120"
+        height="1"
+        fill="var(--color-foreground-tertiary)"
+      />
+      {/* Priority - Low */}
+      <circle
+        cx="260"
+        cy="70"
+        r="4"
+        fill="var(--color-foreground-secondary)"
+      />
+      
+      {/* Task Item 2 - Active */}
+      <rect
+        x="15"
+        y="90"
+        width="270"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="4"
+      />
+      {/* Checkbox - Unchecked */}
+      <rect
+        x="25"
+        y="100"
+        width="12"
+        height="12"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="2"
+      />
+      {/* Task Text */}
+      <rect
+        x="45"
+        y="103"
+        width="140"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="2"
+      />
+      {/* Priority - High */}
+      <circle
+        cx="260"
+        cy="105"
+        r="4"
+        fill="var(--color-foreground-accent)"
+      />
+      
+      {/* Task Item 3 - Active */}
+      <rect
+        x="15"
+        y="125"
+        width="270"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="4"
+      />
+      {/* Checkbox - Unchecked */}
+      <rect
+        x="25"
+        y="135"
+        width="12"
+        height="12"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="2"
+      />
+      {/* Task Text */}
+      <rect
+        x="45"
+        y="138"
+        width="100"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="2"
+      />
+      {/* Due Date */}
+      <rect
+        x="200"
+        y="137"
+        width="30"
+        height="8"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+      {/* Priority - Medium */}
+      <circle
+        cx="260"
+        cy="140"
+        r="4"
+        fill="var(--color-foreground-secondary)"
+      />
+      
+      {/* Task Item 4 - Active with Tag */}
+      <rect
+        x="15"
+        y="160"
+        width="270"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="4"
+      />
+      {/* Checkbox - Unchecked */}
+      <rect
+        x="25"
+        y="170"
+        width="12"
+        height="12"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="2"
+      />
+      {/* Task Text */}
+      <rect
+        x="45"
+        y="173"
+        width="90"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="2"
+      />
+      {/* Tag */}
+      <rect
+        x="145"
+        y="171"
+        width="35"
+        height="10"
+        fill="var(--color-background-accent)"
+        rx="5"
+      />
+      {/* Priority - High */}
+      <circle
+        cx="260"
+        cy="175"
+        r="4"
+        fill="var(--color-foreground-accent)"
+      />
+      
+      {/* Task Item 5 - Active */}
+      <rect
+        x="15"
+        y="195"
+        width="270"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="4"
+      />
+      {/* Checkbox - Unchecked */}
+      <rect
+        x="25"
+        y="205"
+        width="12"
+        height="12"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="2"
+      />
+      {/* Task Text */}
+      <rect
+        x="45"
+        y="208"
+        width="110"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="2"
+      />
+      {/* Subtask Indicator */}
+      <rect
+        x="165"
+        y="207"
+        width="20"
+        height="8"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+      {/* Priority - Low */}
+      <circle
+        cx="260"
+        cy="210"
+        r="4"
+        fill="var(--color-foreground-secondary)"
+      />
+      
+      {/* Progress Bar */}
+      <rect
+        x="15"
+        y="230"
+        width="200"
+        height="6"
+        fill="var(--color-background-tertiary)"
+        rx="3"
+      />
+      <rect
+        x="15"
+        y="230"
+        width="80"
+        height="6"
+        fill="var(--color-foreground-accent)"
+        rx="3"
+      />
+      
+      {/* Progress Text */}
+      <rect
+        x="225"
+        y="232"
+        width="50"
+        height="4"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+    </symbol>
+    <symbol viewBox="0 0 200 200" id="fitnessTracker">
+      {/* Watch Face Background */}
+      <circle
+        cx="100"
+        cy="100"
+        r="90"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-bold)"
+        strokeWidth="2"
+      />
+      
+      {/* Activity Rings - Clean circular progress rings */}
+      {/* Outer Ring - Move Goal (Red) */}
+      <circle
+        cx="100"
+        cy="100"
+        r="70"
+        fill="none"
+        stroke="var(--color-background-tertiary)"
+        strokeWidth="8"
+      />
+      <circle
+        cx="100"
+        cy="100"
+        r="70"
+        fill="none"
+        stroke="var(--color-foreground-accent)"
+        strokeWidth="8"
+        strokeLinecap="round"
+        strokeDasharray="315 125"
+        transform="rotate(-90 100 100)"
+      />
+      
+      {/* Middle Ring - Exercise Goal (Green) */}
+      <circle
+        cx="100"
+        cy="100"
+        r="58"
+        fill="none"
+        stroke="var(--color-background-tertiary)"
+        strokeWidth="8"
+      />
+      <circle
+        cx="100"
+        cy="100"
+        r="58"
+        fill="none"
+        stroke="var(--color-foreground-secondary)"
+        strokeWidth="8"
+        strokeLinecap="round"
+        strokeDasharray="250 114"
+        transform="rotate(-90 100 100)"
+      />
+      
+      {/* Inner Ring - Stand Goal (Blue) */}
+      <circle
+        cx="100"
+        cy="100"
+        r="46"
+        fill="none"
+        stroke="var(--color-background-tertiary)"
+        strokeWidth="8"
+      />
+      <circle
+        cx="100"
+        cy="100"
+        r="46"
+        fill="none"
+        stroke="var(--color-foreground-tertiary)"
+        strokeWidth="8"
+        strokeLinecap="round"
+        strokeDasharray="200 89"
+        transform="rotate(-90 100 100)"
+      />
+      
+      {/* Center Time Display */}
+      <text
+        x="100"
+        y="95"
+        textAnchor="middle"
+        fill="var(--color-foreground-primary)"
+        fontSize="14"
+        fontWeight="600"
+      >
+        10:30
+      </text>
+      
+      {/* Center Stats */}
+      <text
+        x="100"
+        y="115"
+        textAnchor="middle"
+        fill="var(--color-foreground-secondary)"
+        fontSize="10"
+      >
+        450 CAL
+      </text>
+    </symbol>
+    <symbol viewBox="0 0 300 200" id="vitalSigns">
+      {/* Monitor Background */}
+      <rect
+        width="298"
+        height="198"
+        rx="8"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-bold)"
+        strokeWidth="2"
+        x="1"
+        y="1"
+      />
+      
+      {/* Header */}
+      <rect
+        x="1"
+        y="1"
+        width="298"
+        height="25"
+        fill="var(--color-background-secondary)"
+        rx="8"
+      />
+      <rect
+        x="15"
+        y="8"
+        width="80"
+        height="10"
+        fill="var(--color-foreground-primary)"
+        rx="4"
+      />
+      
+      {/* Heart Rate Section */}
+      <rect
+        x="15"
+        y="40"
+        width="270"
+        height="45"
+        fill="var(--color-background-secondary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="4"
+      />
+      <rect
+        x="25"
+        y="48"
+        width="30"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="3"
+      />
+      <rect
+        x="25"
+        y="58"
+        width="20"
+        height="8"
+        fill="var(--color-foreground-accent)"
+        rx="4"
+      />
+      
+      {/* ECG Wave */}
+      <path
+        d="M 60 70 L 70 70 L 75 60 L 80 80 L 85 50 L 90 70 L 100 70 L 105 60 L 110 80 L 115 50 L 120 70 L 130 70 L 135 60 L 140 80 L 145 50 L 150 70 L 160 70 L 165 60 L 170 80 L 175 50 L 180 70 L 190 70"
+        fill="none"
+        stroke="var(--color-foreground-accent)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      
+      {/* Blood Pressure Section */}
+      <rect
+        x="15"
+        y="95"
+        width="130"
+        height="45"
+        fill="var(--color-background-secondary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="4"
+      />
+      <rect
+        x="25"
+        y="103"
+        width="40"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="3"
+      />
+      <rect
+        x="25"
+        y="113"
+        width="25"
+        height="8"
+        fill="var(--color-foreground-secondary)"
+        rx="4"
+      />
+      <rect
+        x="55"
+        y="113"
+        width="20"
+        height="8"
         fill="var(--color-foreground-tertiary)"
         rx="4"
-        x="17"
+      />
+      
+      {/* BP Indicator */}
+      <rect
+        x="90"
+        y="115"
+        width="40"
+        height="4"
+        fill="var(--color-background-tertiary)"
+        rx="2"
+      />
+      <rect
+        x="90"
+        y="115"
+        width="25"
+        height="4"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      
+      {/* Temperature Section */}
+      <rect
+        x="155"
+        y="95"
+        width="130"
+        height="45"
+        fill="var(--color-background-secondary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="4"
+      />
+      <rect
+        x="165"
+        y="103"
+        width="35"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="3"
+      />
+      <rect
+        x="165"
+        y="113"
+        width="30"
+        height="8"
+        fill="var(--color-foreground-secondary)"
+        rx="4"
+      />
+      
+      {/* Temperature Gauge */}
+      <rect
+        x="220"
+        y="108"
+        width="6"
+        height="20"
+        fill="var(--color-background-tertiary)"
+        rx="3"
+      />
+      <rect
+        x="220"
+        y="115"
+        width="6"
+        height="13"
+        fill="var(--color-foreground-secondary)"
+        rx="3"
+      />
+      <circle
+        cx="223"
+        cy="128"
+        r="4"
+        fill="var(--color-foreground-secondary)"
+      />
+      
+      {/* Oxygen Saturation Section */}
+      <rect
+        x="15"
+        y="150"
+        width="130"
+        height="35"
+        fill="var(--color-background-secondary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="4"
+      />
+      <rect
+        x="25"
+        y="158"
+        width="30"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="3"
+      />
+      <rect
+        x="25"
+        y="168"
+        width="25"
+        height="8"
+        fill="var(--color-foreground-accent)"
+        rx="4"
+      />
+      
+      {/* Pulse Wave */}
+      <path
+        d="M 60 175 L 70 175 L 75 170 L 80 180 L 85 165 L 90 175 L 100 175 L 105 170 L 110 180 L 115 165 L 120 175 L 130 175"
+        fill="none"
+        stroke="var(--color-foreground-accent)"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      
+      {/* Respiratory Rate Section */}
+      <rect
+        x="155"
+        y="150"
+        width="130"
+        height="35"
+        fill="var(--color-background-secondary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+        rx="4"
+      />
+      <rect
+        x="165"
+        y="158"
+        width="40"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="3"
+      />
+      <rect
+        x="165"
+        y="168"
+        width="20"
+        height="8"
+        fill="var(--color-foreground-tertiary)"
+        rx="4"
+      />
+      
+      {/* Breathing Pattern */}
+      <path
+        d="M 200 175 Q 210 165 220 175 Q 230 165 240 175 Q 250 165 260 175 Q 270 165 275 175"
+        fill="none"
+        stroke="var(--color-foreground-tertiary)"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </symbol>
+    <symbol viewBox="0 0 320 180" id="stockChart">
+      {/* Chart Window */}
+      <rect
+        width="318"
+        height="178"
+        rx="8"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-bold)"
+        strokeWidth="2"
+        x="1"
+        y="1"
+      />
+      
+      {/* Header */}
+      <rect
+        x="1"
+        y="1"
+        width="318"
+        height="30"
+        fill="var(--color-background-secondary)"
+        rx="8"
+      />
+      
+      {/* Stock Symbol */}
+      <rect
+        x="15"
+        y="10"
+        width="60"
+        height="12"
+        fill="var(--color-foreground-primary)"
+        rx="4"
+      />
+      
+      {/* Price */}
+      <rect
+        x="85"
+        y="8"
+        width="80"
+        height="8"
+        fill="var(--color-foreground-accent)"
+        rx="4"
+      />
+      <rect
+        x="85"
         y="18"
+        width="50"
+        height="6"
+        fill="#28CA42"
+        rx="3"
       />
+      
+      {/* Time Period Buttons */}
       <rect
-        height="16"
-        width="82"
-        fill="var(--color-foreground-secondary)"
+        x="200"
+        y="8"
+        width="20"
+        height="14"
+        fill="var(--color-background-inverse)"
         rx="4"
-        x="180"
-        y="43"
       />
       <rect
-        height="16"
-        width="82"
+        x="225"
+        y="8"
+        width="20"
+        height="14"
+        fill="var(--color-background-tertiary)"
+        rx="4"
+      />
+      <rect
+        x="250"
+        y="8"
+        width="20"
+        height="14"
+        fill="var(--color-background-tertiary)"
+        rx="4"
+      />
+      <rect
+        x="275"
+        y="8"
+        width="20"
+        height="14"
+        fill="var(--color-background-tertiary)"
+        rx="4"
+      />
+      
+      {/* Chart Area */}
+      <rect
+        x="20"
+        y="45"
+        width="280"
+        height="110"
+        fill="var(--color-background-secondary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      
+      {/* Grid Lines */}
+      <line x1="20" y1="65" x2="300" y2="65" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
+      <line x1="20" y1="85" x2="300" y2="85" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
+      <line x1="20" y1="105" x2="300" y2="105" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
+      <line x1="20" y1="125" x2="300" y2="125" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
+      <line x1="20" y1="145" x2="300" y2="145" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
+      
+      <line x1="50" y1="45" x2="50" y2="155" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
+      <line x1="100" y1="45" x2="100" y2="155" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
+      <line x1="150" y1="45" x2="150" y2="155" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
+      <line x1="200" y1="45" x2="200" y2="155" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
+      <line x1="250" y1="45" x2="250" y2="155" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
+      
+      {/* Stock Trend Line */}
+      <path
+        d="M 30 130 L 45 125 L 60 135 L 75 115 L 90 110 L 105 120 L 120 105 L 135 95 L 150 85 L 165 90 L 180 75 L 195 70 L 210 65 L 225 70 L 240 60 L 255 55 L 270 65 L 285 70"
+        fill="none"
+        stroke="#28CA42"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      
+      {/* Volume Bars */}
+      <rect x="25" y="140" width="4" height="12" fill="var(--color-foreground-tertiary)" opacity="0.6" />
+      <rect x="35" y="135" width="4" height="17" fill="var(--color-foreground-tertiary)" opacity="0.6" />
+      <rect x="45" y="130" width="4" height="22" fill="var(--color-foreground-tertiary)" opacity="0.6" />
+      <rect x="55" y="145" width="4" height="7" fill="var(--color-foreground-tertiary)" opacity="0.6" />
+      <rect x="65" y="138" width="4" height="14" fill="var(--color-foreground-tertiary)" opacity="0.6" />
+      <rect x="75" y="142" width="4" height="10" fill="var(--color-foreground-tertiary)" opacity="0.6" />
+      <rect x="85" y="125" width="4" height="27" fill="var(--color-foreground-tertiary)" opacity="0.6" />
+      <rect x="95" y="140" width="4" height="12" fill="var(--color-foreground-tertiary)" opacity="0.6" />
+      
+      {/* Y-axis Labels */}
+      <rect x="5" y="60" width="12" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      <rect x="5" y="80" width="12" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      <rect x="5" y="100" width="12" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      <rect x="5" y="120" width="12" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      <rect x="5" y="140" width="12" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      
+      {/* X-axis Labels */}
+      <rect x="40" y="160" width="20" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      <rect x="90" y="160" width="20" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      <rect x="140" y="160" width="20" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      <rect x="190" y="160" width="20" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      <rect x="240" y="160" width="20" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      
+      {/* Current Price Indicator */}
+      <circle
+        cx="285"
+        cy="70"
+        r="4"
+        fill="#28CA42"
+        stroke="var(--color-background-primary)"
+        strokeWidth="2"
+      />
+    </symbol>
+    <symbol viewBox="0 0 300 200" id="basketball">
+      {/* Basketball Court Background */}
+      <rect
+        height="198"
+        width="298"
+        fill="var(--color-background-secondary)"
+        rx="4"
+        stroke="var(--color-border-bold)"
+        strokeWidth="2"
+        x="1"
+        y="1"
+      />
+      
+      {/* Court Boundary */}
+      <rect
+        x="10"
+        y="20"
+        width="280"
+        height="160"
+        fill="none"
+        stroke="var(--color-foreground-tertiary)"
+        strokeWidth="2"
+      />
+      
+      {/* Center Line */}
+      <rect
+        x="150"
+        y="20"
+        width="2"
+        height="160"
         fill="var(--color-foreground-tertiary)"
-        rx="4"
-        x="17"
-        y="164"
       />
-      <rect
-        height="16"
-        width="79"
-        fill="var(--color-foreground-secondary)"
-        rx="4"
-        x="278"
-        y="68"
+      
+      {/* Center Circle */}
+      <circle
+        cx="150"
+        cy="100"
+        r="25"
+        fill="none"
+        stroke="var(--color-foreground-tertiary)"
+        strokeWidth="2"
       />
-      <rect
-        height="16"
-        width="23"
-        fill="var(--color-foreground-secondary)"
-        rx="4"
-        x="266"
-        y="43"
-      />
-      <rect
-        height="16"
-        width="16"
-        fill="var(--color-foreground-secondary)"
-        rx="4"
-        x="293"
-        y="163"
-      />
-      <rect
-        height="16"
-        width="27"
-        fill="var(--color-foreground-secondary)"
-        rx="4"
-        x="313"
-        y="163"
-      />
-      <rect
-        height="16"
-        width="64"
-        fill="var(--color-foreground-secondary)"
-        rx="4"
-        x="293"
-        y="43"
-      />
-      <rect
-        height="16"
-        width="64"
-        fill="var(--color-foreground-secondary)"
-        rx="4"
-        x="210"
-        y="68"
-      />
-      <rect
-        height="41"
-        width="58"
+      <circle
+        cx="150"
+        cy="100"
+        r="3"
         fill="var(--color-foreground-primary)"
+      />
+      
+      {/* Left Side */}
+      {/* Left Backboard */}
+      <rect
+        x="10"
+        y="85"
+        width="3"
+        height="30"
+        fill="var(--color-foreground-primary)"
+      />
+      {/* Left Hoop */}
+      <circle
+        cx="20"
+        cy="100"
+        r="4"
+        fill="none"
+        stroke="var(--color-background-inverse)"
+        strokeWidth="2"
+      />
+      
+      {/* Left Key/Paint */}
+      <rect
+        x="10"
+        y="70"
+        width="48"
+        height="60"
+        fill="none"
+        stroke="var(--color-foreground-tertiary)"
+        strokeWidth="2"
+      />
+      
+      {/* Left Free Throw Circle */}
+      <circle
+        cx="58"
+        cy="100"
+        r="20"
+        fill="none"
+        stroke="var(--color-foreground-tertiary)"
+        strokeWidth="2"
+      />
+      
+      {/* Left Three-Point Line */}
+      <path
+        d="M 10 50 Q 80 60 80 100 Q 80 140 10 150"
+        fill="none"
+        stroke="var(--color-foreground-tertiary)"
+        strokeWidth="2"
+      />
+      
+      {/* Right Side */}
+      {/* Right Backboard */}
+      <rect
+        x="287"
+        y="85"
+        width="3"
+        height="30"
+        fill="var(--color-foreground-primary)"
+      />
+      {/* Right Hoop */}
+      <circle
+        cx="280"
+        cy="100"
+        r="4"
+        fill="none"
+        stroke="var(--color-background-inverse)"
+        strokeWidth="2"
+      />
+      
+      {/* Right Key/Paint */}
+      <rect
+        x="242"
+        y="70"
+        width="48"
+        height="60"
+        fill="none"
+        stroke="var(--color-foreground-tertiary)"
+        strokeWidth="2"
+      />
+      
+      {/* Right Free Throw Circle */}
+      <circle
+        cx="242"
+        cy="100"
+        r="20"
+        fill="none"
+        stroke="var(--color-foreground-tertiary)"
+        strokeWidth="2"
+      />
+      
+      {/* Right Three-Point Line */}
+      <path
+        d="M 290 50 Q 220 60 220 100 Q 220 140 290 150"
+        fill="none"
+        stroke="var(--color-foreground-tertiary)"
+        strokeWidth="2"
+      />
+      
+      {/* Basketball */}
+      <circle
+        cx="180"
+        cy="120"
+        r="6"
+        fill="var(--color-foreground-accent)"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="1"
+      />
+      <path
+        d="M174 120 L186 120 M180 114 L180 126"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="1"
+      />
+      
+      {/* Score Display */}
+      <rect
+        x="120"
+        y="8"
+        width="60"
+        height="16"
+        fill="var(--color-background-primary)"
         rx="4"
-        x="17"
-        y="51"
+        stroke="var(--color-border-bold)"
       />
       <rect
-        height="41"
-        width="41"
+        x="125"
+        y="12"
+        width="20"
+        height="8"
         fill="var(--color-foreground-primary)"
+        rx="2"
+      />
+      <rect
+        x="155"
+        y="12"
+        width="20"
+        height="8"
+        fill="var(--color-foreground-primary)"
+        rx="2"
+      />
+    </symbol>
+    <symbol viewBox="0 0 280 180" id="badminton">
+      {/* Badminton Court Background */}
+      <rect
+        height="178"
+        width="278"
+        fill="var(--color-background-secondary)"
         rx="4"
-        x="79"
-        y="51"
-      />
-      <path
-        d="M206.967 177.966L200 171L206.967 164.033"
         stroke="var(--color-border-bold)"
+        strokeWidth="2"
+        x="1"
+        y="1"
+      />
+      
+      {/* Outer Court Boundary */}
+      <rect
+        x="30"
+        y="25"
+        width="220"
+        height="130"
         fill="none"
+        stroke="var(--color-foreground-tertiary)"
+        strokeWidth="2"
+      />
+      
+      {/* Left and Right Service Courts */}
+      {/* Left Singles Sideline */}
+      <rect
+        x="45"
+        y="25"
+        width="2"
+        height="130"
+        fill="var(--color-foreground-tertiary)"
+      />
+      {/* Right Singles Sideline */}
+      <rect
+        x="233"
+        y="25"
+        width="2"
+        height="130"
+        fill="var(--color-foreground-tertiary)"
+      />
+      
+      {/* Net */}
+      <rect
+        x="139"
+        y="25"
+        width="2"
+        height="130"
+        fill="var(--color-foreground-primary)"
+        strokeWidth="2"
+      />
+      {/* Net Top */}
+      <rect
+        x="137"
+        y="23"
+        width="6"
+        height="4"
+        fill="var(--color-foreground-accent)"
+        rx="2"
+      />
+      
+      {/* Service Lines */}
+      {/* Left Short Service Line */}
+      <rect
+        x="45"
+        y="60"
+        width="94"
+        height="2"
+        fill="var(--color-foreground-tertiary)"
+      />
+      {/* Right Short Service Line */}
+      <rect
+        x="141"
+        y="60"
+        width="94"
+        height="2"
+        fill="var(--color-foreground-tertiary)"
+      />
+      {/* Left Long Service Line (singles) */}
+      <rect
+        x="45"
+        y="120"
+        width="94"
+        height="2"
+        fill="var(--color-foreground-tertiary)"
+      />
+      {/* Right Long Service Line (singles) */}
+      <rect
+        x="141"
+        y="120"
+        width="94"
+        height="2"
+        fill="var(--color-foreground-tertiary)"
+      />
+      
+      {/* Center Service Lines */}
+      {/* Left Center Service Line */}
+      <rect
+        x="92"
+        y="60"
+        width="2"
+        height="62"
+        fill="var(--color-foreground-tertiary)"
+      />
+      {/* Right Center Service Line */}
+      <rect
+        x="186"
+        y="60"
+        width="2"
+        height="62"
+        fill="var(--color-foreground-tertiary)"
+      />
+      
+      {/* Rackets */}
+      <ellipse
+        cx="70"
+        cy="45"
+        rx="6"
+        ry="10"
+        fill="none"
+        stroke="var(--color-foreground-primary)"
         strokeWidth="1.5"
       />
+      <rect
+        x="69"
+        y="55"
+        width="2"
+        height="12"
+        fill="var(--color-foreground-primary)"
+      />
+      
+      <ellipse
+        cx="210"
+        cy="135"
+        rx="6"
+        ry="10"
+        fill="none"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="1.5"
+      />
+      <rect
+        x="209"
+        y="120"
+        width="2"
+        height="12"
+        fill="var(--color-foreground-primary)"
+      />
+      
+      {/* Shuttlecock */}
+      <ellipse
+        cx="160"
+        cy="80"
+        rx="2"
+        ry="4"
+        fill="var(--color-foreground-accent)"
+      />
       <path
-        d="M349.915 177.966L356.882 171L349.915 164.033"
+        d="M158 76 L162 76 M159 78 L161 78"
+        stroke="var(--color-foreground-primary)"
+        strokeWidth="0.8"
+      />
+      
+      {/* Score Display */}
+      <rect
+        x="110"
+        y="8"
+        width="60"
+        height="16"
+        fill="var(--color-background-primary)"
+        rx="4"
         stroke="var(--color-border-bold)"
-        fill="none"
-        strokeWidth="1.5"
       />
-
-      <path
-        d="M194 80.5V68"
-        stroke="var(--color-foreground-accent)"
-        fill="none"
-        strokeWidth="1.5"
+      <rect
+        x="115"
+        y="12"
+        width="18"
+        height="8"
+        fill="var(--color-foreground-primary)"
+        rx="2"
       />
-      <path
-        d="M188.5 75.5L194 81L199.5 75.5"
-        stroke="var(--color-foreground-accent)"
-        fill="none"
-        strokeWidth="1.5"
+      <rect
+        x="147"
+        y="12"
+        width="18"
+        height="8"
+        fill="var(--color-foreground-primary)"
+        rx="2"
       />
     </symbol>
   </svg>

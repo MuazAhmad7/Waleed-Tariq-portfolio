@@ -1,0 +1,78 @@
+/* Waleed's Green Theme Override */
+:root {
+  /* Custom green colors for Waleed's theme */
+  --color-waleed-primary: #67b769;
+  --color-waleed-secondary: #7fcb8e;
+  --color-waleed-light: #e1f7c6;
+  
+  /* Override accent colors with green */
+  --color-foreground-accent: #67b769 !important;
+  --color-foreground-link: #67b769 !important;
+  --color-foreground-link-hover: #7fcb8e !important;
+  --color-foreground-link-visisted: #67b769 !important;
+  --color-background-accent: #67b769 !important;
+  --color-border-accent: #67b769 !important;
+  --focus-ring: 2px solid #67b769 !important;
+}
+
+.light {
+  --color-foreground-accent: #67b769 !important;
+  --color-foreground-link: #67b769 !important;
+  --color-foreground-link-hover: #7fcb8e !important;
+  --color-foreground-link-visisted: #67b769 !important;
+  --color-background-accent: #67b769 !important;
+  --color-border-accent: #67b769 !important;
+  --focus-ring: 2px solid #67b769 !important;
+}
+
+.dark {
+  --color-foreground-accent: #7fcb8e !important;
+  --color-foreground-link: #7fcb8e !important;
+  --color-foreground-link-hover: #67b769 !important;
+  --color-foreground-link-visisted: #7fcb8e !important;
+  --color-background-accent: #67b769 !important;
+  --color-border-accent: #67b769 !important;
+  --focus-ring: 2px solid #7fcb8e !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-foreground-accent: #7fcb8e !important;
+    --color-foreground-link: #7fcb8e !important;
+    --color-foreground-link-hover: #67b769 !important;
+    --color-foreground-link-visisted: #7fcb8e !important;
+    --color-background-accent: #67b769 !important;
+    --color-border-accent: #67b769 !important;
+    --focus-ring: 2px solid #7fcb8e !important;
+  }
+}
+
+/* Status component green theme */
+.status-success {
+  background-color: #e1f7c6;
+  border-color: #67b769;
+  color: #67b769;
+}
+
+/* Button green theme */
+.btn-primary {
+  background-color: #67b769;
+  border-color: #67b769;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #7fcb8e;
+  border-color: #7fcb8e;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: #67b769;
+  color: #67b769;
+}
+
+.btn-secondary:hover {
+  background-color: #67b769;
+  color: white;
+} 

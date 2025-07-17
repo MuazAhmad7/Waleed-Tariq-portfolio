@@ -1,4 +1,4 @@
-import { IconDefinition } from '@awesome.me/kit-0ba7f5fefb/icons';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import styles from './Icon.module.scss';
 
 type IconProps = {

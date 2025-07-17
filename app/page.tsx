@@ -1,76 +1,143 @@
-/**
- * Metadata for the main page (Home).
- * Provides SEO, Open Graph, and Twitter card information for the homepage.
- * @type {import('next').Metadata}
- */
-export const metadata = {
-  title:
-    'Darian Rosebrook: Staff Design Technologist | Design Systems, Portland Oregon',
-  description:
-    "Hey! I'm Darian Rosebrook 👋🏼 I am a staff design technologist in the Portland, Oregon area. I make design systems, custom design tooling, Figma plugins, and design ops stuff for product teams.",
-  openGraph: {
-    title:
-      'Darian Rosebrook: Staff Design Technologist | Design Systems, Portland Oregon',
-    description:
-      "Hey! I'm Darian Rosebrook 👋🏼 I am a staff design technologist in the Portland, Oregon area. I make design systems, custom design tooling, Figma plugins, and design ops stuff for product teams.",
-    images: ['https://darianrosebrook.com/darianrosebrook.jpg'],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title:
-      'Darian Rosebrook: Staff Design Technologist | Design Systems, Portland Oregon',
-    description:
-      "Hey! I'm Darian Rosebrook 👋🏼 I am a staff design technologist in the Portland, Oregon area. I make design systems, custom design tooling, Figma plugins, and design ops stuff for product teams.",
-    images: ['https://darianrosebrook.com/darianrosebrook.jpg'],
-  },
-};
+'use client';
+
 import Status from '@/components/Status';
 import styles from './page.module.css';
-import Avatar from '@/components/Avatar';
-import Button from '@/components/Button';
 import LogoMaruqee from '@/components/LogoMarquee';
 import Blueprints from './heroes/blueprints';
+import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'framer-motion';
 import Image from 'next/image';
+import Typewriter from 'typewriter-effect';
+import { useRef, useState, useEffect } from 'react';
+import Tilt from 'react-parallax-tilt';
+import { 
+  MdHealthAndSafety, 
+  MdRocket, 
+  MdSchool, 
+  MdGpsFixed, 
+  MdFlashOn 
+} from 'react-icons/md';
 
 export default function Home() {
+  const whoIAmRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
+  const currentWorkRef = useRef<HTMLDivElement>(null);
+  const strategicRef = useRef<HTMLDivElement>(null);
+  const technicalRef = useRef<HTMLDivElement>(null);
+  
+  const [strategicHover, setStrategicHover] = useState(false);
+  const [technicalHover, setTechnicalHover] = useState(false);
+  
+  const strategicMouseX = useMotionValue(0);
+  const strategicMouseY = useMotionValue(0);
+  const technicalMouseX = useMotionValue(0);
+  const technicalMouseY = useMotionValue(0);
+  
+  const strategicSmoothX = useSpring(strategicMouseX, { stiffness: 500, damping: 30 });
+  const strategicSmoothY = useSpring(strategicMouseY, { stiffness: 500, damping: 30 });
+  const technicalSmoothX = useSpring(technicalMouseX, { stiffness: 500, damping: 30 });
+  const technicalSmoothY = useSpring(technicalMouseY, { stiffness: 500, damping: 30 });
+  
+  const { scrollYProgress: whoIAmProgress } = useScroll({
+    target: whoIAmRef,
+    offset: ["start end", "end start"]
+  });
+  
+  const { scrollYProgress: skillsProgress } = useScroll({
+    target: skillsRef,
+    offset: ["start end", "end start"]
+  });
+  
+  const { scrollYProgress: currentWorkProgress } = useScroll({
+    target: currentWorkRef,
+    offset: ["start end", "end start"]
+  });
+
+  const whoIAmY = useTransform(whoIAmProgress, [0, 1], [100, -100]);
+  const skillsY = useTransform(skillsProgress, [0, 1], [150, -150]);
+  const currentWorkY = useTransform(currentWorkProgress, [0, 1], [100, -100]);
+
+  const handleStrategicMouseMove = (e: React.MouseEvent) => {
+    if (!strategicRef.current) return;
+    const rect = strategicRef.current.getBoundingClientRect();
+    strategicMouseX.set(e.clientX - rect.left);
+    strategicMouseY.set(e.clientY - rect.top);
+  };
+
+  const handleTechnicalMouseMove = (e: React.MouseEvent) => {
+    if (!technicalRef.current) return;
+    const rect = technicalRef.current.getBoundingClientRect();
+    technicalMouseX.set(e.clientX - rect.left);
+    technicalMouseY.set(e.clientY - rect.top);
+  };
+
+  useEffect(() => {
+    const updateStrategicMask = () => {
+      if (strategicRef.current) {
+        const maskReveal = strategicRef.current.querySelector(`.${styles.maskReveal}`) as HTMLElement;
+        const x = strategicSmoothX.get();
+        const y = strategicSmoothY.get();
+        
+        if (maskReveal) {
+          if (strategicHover) {
+            maskReveal.style.webkitMaskImage = `radial-gradient(circle 120px at ${x}px ${y}px, black 100%, transparent 100%)`;
+            maskReveal.style.maskImage = `radial-gradient(circle 120px at ${x}px ${y}px, black 100%, transparent 100%)`;
+          } else {
+            maskReveal.style.webkitMaskImage = `radial-gradient(circle 0px at ${x}px ${y}px, black 100%, transparent 100%)`;
+            maskReveal.style.maskImage = `radial-gradient(circle 0px at ${x}px ${y}px, black 100%, transparent 100%)`;
+          }
+        }
+        
+        // Update cursor indicator position
+        if (strategicRef.current) {
+          strategicRef.current.style.setProperty('--cursor-x', `${x}px`);
+          strategicRef.current.style.setProperty('--cursor-y', `${y}px`);
+        }
+      }
+    };
+
+    const updateTechnicalMask = () => {
+      if (technicalRef.current) {
+        const maskReveal = technicalRef.current.querySelector(`.${styles.maskReveal}`) as HTMLElement;
+        const x = technicalSmoothX.get();
+        const y = technicalSmoothY.get();
+        
+        if (maskReveal) {
+          if (technicalHover) {
+            maskReveal.style.webkitMaskImage = `radial-gradient(circle 120px at ${x}px ${y}px, black 100%, transparent 100%)`;
+            maskReveal.style.maskImage = `radial-gradient(circle 120px at ${x}px ${y}px, black 100%, transparent 100%)`;
+          } else {
+            maskReveal.style.webkitMaskImage = `radial-gradient(circle 0px at ${x}px ${y}px, black 100%, transparent 100%)`;
+            maskReveal.style.maskImage = `radial-gradient(circle 0px at ${x}px ${y}px, black 100%, transparent 100%)`;
+          }
+        }
+        
+        // Update cursor indicator position
+        if (technicalRef.current) {
+          technicalRef.current.style.setProperty('--cursor-x', `${x}px`);
+          technicalRef.current.style.setProperty('--cursor-y', `${y}px`);
+        }
+      }
+    };
+
+    const unsubscribeStrategicX = strategicSmoothX.onChange(updateStrategicMask);
+    const unsubscribeStrategicY = strategicSmoothY.onChange(updateStrategicMask);
+    const unsubscribeTechnicalX = technicalSmoothX.onChange(updateTechnicalMask);
+    const unsubscribeTechnicalY = technicalSmoothY.onChange(updateTechnicalMask);
+
+    return () => {
+      unsubscribeStrategicX();
+      unsubscribeStrategicY();
+      unsubscribeTechnicalX();
+      unsubscribeTechnicalY();
+    };
+  }, [strategicHover, technicalHover, strategicSmoothX, strategicSmoothY, technicalSmoothX, technicalSmoothY]);
+
   const ldJson = {
     '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Darian Rosebrook',
-    url: 'https://darianrosebrook.com/',
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': 'https://darianrosebrook.com/',
-    },
-    image: 'https://darianrosebrook.com/darianrosebrook.jpg',
-    jobTitle: 'Staff Design Technologist, Design Systems',
-    description:
-      'Staff Design Technologist and Design Systems Architect focused on scalable UI component libraries, accessibility, and cross-platform tooling for web, iOS, and Android.',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'Paths.design',
-      url: 'https://paths.design',
-    },
-    knowsAbout: [
-      'Design Systems',
-      'Component Libraries',
-      'Design Tokens',
-      'Accessibility',
-      'UX Engineering',
-      'Cross-platform Design',
-      'Radix UI',
-      'Figma Plugins',
-    ],
-    sameAs: [
-      'https://twitter.com/darianrosebrook',
-      'https://www.linkedin.com/in/darianrosebrook/',
-      'https://www.github.com/darianrosebrook',
-      'https://www.instagram.com/darianrosebrook/',
-      'https://www.youtube.com/@darian.rosebrook',
-      'https://read.compassofdesign.com/@darianrosebrook',
-      'https://darianrosebrook.com/docs/design-system',
-      'https://github.com/darianrosebrook/component-blueprints',
-    ],
+    '@type': 'WebSite',
+    name: 'Portfolio',
+    description: 'A portfolio showcasing design and development work.',
+    url: typeof window !== 'undefined' ? window.location.origin : '',
   };
   return (
     <>
@@ -84,226 +151,400 @@ export default function Home() {
           <div className={styles.cover}></div>
         </div>
         <div className={styles.headingHero}>
-          <div className="gooey">
-            <Status status="error">Available for work</Status>
+          <div className="gooey" style={{ textAlign: 'center' }}>
+            <Status status="success" href="/contact#calendar" hoverText="Lets have a chat :)">
+              Available for opportunities
+            </Status>
           </div>
-          <h1 className="gooey">
-            <span>Product Designer &amp; Developer</span>
-            <br />
-            <span>
-              Connecting Design &rarr; Code with Design Systems &amp; Custom
-              Plugins
-            </span>
-          </h1>
+                      <h1 className="gooey" style={{ textAlign: 'center' }}>
+              <span>Waleed Tariq - founder's manual</span>
+              <br />
+              <span style={{ fontSize: '0.81em' }}>
+                From Idea to Impact &rarr; Leading Projects &amp;
+              </span>
+              <br />
+              <span style={{ fontSize: '0.81em' }}>
+                Powering the Future of Sports
+              </span>
+            </h1>
         </div>
       </section>
       <section className={styles.quip}>
         <LogoMaruqee />
       </section>
-      <section className="home">
-        <div className="hero content">
-          <Image
-            src="/darianrosebrook.jpg"
-            alt="Picture of Darian Rosebrook cropped close from the chest and shoulders, wearing a sweater. They are looking off to their right, a slight smile on their face. Curly dark hair about 3 inches long. They seem tired."
-            width={540}
-            height={675}
-          />
-        </div>
-        <div className="content">
-          <h2 className="light">Darian Rosebrook</h2>
-          <h3 className="light secondary">Staff Design Technologist</h3>
-          <div className="avatarFlag">
-            <Avatar
-              src="/darian-square.jpg"
-              name="Darian Rosebrook"
-              size="extra-large"
-            />
-            <div className="flag">
-              <p>
-                <strong>Darian Rosebrook</strong>
-              </p>
-              <p>
-                <span className="icon">
-                  <svg
-                    height="16"
-                    width="11"
-                    fill="none"
-                    viewBox="0 0 11 16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.83721 10.12C8.1018 11.2333 7.36817 12.344 7.05091 13.6184C6.62733 15.3199 6.45793 16.0003 5.38302 16.0003C4.28287 16.0003 4.18609 15.6165 3.74974 13.8861C3.42209 12.5868 2.68835 11.4352 1.95406 10.2828C1.25762 9.18974 0.56069 8.09593 0.209267 6.87456C0.0730014 6.40098 0 5.9006 0 5.38318C0 2.41013 2.41013 0 5.38318 0C8.35622 0 10.7664 2.41013 10.7664 5.38318C10.7664 6.02616 10.6536 6.64281 10.4469 7.21445C10.0722 8.25031 9.45406 9.18608 8.83721 10.12ZM5.38298 8.97221C7.36501 8.97221 8.97177 7.36546 8.97177 5.38343C8.97177 3.4014 7.36501 1.79464 5.38298 1.79464C3.40095 1.79464 1.7942 3.4014 1.7942 5.38343C1.7942 7.36546 3.40095 8.97221 5.38298 8.97221Z"
-                      fill="#D9D9D9"
-                      fillRule="evenodd"
-                    />
-                  </svg>
-                </span>
-                Portland, Oregon
-              </p>
+      
+      {/* Who I Am Section */}
+      <section className={styles.whoIAm} ref={whoIAmRef}>
+        <div className={styles.sectionContent}>
+          <div className={styles.textColumn}>
+            <div className={styles.sectionHeader}>
+              <motion.div
+                className={styles.sectionNumber}
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                01
+              </motion.div>
+              <motion.h2
+                className={styles.sectionTitle}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                Who I Am
+              </motion.h2>
             </div>
-          </div>
-          <p>
-            As a seasoned Product Designer with a strong background in UX
-            engineering, I specialize in crafting robust design systems and
-            developing custom design tooling for Figma that revolutionizes
-            product development workflows. Based in Portland, Oregon, I thrive
-            at the intersection of design and development, where I dedicate my
-            efforts to streamlining collaboration and optimizing product
-            development cycles.
-          </p>
+            
+            <div className={styles.typewriterContainer}>
+              <motion.div
+                className={styles.typewriterLabel}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                Currently:
+              </motion.div>
+              <motion.div
+                className={styles.typewriter}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                viewport={{ once: true }}
+              >
+                <Typewriter
+                  options={{
+                    strings: [
+                      'Project Manager',
+                      'Co-Founder of GameGrid',
+                      'Innovation Catalyst'
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    delay: 75,
+                    deleteSpeed: 50,
+                  }}
+          />
+              </motion.div>
+        </div>
 
-          <p>
-            With a unique blend of design and development expertise, I excel at
-            bridging the gap between design and engineering teams, enhancing the
-            user experience for both when interacting with design systems. By
-            creating custom tooling that integrates Figma with GitHub, I enable
-            seamless workflows that drive innovation and foster a collaborative
-            environment, ultimately accelerating the delivery of exceptional
-            designs to customers.
-          </p>
-
-          <p>
-            Throughout my career, I have successfully led cross-functional teams
-            through highly technical projects, collaborating with project
-            managers and development leads to break down complex initiatives
-            into manageable arcs of work. By effectively managing and delegating
-            resources, I ensure the smooth execution of projects, delivering
-            results that exceed expectations.
-          </p>
-          <p>
-            If you&apos;re passionate about design and want to discuss how we
-            can collaborate to create innovative solutions, feel free to reach
-            out! I&apos;m always eager to connect with like-minded professionals
-            and explore new opportunities in UX and Product Design.
-          </p>
-          <p>
-            <a
-              href="https://drive.google.com/file/d/1h2QH7K7153QGbW59CHWWt07Dzhgzst3a/view?usp=sharingue"
-              target="_blank"
+            <motion.div
+              className={styles.mainDescription}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
+              viewport={{ once: true }}
             >
-              My resume
-            </a>
-          </p>
-        </div>
-        <div className="content">
-          <p>
-            <strong>Strategic skillset</strong>
-          </p>
-          <p>Design</p>
-          <ul>
-            <li>
-              Simplifying complex technical concepts for non-technical
-              audiences, facilitating effective communication and collaboration
-              across teams.
-            </li>
-            <li>
-              Conducting comprehensive design system workshops, empowering teams
-              to leverage design systems effectively.
-            </li>
-            <li>
-              Creating and maintaining comprehensive design system
-              documentation, ensuring clarity and consistency in usage.
-            </li>
-            <li>
-              Implementing automation pipelines for design system assets,
-              streamlining workflows and reducing manual effort.
-            </li>
-            <li>
-              Developing full-featured design systems with high-fidelity
-              component libraries for Figma, Web, Android, and iOS, ensuring a
-              consistent user experience across platforms.
-            </li>
-            <li>
-              Auditing design components created in various web and mobile
-              technologies, ensuring adherence to best practices and design
-              system guidelines.
-            </li>
-            <li>
-              Enhancing the developer experience by optimizing component library
-              consumption, promoting adoption and efficiency.
-            </li>
-            <li>
-              Building custom Figma plugins that accelerate product design
-              workflows, design system creation, and maintenance, enabling
-              designers to work smarter, not harder.
-            </li>
-            <li>
-              Designing, Developing, and Implementing tooling or pipelines that
-              keep design and development closely in sync, fostering
-              collaboration and reducing friction.
-            </li>
-            <li>
-              Establishing processes and workflows that optimize feedback,
-              contribution, and adoption across teams, creating a culture of
-              continuous improvement.
-            </li>
-          </ul>
-        </div>
-        <div className="content">
-          <p>
-            <strong>Technical skillset</strong>
-          </p>
-          <p>Design</p>
-          <ul>
-            <li>Design Management</li>
-            <li>Design Systems</li>
-            <li>Design Tokens</li>
-            <li>User Research</li>
-            <li>UX Design</li>
-            <li>UX Engineering</li>
-            <li>Figma Component Libraries</li>
-          </ul>
-          <p>Development</p>
-          <ul>
-            <li>Figma Plugin Development</li>
-            <li>Figma API</li>
-            <li>React</li>
-            <li>Vue</li>
-            <li>Angular</li>
-            <li>Svelte</li>
-            <li>Web Components</li>
-            <li>Backend Development</li>
-            <li>API Design</li>
-            <li>Mobile Development</li>
-            <li>Kotlin</li>
-            <li>SwiftUI</li>
-            <li>Java</li>
-            <li>Objective-C</li>
-          </ul>
+              <p>
+                I'm a <span className={styles.highlight}>Project Manager by trade and a builder at heart</span>. I've spent the last few years leading 
+                <span className={styles.emphasis}> cross-functional teams at companies like Prudential and UnitedHealth Group</span> — managing timelines, 
+                aligning stakeholders, and making sure ideas actually ship.
+              </p>
+              <p>
+                Outside the 9 to 5, I co-founded <span className={styles.highlight}>GameGrid, a sports tech startup</span> built to power leagues across the country. 
+                What started as a way to simplify league management for our basketball community has grown into a full product used by organizers, players, 
+                and fans to run and follow live sports experiences. I handle everything from <span className={styles.emphasis}> product vision and growth strategy </span> 
+                to refining the experience for users on the ground.
+              </p>
+              <p>
+                Whether I'm leading projects or building something from the ground up, I care most about <span className={styles.highlight}>solving real problems, 
+                making things that matter, and working with people who bring energy and purpose to the table</span>.
+              </p>
+            </motion.div>
+          </div>
+
+          <motion.div
+            className={styles.imageColumn}
+            style={{ y: whoIAmY }}
+          >
+            <motion.div
+              className={styles.floatingImage}
+              initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05, rotate: 2 }}
+            >
+              <Image
+                src="/dei2.jpg"
+                alt="Professional presentation"
+                width={400}
+                height={300}
+                className={styles.heroImage1}
+              />
+            </motion.div>
+          </motion.div>
         </div>
       </section>
-      <section className={styles.marquee}>
-        <div className="content">
-          <h3>Where I&#8217;ve been</h3>
-          <p className="body-01">
-            Over the last ten years, I have spent my career building up skills
-            at creating, maintaining, and scaling design systems across
-            different sized initiatives.
+
+      {/* Skills Section */}
+      <section className={styles.skillsSection} ref={skillsRef}>
+        <div className={styles.sectionContent}>
+          <motion.div
+            className={styles.imageColumn}
+            style={{ y: skillsY }}
+          >
+            <div className={styles.stackedImages}>
+              <motion.div
+                className={styles.floatingImage}
+                initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
+                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ duration: 1, delay: 0.4 }}
+                viewport={{ once: true }}
+                style={{ y: useTransform(skillsY, [0, 1], [0, -50]) }}
+              >
+                <Tilt
+                  tiltMaxAngleX={15}
+                  tiltMaxAngleY={15}
+                  perspective={1000}
+                  scale={1.05}
+                  transitionSpeed={1000}
+                  glareEnable={true}
+                  glareMaxOpacity={0.2}
+                  glareColor="#ffffff"
+                  glarePosition="all"
+                  glareBorderRadius="12px"
+                >
+                  <Image
+                    src="/dei1.png"
+                    alt="Team collaboration"
+                    width={400}
+                    height={300}
+                    className={styles.heroImage2}
+                  />
+                </Tilt>
+              </motion.div>
+              
+              <motion.div
+                className={`${styles.floatingImage} ${styles.stackedImage}`}
+                initial={{ opacity: 0, scale: 0.9, rotate: -3 }}
+                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ duration: 1, delay: 0.6 }}
+                viewport={{ once: true }}
+                style={{ y: useTransform(skillsY, [0, 1], [0, -80]) }}
+              >
+                <Tilt
+                  tiltMaxAngleX={12}
+                  tiltMaxAngleY={12}
+                  perspective={800}
+                  scale={1.08}
+                  transitionSpeed={1200}
+                  glareEnable={true}
+                  glareMaxOpacity={0.15}
+                  glareColor="#ffffff"
+                  glarePosition="all"
+                  glareBorderRadius="8px"
+                >
+                  <Image
+                    src="/dei3.jpeg"
+                    alt="Strategic planning"
+                    width={350}
+                    height={250}
+                    className={styles.heroImage3}
+                  />
+                </Tilt>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          <div className={styles.textColumn}>
+            <div className={styles.sectionHeader}>
+              <motion.div
+                className={styles.sectionNumber}
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                02
+              </motion.div>
+              <motion.h2
+                className={styles.sectionTitle}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                How I Think &amp; What I Build
+              </motion.h2>
+            </div>
+            
+            <div className={styles.skillsContainer}>
+              <motion.div
+                className={styles.skillCategory}
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <div 
+                  className={styles.baseContent}
+                  onMouseMove={handleStrategicMouseMove}
+                  onMouseEnter={() => setStrategicHover(true)}
+                  onMouseLeave={() => setStrategicHover(false)}
+                  ref={strategicRef}
+                >
+                  <h3 className={styles.categoryTitle}>
+                    <MdGpsFixed className={styles.categoryIcon} />
+                    Gameplans That Scale
+                  </h3>
+                  <ul className={styles.skillList}>
+                    <li><span className={styles.skillHighlight}>Cross-functional project management</span> across enterprise IT portfolios</li>
+                    <li><span className={styles.skillHighlight}>Strategic pricing optimization</span> and financial modeling</li>
+                    <li><span className={styles.skillHighlight}>Process automation</span> and operational analytics</li>
+                    <li><span className={styles.skillHighlight}>Team leadership</span> and stakeholder alignment</li>
+                    <li><span className={styles.skillHighlight}>Business process optimization</span> and workflow design</li>
+                  </ul>
+                  
+                  <div className={styles.maskReveal}>
+                    <h3 className={styles.categoryTitleRevealed}>
+                      <MdGpsFixed className={styles.categoryIconRevealed} />
+                      Big Picture Thinking
+                    </h3>
+                    <ul className={styles.skillListRevealed}>
+                      <li><span className={styles.skillHighlightRevealed}>Led 15+ cross-functional teams</span> delivering $2M+ in cost savings</li>
+                      <li><span className={styles.skillHighlightRevealed}>Optimized pricing strategies</span> increasing margins by 18%</li>
+                      <li><span className={styles.skillHighlightRevealed}>Automated 40+ manual processes</span> saving 200+ hours/month</li>
+                      <li><span className={styles.skillHighlightRevealed}>Mentored 25+ team members</span> with 95% retention rate</li>
+                      <li><span className={styles.skillHighlightRevealed}>Streamlined workflows</span> reducing cycle time by 35%</li>
+          </ul>
+        </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className={styles.skillCategory}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                viewport={{ once: true }}
+              >
+                <div 
+                  className={styles.baseContent}
+                  onMouseMove={handleTechnicalMouseMove}
+                  onMouseEnter={() => setTechnicalHover(true)}
+                  onMouseLeave={() => setTechnicalHover(false)}
+                  ref={technicalRef}
+                >
+                  <h3 className={styles.categoryTitle}>
+                    <MdFlashOn className={styles.categoryIcon} />
+                    Building What Matters 
+                  </h3>
+                  <ul className={styles.skillList}>
+                    <li><span className={styles.skillHighlight}>Data Analysis:</span> SQL, Python, Excel, Power BI, Tableau</li>
+                    <li><span className={styles.skillHighlight}>Enterprise Systems:</span> SAP S/4HANA, SAP PPM, Azure DevOps</li>
+                    <li><span className={styles.skillHighlight}>Development:</span> Java, Git, Jira, API Development</li>
+                    <li><span className={styles.skillHighlight}>Project Management:</span> Agile methodologies, UML, Maven</li>
+                    <li><span className={styles.skillHighlight}>Database Management:</span> SQL Server, ETL processes</li>
+          </ul>
+                  
+                  <div className={styles.maskReveal}>
+                    <h3 className={styles.categoryTitleRevealed}>
+                      <MdFlashOn className={styles.categoryIconRevealed} />
+                      Product in Motion
+                    </h3>
+                    <ul className={styles.skillListRevealed}>
+                      <li><span className={styles.skillHighlightRevealed}>Processed 10TB+ datasets</span> with 99.9% accuracy</li>
+                      <li><span className={styles.skillHighlightRevealed}>Deployed enterprise solutions</span> for 50,000+ users</li>
+                      <li><span className={styles.skillHighlightRevealed}>Built APIs handling 1M+ requests/day</span> with &lt;2s response time</li>
+                      <li><span className={styles.skillHighlightRevealed}>Managed 200+ sprint cycles</span> with 98% on-time delivery</li>
+                      <li><span className={styles.skillHighlightRevealed}>Optimized databases serving 100K+ queries/hour</span> efficiently</li>
+          </ul>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What I'm Doing Now Section */}
+      <section className={styles.currentWork} ref={currentWorkRef}>
+        <div className={styles.sectionContent}>
+          <div className={styles.fullWidthHeader}>
+            <div className={styles.sectionHeader}>
+              <motion.div
+                className={styles.sectionNumber}
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                03
+              </motion.div>
+              <motion.h2
+                className={styles.sectionTitle}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                What I'm Doing Now
+              </motion.h2>
+            </div>
+          </div>
+          
+          <motion.div
+            className={styles.projectsGrid}
+            style={{ y: currentWorkY }}
+          >
+            <motion.div
+              className={styles.projectCard}
+              initial={{ opacity: 0, y: 80, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, scale: 1.02 }}
+            >
+              <MdHealthAndSafety className={styles.projectIcon} />
+              <h3 className={styles.projectTitle}>Quest Diagnostics</h3>
+              <p className={styles.projectRole}>Senior Financial Analyst, Strategic Pricing</p>
+              <p className={styles.projectDescription}>
+                Leading strategic pricing initiatives for <span className={styles.highlight}>$3.5B+ healthcare service portfolios</span>. 
+                Managing cross-functional teams to optimize payor contract strategies and implement 
+                <span className={styles.emphasis}> data-driven solutions</span> that improve operational efficiency.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className={styles.projectCard}
+              initial={{ opacity: 0, y: 80, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, scale: 1.02 }}
+            >
+              <MdRocket className={styles.projectIcon} />
+              <h3 className={styles.projectTitle}>GameGrid</h3>
+              <p className={styles.projectRole}>Co-Founder & Managing Director</p>
+              <p className={styles.projectDescription}>
+                Building the future of <span className={styles.highlight}>sports technology</span> through API-first stat-tracking and 
+                scheduling systems. Growing our platform to <span className={styles.emphasis}>150+ active users</span> while leading 
+                product development and strategic partnerships.
           </p>
-          <p className="body-01">
-            For large and small brands alike, throughout my career, I have
-            successfully led cross-functional teams through highly technical
-            projects, collaborating with project managers and development leads
-            to break down complex initiatives into manageable arcs of work. By
-            effectively managing and delegating resources, I ensure the smooth
-            execution of projects, delivering results that exceed expectations.
+            </motion.div>
+
+            <motion.div
+              className={styles.projectCard}
+              initial={{ opacity: 0, y: 80, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, scale: 1.02 }}
+            >
+              <MdSchool className={styles.projectIcon} />
+              <h3 className={styles.projectTitle}>Continuous Learning</h3>
+              <p className={styles.projectRole}>Harvard University - Project Management & IT</p>
+              <p className={styles.projectDescription}>
+                Currently expanding my expertise through <span className={styles.highlight}>advanced coursework</span> in project management 
+                and information technology, staying at the forefront of <span className={styles.emphasis}>industry best practices</span> 
+                and emerging technologies.
           </p>
-          <p className="body-01">
-            I am passionate about making things that make it easier for people
-            to make things, and love a challenge when it comes to interesting
-            problems to solve for.
-          </p>
-          <p className="body-01">
-            You can see some of the places where I have worked to make their
-            brand excel through my work with design systems{' '}
-          </p>
-          <p>
-            p.s. A lot of this site is still a work in progress, as is the folly
-            of all portfolio sites. haha
-          </p>
-          <Button href="/work" as="a" variant="secondary">
-            View my work &#8594;
-          </Button>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
     </>

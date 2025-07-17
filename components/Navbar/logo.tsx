@@ -1,54 +1,34 @@
+import Image from 'next/image';
+import { useState } from 'react';
+
 const Logo = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <svg
-      width="36"
-      height="36"
-      viewBox="0 0 36 36"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+    <div 
+      style={{ 
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        transformOrigin: 'center',
+        transform: isHovered ? 'rotateZ(-15deg) scale(1.1) scaleY(-1)' : 'rotateZ(0deg) scale(1) scaleY(-1)',
+        cursor: 'pointer'
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <path
-        d="M23.5 8L25 15L33 16L23.5 8Z"
-        fill="#E74B4C"
-        stroke="#1A1B1C"
-        strokeLinejoin="round"
+      <Image
+        src="/shuttlecock1.png"
+        alt="Shuttlecock Logo"
+        width={32}
+        height={32}
+        style={{
+          filter: isHovered ? 'brightness(1.3) saturate(1.2)' : 'brightness(1.2)',
+          transition: 'filter 0.3s ease'
+        }}
       />
-      <path
-        d="M23.5 8L25 15M33 16L25 15M18 31V17M3 16L11 15M12.5 8L11 15M11 15L18 17M18 17L25 15"
-        stroke="#1A1B1C"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M25 15L18 17V31L33 16L25 15Z"
-        fill="#963131"
-        stroke="#1A1B1C"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M11 15L12.5 8H23.5L25 15L18 17L11 15Z"
-        fill="#E73C3E"
-        stroke="#1A1B1C"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M3 16L11 15L18 17V31L3 16Z"
-        fill="#D14345"
-        stroke="#1A1B1C"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M11 15L12.5 8L3 16L11 15Z"
-        fill="#FF616A"
-        stroke="#1A1B1C"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M33 16L23.5 8H12.5L3 16L18 31L33 16Z"
-        stroke="#1A1B1C"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-      />
-    </svg>
+    </div>
   );
 };
 export default Logo;

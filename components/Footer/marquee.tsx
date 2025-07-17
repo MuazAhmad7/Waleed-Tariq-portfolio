@@ -6,22 +6,44 @@ import { useGSAP } from '@gsap/react';
 import Styles from './index.module.css';
 import { horizontalLoop } from '@/utils';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { byPrefixAndName } from '@awesome.me/kit-0ba7f5fefb/icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Icon from '../Icon';
+import Image from 'next/image';
+
 type MarqueeProps = {
   title: string;
-  icon: IconDefinition;
+  icon: IconDefinition | string;
   url: string;
+  isCustomImage?: boolean;
 };
-const faArrowUpRight = byPrefixAndName['far']['arrow-up-right'];
 
-const Marquee: React.FC<MarqueeProps> = ({ title, icon, url }) => {
+const Marquee: React.FC<MarqueeProps> = ({ title, icon, url, isCustomImage = false }) => {
   const marqueeRef = useRef(null); // Create a ref for the marquee element
+  
+  // Debug logging
+  if (title === 'GameGrid') {
+    console.log('GameGrid marquee props:', { title, icon, url, isCustomImage });
+  }
   const clone = (index) => (
     <div className={Styles.box} key={index}>
       <p className={`heading-04 ${Styles.socialLinkTitle}`}>
         {title.toUpperCase()}
-        <Icon width={48} height={48} icon={icon} />
+        {isCustomImage ? (
+          <Image 
+            src={icon as string} 
+            alt={title} 
+            width={48} 
+            height={48} 
+            style={{ 
+              objectFit: 'contain',
+              maxWidth: '48px',
+              maxHeight: '48px',
+              verticalAlign: 'middle'
+            }} 
+          />
+        ) : (
+          <Icon width={48} height={48} icon={icon as IconDefinition} />
+        )}
       </p>
     </div>
   );
@@ -45,7 +67,7 @@ const Marquee: React.FC<MarqueeProps> = ({ title, icon, url }) => {
       <Link href={url} className={Styles.socialLink}>
         <h4 className={Styles.socialLinkTitle}>
           {title.toUpperCase()}
-          <Icon width={48} height={48} icon={faArrowUpRight} />
+          <Icon width={48} height={48} icon={faArrowRight} />
         </h4>
         <div className={Styles.marquee} ref={marqueeRef}>
           {clones && clones.map((clone, index) => clone(index))}

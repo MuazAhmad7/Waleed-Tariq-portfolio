@@ -66,27 +66,34 @@ const Popover: React.FC<PopoverProps> & {
       let left = triggerRect.left + offset;
       let top = triggerRect.bottom + offset;
 
-      // Check right edge overflow
-      if (left + contentRect.width > window.innerWidth) {
-        // Try to align with right edge of trigger
-        left = triggerRect.right - contentRect.width - offset;
+      // Mobile-specific positioning
+      if (window.innerWidth < 1000) {
+        // Force positioning for mobile - position from top-left
+        left = 10;
+        top = 80; // Position below navbar
+      } else {
+        // Check right edge overflow
+        if (left + contentRect.width > window.innerWidth) {
+          // Try to align with right edge of trigger
+          left = triggerRect.right - contentRect.width - offset;
 
-        // If still overflowing, align with window edge with small margin
-        if (left < 0) {
-          left = window.innerWidth - contentRect.width - 16;
+          // If still overflowing, align with window edge with small margin
+          if (left < 0) {
+            left = window.innerWidth - contentRect.width - 16;
+          }
         }
-      }
 
-      // Check left edge overflow
-      if (left < 0) {
-        left = 10; // Small margin from left edge
-      }
+        // Check left edge overflow
+        if (left < 0) {
+          left = 10; // Small margin from left edge
+        }
 
-      // Check bottom edge overflow
-      const bottomOverflow = top + contentRect.height > window.innerHeight;
-      if (bottomOverflow) {
-        // Position above the trigger
-        top = triggerRect.top - contentRect.height - offset;
+        // Check bottom edge overflow
+        const bottomOverflow = top + contentRect.height > window.innerHeight;
+        if (bottomOverflow) {
+          // Position above the trigger
+          top = triggerRect.top - contentRect.height - offset;
+        }
       }
 
       setPosition({ top, left });
@@ -215,6 +222,44 @@ const Content: React.FC<ContentProps> = ({ children, className }) => {
   }, [isOpen, contentRef]);
 
   if (!isOpen) return null;
+
+  // Mobile-specific rendering
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1000;
+  
+  if (isMobile) {
+    return (
+      <div
+        ref={contentRef}
+        id={popoverId}
+        style={{
+          position: 'fixed',
+          top: '80px',
+          left: '1rem',
+          right: '1rem',
+          zIndex: 9999,
+          background: 'var(--color-background-secondary)',
+          border: `1px solid var(--color-border-subtle)`,
+          borderRadius: '8px',
+          boxShadow: 'var(--elevation)',
+          maxHeight: 'calc(100vh - 120px)',
+          overflowY: 'auto',
+          opacity: 0,
+          transform: 'translateY(-10px) scale(0.95)',
+          animation: 'popoverSlideIn 0.3s ease-out forwards'
+        }}
+      >
+        <style>{`
+          @keyframes popoverSlideIn {
+            to {
+              opacity: 1;
+              transform: translateY(0) scale(1);
+            }
+          }
+        `}</style>
+        {children}
+      </div>
+    );
+  }
 
   return (
     <div

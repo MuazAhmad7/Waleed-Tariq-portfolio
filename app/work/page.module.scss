@@ -1,0 +1,178 @@
+// Work page animations and hover effects
+.experiencePage {
+  .experienceList {
+    .experienceItem {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      
+      &:hover {
+        transform: translateY(-2px);
+        
+        h4 {
+          color: #22c55e;
+          transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+      }
+    }
+  }
+
+  .keyAchievements {
+    .achievement {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      padding: 1rem;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
+        transition: left 0.5s ease;
+      }
+      
+      &:hover {
+        color: #22c55e;
+        transform: translateY(-4px) scale(1.02);
+        background: rgba(34, 197, 94, 0.05);
+        
+        &::before {
+          left: 100%;
+        }
+      }
+    }
+  }
+
+  .skillsSection {
+    .skillCategory {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: none !important;
+      
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: none !important;
+        
+        h4 {
+          color: #22c55e;
+          transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+      }
+      
+      ul {
+        li {
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          
+          &:hover {
+            color: #22c55e;
+            transform: translateX(4px);
+          }
+        }
+      }
+    }
+  }
+
+  .educationSection {
+    .educationItem {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      
+      &:hover {
+        transform: translateY(-2px);
+        
+        h4 {
+          color: #22c55e;
+          transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+      }
+    }
+  }
+
+  .leadershipSection {
+    .leadershipItem {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      
+      &:hover {
+        transform: translateY(-2px);
+        
+        h4 {
+          color: #22c55e;
+          transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+      }
+    }
+  }
+
+  .awardsSection {
+    .awardItem {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      
+      &:hover {
+        transform: translateY(-2px);
+        
+        h4 {
+          color: #22c55e;
+          transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+      }
+    }
+  }
+
+  // Fade in animation for sections
+  .fadeInSection {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // Stagger animation delays for list items
+  .experienceList li:nth-child(1) { animation-delay: 0.1s; }
+  .experienceList li:nth-child(2) { animation-delay: 0.2s; }
+  .experienceList li:nth-child(3) { animation-delay: 0.3s; }
+  .experienceList li:nth-child(4) { animation-delay: 0.4s; }
+  .experienceList li:nth-child(5) { animation-delay: 0.5s; }
+
+  // Responsive overrides for key achievements
+  .keyAchievements {
+    // Override the global three-up class for mobile
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr !important;
+      gap: 1rem !important;
+    }
+
+    // For tablets - use 2 columns
+    @media (min-width: 769px) and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 1.5rem !important;
+    }
+
+    // For desktop - keep 3 columns but ensure proper spacing
+    @media (min-width: 1025px) {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: var(--size-06) !important;
+    }
+  }
+}
+
+// Pulse animation for key achievements
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.pulseOnHover:hover {
+  animation: pulse 0.6s ease-in-out;
+} 

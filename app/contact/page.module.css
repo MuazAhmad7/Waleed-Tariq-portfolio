@@ -1,0 +1,247 @@
+.container {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: var(--color-background-primary);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 6rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-foreground-primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-nohemi);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--color-foreground-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Ensure the 5th card (scheduling) spans full width on larger screens */
+@media (min-width: 769px) {
+  .contactGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .contactCard:nth-child(5) {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.contactCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.contactCard:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  background: var(--color-foreground-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.contactCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-foreground-primary);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-nohemi);
+}
+
+.contactLink {
+  color: var(--color-foreground-accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contactLink:hover {
+  color: var(--color-foreground-primary);
+  text-decoration: underline;
+}
+
+.contactText {
+  color: var(--color-foreground-secondary);
+  margin: 0;
+}
+
+.schedulingSection {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  margin-bottom: 4rem;
+}
+
+.schedulingSection h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-foreground-primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-nohemi);
+}
+
+.schedulingSection p {
+  font-size: 1.125rem;
+  color: var(--color-foreground-secondary);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.calendlyWrapper {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1rem;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+.ctaSection {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.ctaSection h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-foreground-primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-nohemi);
+}
+
+.ctaSection p {
+  font-size: 1.125rem;
+  color: var(--color-foreground-secondary);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.primaryButton {
+  display: inline-block;
+  background: var(--color-foreground-accent);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .content {
+    padding-top: 4rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .contactCard {
+    padding: 1.5rem;
+  }
+  
+  .schedulingSection {
+    padding: 2rem 1.5rem;
+  }
+  
+  .schedulingSection h2 {
+    font-size: 1.75rem;
+  }
+  
+  .calendlyWrapper {
+    padding: 0.5rem;
+  }
+  
+  .ctaSection {
+    padding: 2rem 1.5rem;
+  }
+  
+  .ctaSection h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .contactCard {
+    padding: 1.25rem;
+  }
+  
+  .iconWrapper {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+} 

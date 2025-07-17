@@ -1,490 +1,342 @@
-import Link from 'next/link';
+import styles from './page.module.scss';
 
 export default function Page() {
   return (
-    <>
+    <div className={styles.experiencePage}>
       <section>
         <div className="content">
-          <h2>Highlighted Projects</h2>
+          <h2>Professional Experience</h2>
           <p>
-            These are just the favorites of some recent work. Full case studies
-            available on request.
+            A comprehensive overview of my professional journey, education, and key achievements in business analysis, project management, and strategic leadership.
           </p>
-          <Link href="/work/design-process">Design Process</Link>
         </div>
       </section>
-      <section data-print="true" className="projects content">
-        <ul className="experience">
-          <li>
+      
+      {/* Education Section */}
+      <section className={`content ${styles.educationSection} ${styles.fadeInSection}`}>
+        <h3>Education</h3>
+        <ul className={`experience ${styles.experienceList}`}>
+          <li className={`${styles.experienceItem} ${styles.educationItem}`}>
             <h3 className="dateYear">
-              <span>2025</span>
+              <span>Current</span>
             </h3>
             <h4>
-              Design System Analytics <span> at Verizon</span>
+              Harvard University <span>Cambridge, MA</span>
             </h4>
             <div className="content">
               <div>
                 <div>
-                  <h5>Role</h5>
+                  <h5>Program</h5>
                   <p>
-                    <strong>Design Technologist, UX Engineer</strong>
+                    <strong>Certification of Project Management & Information Technology</strong>
                   </p>
-                </div>
-              </div>
-              <h5>Outcomes</h5>
-              <div className="three-up">
-                <p>
-                  Detailed Key Performance Indicator (KPIs) Metrics for the
-                  Design System across the Product Organization
-                </p>
-                <p>
-                  Custom Data Visualization for Design System Analytics and
-                  Adoption across Design and Code
-                </p>
-                <p>
-                  Data Management portals for creating, updating, and deleting
-                  records
-                </p>
-              </div>
-              <p>
-                As a UX Engineer on my team, I was designated as the team lead
-                to guide the direction of our project. I worked with my team to
-                build a robust tool for data insights, tracking specific Key
-                Performance Indicators across our Design and Engineering orgs
-                through Figma, Gitlab, and other integrations. With my expertise
-                in the Figma and Design System space, I helped implement an API
-                layer to empower other tools our larger team built with the data
-                necessary to help improve the workflows of our team.
-              </p>
-              <p>
-                Once the data layer was set up, I created a custom website using
-                React that serves as an admin level portal to manage this data.
-                This custom analytics tool also serves as a central hub for our
-                product design organization&apos;s data. The tool enables rich
-                insights into the relationships between products, team
-                resourcing, design system adoption, and other metrics important
-                to our design leaders.
-              </p>
-              <p>
-                As a result, our team has been able to make more informed
-                decisions about the design system, and the design system has
-                been able to make more informed decisions about the products it
-                serves. This has led to a more cohesive design ecosystem, and a
-                more efficient design process.
-              </p>
-            </div>
-          </li>
-          <li>
-            <h3 className="dateYear">
-              <span>2024</span>
-            </h3>
-            <h4>
-              <Link href={'/work/iconography-sync'}>
-                Iconography Sync <span> at eBay</span>
-              </Link>
-            </h4>
-            <div className="content">
-              <div>
-                <div>
-                  <h5>Role</h5>
-                  <p>
-                    <strong>Lead Designer, Developer</strong>
-                  </p>
-                </div>
-              </div>
-              <h5>Outcomes</h5>
-              <div className="three-up">
-                <p>
-                  95% Time Reductionfrom finished design to code implementation
-                </p>
-                <p>
-                  100% reduction in naming, mismatching, and availability errors
-                  across codebases
-                </p>
-                <p>
-                  Proof of viability for more asset automation pipelines in our
-                  design system
-                </p>
-              </div>
-              <p>
-                I&apos;ve created a figma plugin for design system teams that
-                allows design and development to be closer in sync, allowing for
-                a fairly optimized and automated process for syncing our design
-                assets to our code assets through GitHub. Designers have control
-                over which of their designed assets gets output from the
-                tooling, developers have control over what gets checked into the
-                codebase, site, and packages.
-              </p>
-              <p>
-                Utilizing bidirectional sync with GitHub based on versioning,
-                design and development now have a dual turn key moment for
-                releasing new changes in things like iconography, design tokens,
-                and illustrations. Designers have the ability to see the status
-                of their work, and developers have visibility into what changes
-                are made instead of reaching blindly into the google folder to
-                grab all icons and hope that nothing breaks again
-              </p>
-              <p>
-                By bridging the gap between design and code here, our design
-                system team can now create, publish, and release new iconography
-                from Figma to the team&lsquo;s codebase the same day. Much
-                better than the 6-8 week turnaround due to meetings, backlogging
-                tickets, and working around release schedules.
-              </p>
-              <p>
-                From the push of a button, and the approving pull request of a
-                developer, our Figma library, our Web, Android, and iOS
-                libraries, and our documentation site are all updated at the
-                same time.
-              </p>
-            </div>
-          </li>
-          <li>
-            <h3 className="dateYear">
-              <span>2023</span>
-            </h3>
-            <h4>
-              <Link href={'/work/definition-of-done'}>
-                Designer&lsquo;s Definition of Done<span> at eBay</span>
-              </Link>
-            </h4>
-            <div className="content">
-              <div>
-                <div>
-                  <h5>Role</h5>
-                  <p>
-                    <strong>Co-Designer, Co-Developer</strong>
-                  </p>
-                </div>
-              </div>
-              <h5>Outcomes</h5>
-              <div className="three-up">
-                <p>
-                  Standardized the process for preparing design work, creating
-                  more efficient collaboration between design and development
-                  teams.
-                </p>
-                <p>
-                  A large reduction in bug reports from edge cases being covered
-                  during design and improved communication processes.
-                </p>
-                <p>
-                  Standardized onboarding with new designers getting from
-                  &ldquo;Zero-To-One&rdquo; quickly ensuring consistency by
-                  adhering to org standards
-                </p>
-              </div>
-              <p>
-                Me and my coworker
-                <Link href={'https://www.catalinamanea.com/'} target="_blank">
-                  {' '}
-                  Catalina Manea{' '}
-                </Link>
-                interviewed over 40 designers, 30 developers,and 11 project
-                managers to understand the current landscape of design handoff
-                and design/developer collaboration. We worked with them to
-                identify strong key points along our product process that were
-                critically broken, requiring some form of intervention and
-                reeducation to fix.
-              </p>
-              <p>
-                Together, we set out to bring these pain points directly to the
-                teams they partner with, like accessibility, content designers,
-                development leads, the design system team. We worked with these
-                teams to develop a list of key things they require when
-                interfacing with them cross collaboratively.
-              </p>
-              <p>
-                Using this list, I and one other developer used this list to
-                create a custom &ldquo;<strong>Definitiion of Done</strong>
-                &rdquo; interactive Figma widget to be used as a companion that
-                helps designers build good habits and file hygeine before
-                interfacing with their partners during the product design
-                lifecycle.
-              </p>
-              <p>
-                This tool helps build a standard of things we expect from our
-                senior level designers, and helps teams build consistent habits
-                across the organization.
-              </p>
-              <p>
-                Teams involved in our pilots have had a large reduction in bugs,
-                and more efficient design handoff as opposed to teams outside
-                the pilot
-              </p>
-            </div>
-          </li>
-          <li>
-            <h3 className="dateYear">
-              <span>2022</span>
-            </h3>
-            <h4>
-              Figma library sync<span> at Nike</span>
-            </h4>
-            <div className="content">
-              <div>
-                <div>
-                  <h5>Role</h5>
-                  <p>
-                    <strong>Lead Designer, Developer</strong>
-                  </p>
-                </div>
-              </div>
-              <h5>Outcomes</h5>
-              <div className="three-up">
-                <p>
-                  A solid pre-variables workflow for connecting underlying
-                  design tokens across multiple libraries.
-                </p>
-                <p>
-                  Enabled control over the scope and amount of design tokens
-                  imported, creating flexibility while still adhering to
-                  standards.
-                </p>
-                <p>
-                  Synchronized updates across multiple libraries, reducing
-                  manual management of individual design tokens.
-                </p>
-              </div>
-              <p>
-                For our Nike foundations design system library, I created a
-                figma plugin that takes the design tokens that are defined in
-                one figma library and hoists them into other design system
-                libraries managed by the different arms of our organizations.
-                These libraries consume the base tokens in both design and code,
-                while making sure their output from the organization level
-                (enterprise, consumer, and marketing) allow their teams to best
-                optimize their design system tokens and component libraries for
-                their needs.
-              </p>
-              <p>
-                This work allows for smartly checking for changes, deprecations,
-                and updating referenced tokens in the library, a feature that
-                figma severely lacked during this phase of their product.
-              </p>
-              <p>
-                This tool augments the work we did for the foundations library,
-                and helps keep design and development a lot closer together in
-                code.
-              </p>
-            </div>
-          </li>
-          <li>
-            <h3 className="dateYear">
-              <span>2022</span>
-            </h3>
-            <h4>
-              Podium Foundations Library<span> at Nike</span>
-            </h4>
-            <div className="content">
-              <div>
-                <div>
-                  <h5>Role</h5>
-                  <p>
-                    <strong>Workshop Co-lead, Strategist, Co-developer</strong>
-                  </p>
+                  <p><em>Currently Enrolled</em></p>
                 </div>
               </div>
               <p>
-                In late 2021, the Consumer, Marketing, and Enterprise leaders
-                got together to figure out how to work towards an even tighter
-                collaboration on design across our orgs. The result led to me
-                and my lead developer on the enterprise design system to co-lead
-                the effort with leads from each org to design a foundational
-                library that feeds all three org-focused design systems.
-              </p>
-              <p>
-                To pull redundancy of designing the design tokens, base
-                components, and overall codebases, I helped architect and build
-                several internal tools that take the existing properties of
-                Figma libraries, branching, GitHub, and the Figma plugin system
-                and created custom tooling that outputs and links our
-                foundational figma library to GitHub for our developers, and
-                links the foundational library to other figma libraries.
-              </p>
-              <p>
-                This connection allows us to change underlying tokens in a turn
-                key moment between design and development to ensure the updates
-                to code and design can happen simultaneously with the correct
-                values and little lag time.
-              </p>
-              <p>
-                Through this, I helped facilitate intense design system
-                workshops, build incredible tooling, and solve a long standing
-                problem in large corporate design systems
+                Advanced certification program focusing on strategic project management methodologies, IT infrastructure, and digital transformation leadership. Curriculum includes Agile/Scrum frameworks, risk management, and emerging technology integration.
               </p>
             </div>
           </li>
-          <li>
+          <li className={`${styles.experienceItem} ${styles.educationItem}`}>
             <h3 className="dateYear">
               <span>2021</span>
             </h3>
             <h4>
-              <div>
-                <a
-                  href="http://Nike.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-hover="true"
-                >
-                  Podium Enterprise Design System<span> at Nike </span>
-                </a>
-              </div>
+              Rutgers University <span>New Brunswick, NJ</span>
             </h4>
             <div className="content">
               <div>
                 <div>
-                  <h5>Role</h5>
+                  <h5>Degree</h5>
                   <p>
-                    <strong>Lead Designer </strong>
+                    <strong>Bachelor of Science in Biology & Business/Health Administration</strong>
                   </p>
                 </div>
               </div>
               <p>
-                I worked for 18 months designing and building the enterprise
-                branch of the Nike design system. Prior to me joining, Nike had
-                several micro design systems focused on internal tools built by
-                various teams because the current system did not support their
-                use case. During the transition to a new internal design
-                organization called Technical Product Experience Design(TPxD),
-                myself and several other designers brought several changes to
-                the way Nike designs for internal experiences.
-              </p>
-              <p>
-                Here I focused on creating a unified style that honors the
-                consumer design library, yet crafts components and layouts for
-                dense data, analytics, and form inputs. The system was served to
-                several hundred teams and has garnered a high adoption rate
-                across the org.
-              </p>
-            </div>
-          </li>
-          <li>
-            <h3 className="dateYear">
-              <span>2020</span>
-            </h3>
-            <h4>
-              Branding and Product design<span> at Common Room</span>
-            </h4>
-            <div className="content">
-              <div>
-                <div>
-                  <h5>Role</h5>
-                  <p>
-                    <strong>Lead Designer </strong>
-                  </p>
-                </div>
-              </div>
-              <p>
-                I was one of the first designers contracted with their team. It
-                was a pre launch product gaining traction with early investors
-                and together with the engineering, design, and product leads,
-                put together a product outline for what they were pitching to
-                our investors.
-              </p>
-              <p>
-                In this work, I had a lot of roles. I co designed the early
-                product interface, while owning more of the systems level
-                thinking. I led branding and identity workshops with our team,
-                which then expanded into design systems, figma organization
-                management, documentation, user experience process templates and
-                docs, and building our library of assets to help accelerate our
-                product design.
-              </p>
-            </div>
-          </li>
-          <li>
-            <h3 className="dateYear">
-              <span>2020</span>
-            </h3>
-            <h4>
-              Sustainability Cloud<span> at Salesforce</span>
-            </h4>
-            <div className="content">
-              <div>
-                <div>
-                  <h5>Role</h5>
-                  <p>
-                    <strong>UX Designer, UX Researcher </strong>
-                  </p>
-                </div>
-              </div>
-              <p>
-                I worked on the Salesforce Sustainabilitu Cloud which functions
-                as a carbon emissions tracker, analytics, and data reporting
-                tool for companies focused on improving the emissions of their
-                buildings and supply chain. This tool was enterprise focused and
-                heavily relied on the ability to intelligently connect high
-                quantities of data with related, relevant, and statistically
-                interesting datapoints across a companies current organizational
-                landscape.
-              </p>
-              <p>
-                The tooling required improvements in their overarching user
-                experience, onboarding and setup flows, and data uploading and
-                display interfaces. Together with my development team, we
-                explored custom components designed and developed within our
-                design system guidelines, integrations with Artificial
-                intelligence, analytics, and the reporting features of the
-                Salesforce system.
-              </p>
-              <p>
-                The work here helped push the product to launch ready, allowing
-                Salesforce to open the tooling up for their broader customer
-                list
-              </p>
-            </div>
-          </li>
-          <li>
-            <h3 className="dateYear">
-              <span>2019</span>
-            </h3>
-            <h4>
-              The New Microsoft Edge Browser<span> at Microsoft</span>
-            </h4>
-            <div className="content">
-              <div>
-                <div>
-                  <h5>Role</h5>
-                  <p>
-                    <strong>UX Designer, UX Researcher </strong>
-                  </p>
-                </div>
-              </div>
-              <p>
-                My work with Edge was a mixture of branding, product design, and
-                design process refinement. I had been onboarded to a pre launch
-                product team that was focused on designing, iterating, and
-                innovating experiences with our browser that set us apart from
-                any chromium based browser. Microsoft had asked me to come in
-                from my work with applying branding to digital products to help
-                with features within edge on both the consumer and development
-                personas.
-              </p>
-              <p>
-                I had several features I worked on with groupings of other
-                designers on the team. Collections, a quick save tool that
-                augments searching and saving web content for better
-                organization, categorization, decision making, and storing.
-              </p>
-              <p>
-                After we were getting close to launch, I shifted focus to the
-                development side of the platform to help improve the usability,
-                accessibility, and features for our devtools developer tool. I
-                focused on uniquely propositioned features such as intelligent
-                font debugging, layers and z-index inspection from a 3d
-                perspective, and creating a micro design system in figma for the
-                developer tools.
-              </p>
-              <p>
-                This work helped grow out features that differentiate our
-                product so when it launched it could garner interest and gain
-                momentum for use as Microsoft transitioned to windows 12
+                Dual-concentration program combining scientific rigor with business acumen, specializing in healthcare administration and strategic management. Graduated with honors while serving as Head Captain of NCAA Division I Badminton team.
               </p>
             </div>
           </li>
         </ul>
       </section>
-    </>
+
+      {/* Professional Experience Section */}
+      <section data-print="true" className={`projects content ${styles.fadeInSection}`}>
+        <h3>Professional Experience</h3>
+        <ul className={`experience ${styles.experienceList}`}>
+          <li className={styles.experienceItem}>
+            <h3 className="dateYear">
+              <span>2024-2025</span>
+            </h3>
+            <h4>
+              Quest Diagnostics <span>New York, NY</span>
+            </h4>
+            <div className="content">
+              <div>
+                <div>
+                  <h5>Role</h5>
+                  <p>
+                    <strong>Senior Financial Analyst, Strategic Pricing (Contract)</strong>
+                  </p>
+                  <p><em>December 2024 - March 2025</em></p>
+                </div>
+              </div>
+              <h5>Key Achievements</h5>
+              <div className={`three-up ${styles.keyAchievements}`}>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Spearheaded pricing optimization for a $3.5B+ healthcare service portfolio, improving gross margin by 18%
+                </p>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Automated financial data pipelines via ETL integrations, reducing reporting turnaround by 81%
+                </p>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Enhanced Power BI dashboard performance, increasing user engagement by 40%
+                </p>
+              </div>
+              <p>
+                Led pricing optimization initiatives for a multi-billion dollar healthcare service portfolio, leveraging SQL and SAP S/4HANA to build sophisticated multi-scenario financial models. Collaborated cross-functionally with Product, Legal, and Go-to-Market teams to align payor contract strategy with alternative reimbursement models and value-based care metrics.
+              </p>
+              <p>
+                Identified and resolved backend processing bottlenecks in Power BI dashboards that were causing significant delays in analytics requests. Implemented SAP and ETL automation solutions to streamline data pipelines, dramatically reducing turnaround times and improving user experience across the organization.
+              </p>
+            </div>
+          </li>
+          <li className={styles.experienceItem}>
+            <h3 className="dateYear">
+              <span>2023-2024</span>
+            </h3>
+            <h4>
+              Prudential Financial <span>Newark, NJ</span>
+            </h4>
+            <div className="content">
+              <div>
+                <div>
+                  <h5>Role</h5>
+                  <p>
+                    <strong>Project Manager</strong>
+                  </p>
+                  <p><em>February 2023 - April 2024</em></p>
+                </div>
+              </div>
+              <h5>Key Achievements</h5>
+              <div className={`three-up ${styles.keyAchievements}`}>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Directed strategic initiatives across enterprise IT portfolio supporting 250+ internal clients
+                </p>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Implemented compliance automation via SAP GRC, reducing manual updates by 35%
+                </p>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Applied operational analytics to optimize annual IT investment planning and eliminate redundant workflows
+                </p>
+              </div>
+              <p>
+                Led strategic initiatives across enterprise IT portfolio using SAP PPM and Azure DevOps, providing comprehensive project management support for over 250 internal clients. Focused on aligning IT strategy with business objectives through data-driven decision making and process optimization.
+              </p>
+              <p>
+                Implemented compliance automation solutions via SAP GRC to improve audit-readiness and streamline policy management. Successfully reduced manual updates in TRID policies by 35%, significantly improving operational efficiency and reducing compliance risk.
+              </p>
+              <p>
+                Applied operational analytics to identify inefficiencies in annual IT investment planning processes. Developed strategic recommendations that eliminated redundant workflows and better aligned technology investments with organizational priorities.
+              </p>
+            </div>
+          </li>
+          <li className={styles.experienceItem}>
+            <h3 className="dateYear">
+              <span>2021-2023</span>
+            </h3>
+            <h4>
+              United Health Group <span>San Antonio, TX</span>
+            </h4>
+            <div className="content">
+              <div>
+                <div>
+                  <h5>Role</h5>
+                  <p>
+                    <strong>Business Process/Strategy Analyst</strong>
+                  </p>
+                  <p><em>June 2021 - February 2023</em></p>
+                </div>
+              </div>
+              <h5>Key Achievements</h5>
+              <div className={`three-up ${styles.keyAchievements}`}>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Developed custom financial forecasting model in SAP S/HANA, improving forecasting precision by 25%
+                </p>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Embedded with operations and actuarial teams to identify and eliminate operational bottlenecks
+                </p>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Utilized SAP Signavio Process Intelligence to optimize workflows and reduce redundancies
+                </p>
+              </div>
+              <p>
+                Developed a custom financial forecasting model in SAP S/HANA to address systemic inaccuracies in revenue projections, significantly improving forecasting precision and supporting better business decision-making across the organization.
+              </p>
+              <p>
+                Embedded directly with operations and actuarial teams to conduct comprehensive analysis of existing workflows and processes. Identified critical operational bottlenecks and developed strategic recommendations to eliminate redundancies and improve efficiency.
+              </p>
+              <p>
+                Leveraged SAP Signavio Process Intelligence to map, analyze, and optimize business processes, resulting in streamlined operations and reduced operational costs across multiple business units.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      {/* Leadership Experience Section */}
+      <section className={`content ${styles.leadershipSection} ${styles.fadeInSection}`}>
+        <h3>Leadership Experience</h3>
+        <ul className={`experience ${styles.experienceList}`}>
+          <li className={`${styles.experienceItem} ${styles.leadershipItem}`}>
+            <h3 className="dateYear">
+              <span>2025-Present</span>
+            </h3>
+            <h4>
+              Game Grid <span>Lewes, DE</span>
+            </h4>
+            <div className="content">
+              <div>
+                <div>
+                  <h5>Role</h5>
+                  <p>
+                    <strong>Co-Founder & Managing Director</strong>
+                  </p>
+                  <p><em>February 2025 - Present</em></p>
+                </div>
+              </div>
+              <h5>Key Achievements</h5>
+              <div className={`three-up ${styles.keyAchievements}`}>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Launched sports-tech startup with API-first stat-tracking and scheduling engine for amateur leagues
+                </p>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Grew to 150+ active users in under one year using Firebase, SQL, and role-based admin controls
+                </p>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Designed MVP stat-tracking system enabling real-time data input across 16 basketball teams
+                </p>
+              </div>
+              <p>
+                Co-founded and launched Game Grid, a comprehensive sports-tech startup providing API-first stat-tracking and scheduling solutions for amateur leagues. Built the platform using modern technologies including Firebase and SQL with sophisticated role-based admin controls.
+              </p>
+              <p>
+                Led UX strategy development for a gamified "My Player" system featuring dynamic dashboards, comprehensive player KPIs, and detailed matchup history to enhance user engagement and retention.
+              </p>
+              <p>
+                Designed and launched GameGrid's MVP stat-tracking system from the ground up, enabling real-time data input, live score updates, and automated team/player analytics, successfully serving 16 basketball teams with seamless performance.
+              </p>
+            </div>
+          </li>
+          <li className={`${styles.experienceItem} ${styles.leadershipItem}`}>
+            <h3 className="dateYear">
+              <span>2017-2021</span>
+            </h3>
+            <h4>
+              <span style={{ whiteSpace: 'nowrap' }}>NCAA Division I</span> Badminton, Rutgers University <span>New Brunswick, NJ</span>
+            </h4>
+            <div className="content">
+              <div>
+                <div>
+                  <h5>Role</h5>
+                  <p>
+                    <strong>Head Captain</strong>
+                  </p>
+                  <p><em>September 2017 - June 2021</em></p>
+                </div>
+              </div>
+              <h5>Key Achievements</h5>
+              <div className={`three-up ${styles.keyAchievements}`}>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Led Rutgers to Historic 1st ever Top 3 Placement at National Tournaments
+                </p>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Silver Medal: 2019 National Division I Eastern Collegiate Tournament
+                </p>
+                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
+                  Trained a team of 18 players with 5am sessions, endurance conditioning, and team rapport building
+                </p>
+              </div>
+              <p>
+                Served as Head Captain for Rutgers University's NCAA Division I Badminton team, leading the program to unprecedented success including their first-ever Top 3 placement at National Tournaments.
+              </p>
+              <p>
+                Achieved historic Silver Medal at the 2019 National Division I Eastern Collegiate Tournament, marking a significant milestone in the program's competitive history and establishing new standards of excellence.
+              </p>
+              <p>
+                Developed and implemented comprehensive training programs for 18 team members, including rigorous 5am training sessions, specialized endurance conditioning, and team-building initiatives that built resilience and fostered strong team rapport.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      {/* Skills Section */}
+      <section className={`content ${styles.skillsSection} ${styles.fadeInSection}`}>
+        <h3>Skills</h3>
+        <div className="three-up">
+          <div className={styles.skillCategory}>
+            <h4>Data Analysis & Visualization</h4>
+            <ul>
+              <li>Excel (Advanced: Pivot Tables, VLOOKUP, Macros)</li>
+              <li>Power BI & Tableau</li>
+              <li>Microsoft Access</li>
+              <li>SAP S/4HANA</li>
+            </ul>
+          </div>
+          <div className={styles.skillCategory}>
+            <h4>Programming & Software</h4>
+            <ul>
+              <li>Java, Python, SQL</li>
+              <li>Salesforce, Jira, Git, Bitbucket</li>
+              <li>UML, Apache Maven</li>
+              <li>Epic Systems</li>
+            </ul>
+          </div>
+          <div className={styles.skillCategory}>
+            <h4>Languages</h4>
+            <ul>
+              <li><strong>Fluent:</strong> English, Urdu</li>
+              <li><strong>Proficient:</strong> Arabic, French, Spanish</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Awards Section */}
+      <section className={`content ${styles.awardsSection} ${styles.fadeInSection}`}>
+        <h3>Awards & Recognition</h3>
+        <ul className={`experience ${styles.experienceList}`}>
+          <li className={`${styles.experienceItem} ${styles.awardItem}`}>
+            <h3 className="dateYear">
+              <span>2021</span>
+            </h3>
+            <h4>
+              Top 5 UnitedHealth Group Central Regional Analyst
+            </h4>
+            <div className="content">
+              <p>
+                Recognized as one of the top 5 performing analysts in the Central Regional division for exceptional performance in business analysis, strategic insights, and operational excellence.
+              </p>
+            </div>
+          </li>
+          <li className={`${styles.experienceItem} ${styles.awardItem}`}>
+            <h3 className="dateYear">
+              <span>2019-2021</span>
+            </h3>
+            <h4>
+              Rutgers University Athlete of The Year
+            </h4>
+            <div className="content">
+              <p>
+                Awarded Rutgers University Athlete of The Year for outstanding athletic performance, leadership, and contribution to the university's sports programs during tenure as Head Captain of the NCAA Division I Badminton team.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
   );
 }

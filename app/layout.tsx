@@ -4,6 +4,7 @@ import { ViewTransitions } from 'next-view-transitions';
 import './globals.scss';
 import './waleed-theme.scss';
 import { SVGSprites } from './SVGSprites/SVGSprites';
+import Template from './template';
 // If loading a variable font, you don't need to specify the font weight
 const nohemi = localFont({
   src: '../public/fonts/Nohemi-VF.ttf',
@@ -52,13 +53,7 @@ export default async function RootLayout({
       <html lang="en" className={`${inter.variable} ${nohemi.variable}`}>
         <body>
           <SVGSprites />
-          {children}
-          <script
-            async
-            src="https://kit.fontawesome.com/cf8a647076.js"
-            crossOrigin="anonymous"
-          ></script>
-
+          <Template>{children}</Template>
           <Analytics />
         </body>
       </html>

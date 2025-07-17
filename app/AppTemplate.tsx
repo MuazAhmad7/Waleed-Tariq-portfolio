@@ -78,15 +78,18 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
     };
   }, []);
 
-  useGSAP(() => {
-    gsap.to(ref.current, {
-      opacity: 1,
-      y: 0,
-      filter: 'blur(0px)',
-      duration: 0.5,
-      ease: 'power2.inOut',
-    });
-  }, []);
+  // Temporarily disabled GSAP animation to fix navbar duplication
+  // useGSAP(() => {
+  //   if (ref.current) {
+  //     gsap.to(ref.current, {
+  //       opacity: 1,
+  //       y: 0,
+  //       filter: 'blur(0px)',
+  //       duration: 0.5,
+  //       ease: 'power2.inOut',
+  //     });
+  //   }
+  // }, []);
 
   return (
     <ReducedMotionProvider>

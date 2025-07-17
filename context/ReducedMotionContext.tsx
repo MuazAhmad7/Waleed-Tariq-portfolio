@@ -29,13 +29,16 @@ const checkMediaPreference = () => {
 export const ReducedMotionProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [prefersReducedMotion, setPrefersReducedMotionState] = useState(
-    checkMediaPreference()
-  );
+  const [prefersReducedMotion, setPrefersReducedMotionState] = useState(false);
 
   const setPrefersReducedMotion = useCallback((value: boolean) => {
     localStorage.setItem('reduce-motion', String(value));
     setPrefersReducedMotionState(value);
+  }, []);
+
+  // Set initial value after hydration to avoid SSR mismatch
+  useEffect(() => {
+    setPrefersReducedMotionState(checkMediaPreference());
   }, []);
 
   useEffect(() => {

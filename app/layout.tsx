@@ -1,10 +1,9 @@
 import { Analytics } from '@vercel/analytics/react';
 import localFont from 'next/font/local';
-import { ViewTransitions } from 'next-view-transitions';
 import './globals.scss';
 import './waleed-theme.scss';
 import { SVGSprites } from './SVGSprites/SVGSprites';
-import Template from './template';
+import Template from './AppTemplate';
 // If loading a variable font, you don't need to specify the font weight
 const nohemi = localFont({
   src: '../public/fonts/Nohemi-VF.ttf',
@@ -49,14 +48,12 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en" className={`${inter.variable} ${nohemi.variable}`}>
-        <body>
-          <SVGSprites />
-          <Template>{children}</Template>
-          <Analytics />
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="en" className={`${inter.variable} ${nohemi.variable}`}>
+      <body>
+        <SVGSprites />
+        <Template>{children}</Template>
+        <Analytics />
+      </body>
+    </html>
   );
 }

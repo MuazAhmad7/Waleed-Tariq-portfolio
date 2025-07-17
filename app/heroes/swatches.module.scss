@@ -47,7 +47,9 @@
 /* Enhanced hover effect for image swatches */
 .imageSwatchHover {
   cursor: pointer;
-  transition: transform 0.3s ease-out, filter 0.3s ease-out;
+  transition:
+    transform 0.3s ease-out,
+    filter 0.3s ease-out;
 }
 
 .imageSwatchHover:not(.centered) {
@@ -198,7 +200,7 @@
   color: var(--color-foreground-primary);
   margin-bottom: 1rem;
   line-height: 1.6;
-  
+
   strong {
     color: var(--color-foreground-accent);
     font-weight: 600;
@@ -221,26 +223,26 @@
   .colorSwatchContainer {
     gap: 3rem;
   }
-  
+
   .waveTextSection {
     max-width: 95%;
     padding-bottom: 1rem;
   }
-  
+
   .textContent {
     padding: 1rem;
   }
-  
+
   .leagueTitle {
     font-size: var(--heading-06);
     margin-bottom: 0.75rem;
   }
-  
+
   .leagueDescription {
     font-size: var(--body-03);
     margin-bottom: 0.75rem;
   }
-  
+
   .leagueQuote {
     font-size: var(--caption-01);
   }

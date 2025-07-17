@@ -23,13 +23,13 @@ export const ImageSwatch: React.FC<ImageSwatchProps> = ({
   const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     e.preventDefault();
-    
+
     // Set this image as the overlay image
     setOverlayImage(imageSrc);
   };
 
   return (
-    <div 
+    <div
       className={`${Style.isometricContainer} ${Style.imageSwatchHover}`}
       onClick={handleClick}
     >
@@ -63,4 +63,4 @@ export const ImageSwatch: React.FC<ImageSwatchProps> = ({
       </svg>
     </div>
   );
-}; 
+};

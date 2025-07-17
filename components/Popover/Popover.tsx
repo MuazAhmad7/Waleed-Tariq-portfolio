@@ -225,7 +225,7 @@ const Content: React.FC<ContentProps> = ({ children, className }) => {
 
   // Mobile-specific rendering
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 1000;
-  
+
   if (isMobile) {
     return (
       <div
@@ -245,7 +245,7 @@ const Content: React.FC<ContentProps> = ({ children, className }) => {
           overflowY: 'auto',
           opacity: 0,
           transform: 'translateY(-10px) scale(0.95)',
-          animation: 'popoverSlideIn 0.3s ease-out forwards'
+          animation: 'popoverSlideIn 0.3s ease-out forwards',
         }}
       >
         <style>{`

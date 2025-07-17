@@ -3,10 +3,10 @@
   .experienceList {
     .experienceItem {
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      
+
       &:hover {
         transform: translateY(-2px);
-        
+
         h4 {
           color: #22c55e;
           transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -23,7 +23,7 @@
       border-radius: 8px;
       position: relative;
       overflow: hidden;
-      
+
       &::before {
         content: '';
         position: absolute;
@@ -31,15 +31,20 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(34, 197, 94, 0.1),
+          transparent
+        );
         transition: left 0.5s ease;
       }
-      
+
       &:hover {
         color: #22c55e;
         transform: translateY(-4px) scale(1.02);
         background: rgba(34, 197, 94, 0.05);
-        
+
         &::before {
           left: 100%;
         }
@@ -51,21 +56,21 @@
     .skillCategory {
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       box-shadow: none !important;
-      
+
       &:hover {
         transform: translateY(-3px);
         box-shadow: none !important;
-        
+
         h4 {
           color: #22c55e;
           transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
       }
-      
+
       ul {
         li {
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          
+
           &:hover {
             color: #22c55e;
             transform: translateX(4px);
@@ -78,10 +83,10 @@
   .educationSection {
     .educationItem {
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      
+
       &:hover {
         transform: translateY(-2px);
-        
+
         h4 {
           color: #22c55e;
           transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -93,10 +98,10 @@
   .leadershipSection {
     .leadershipItem {
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      
+
       &:hover {
         transform: translateY(-2px);
-        
+
         h4 {
           color: #22c55e;
           transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -108,10 +113,10 @@
   .awardsSection {
     .awardItem {
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      
+
       &:hover {
         transform: translateY(-2px);
-        
+
         h4 {
           color: #22c55e;
           transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -135,11 +140,21 @@
   }
 
   // Stagger animation delays for list items
-  .experienceList li:nth-child(1) { animation-delay: 0.1s; }
-  .experienceList li:nth-child(2) { animation-delay: 0.2s; }
-  .experienceList li:nth-child(3) { animation-delay: 0.3s; }
-  .experienceList li:nth-child(4) { animation-delay: 0.4s; }
-  .experienceList li:nth-child(5) { animation-delay: 0.5s; }
+  .experienceList li:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .experienceList li:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .experienceList li:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .experienceList li:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .experienceList li:nth-child(5) {
+    animation-delay: 0.5s;
+  }
 
   // Responsive overrides for key achievements
   .keyAchievements {
@@ -165,7 +180,8 @@
 
 // Pulse animation for key achievements
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -175,4 +191,4 @@
 
 .pulseOnHover:hover {
   animation: pulse 0.6s ease-in-out;
-} 
+}

@@ -21,15 +21,14 @@
 }
 
 .box .logo {
-  max-height: 180px;  /* Increased from 150px */
+  max-height: 180px; /* Increased from 150px */
 }
 
 /* Make specific logos bigger - target by use href */
-.logo use[href="#gamegrid"] {
+.logo use[href='#gamegrid'] {
   transform: scale(1.5); /* 300px / 180px = 1.67 scale factor */
   transform-origin: center;
 }
-
 
 /* United Health Group logo - no filters needed with new logo */
 
@@ -52,11 +51,11 @@
   }
 
   .box .logo {
-    max-height: 100px;  /* Increased from 80px */
+    max-height: 100px; /* Increased from 80px */
   }
 
   /* Make specific logos bigger on mobile too */
-  .logo use[href="#gamegrid"] {
+  .logo use[href='#gamegrid'] {
     transform: scale(1.2); /* 150px / 100px = 1.5 scale factor */
     transform-origin: center;
   }

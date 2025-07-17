@@ -43,7 +43,7 @@
   .contactGrid {
     grid-template-columns: repeat(4, 1fr);
   }
-  
+
   .contactCard:nth-child(5) {
     grid-column: 1 / -1;
     max-width: 600px;
@@ -187,40 +187,40 @@
   .content {
     padding-top: 4rem;
   }
-  
+
   .title {
     font-size: 2.5rem;
   }
-  
+
   .subtitle {
     font-size: 1.125rem;
   }
-  
+
   .contactGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .contactCard {
     padding: 1.5rem;
   }
-  
+
   .schedulingSection {
     padding: 2rem 1.5rem;
   }
-  
+
   .schedulingSection h2 {
     font-size: 1.75rem;
   }
-  
+
   .calendlyWrapper {
     padding: 0.5rem;
   }
-  
+
   .ctaSection {
     padding: 2rem 1.5rem;
   }
-  
+
   .ctaSection h2 {
     font-size: 1.75rem;
   }
@@ -230,18 +230,18 @@
   .container {
     padding: 1rem 0.5rem;
   }
-  
+
   .title {
     font-size: 2rem;
   }
-  
+
   .contactCard {
     padding: 1.25rem;
   }
-  
+
   .iconWrapper {
     width: 50px;
     height: 50px;
     font-size: 1.25rem;
   }
-} 
+}

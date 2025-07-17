@@ -68,27 +68,27 @@
   .nav .navLinks li:not(:last-child) {
     display: none;
   }
-  
+
   .nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .logoContainer {
     order: 2;
   }
-  
+
   .navLinks {
     order: 1;
     justify-content: flex-start;
   }
-  
+
   /* Ensure burger menu content is visible on mobile */
   .navContainer {
     overflow: visible;
   }
-  
+
   /* Make sure burger menu button is visible and clickable on mobile */
   .navLinks li:last-child {
     display: block !important;

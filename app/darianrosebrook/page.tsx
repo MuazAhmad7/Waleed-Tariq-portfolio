@@ -65,12 +65,13 @@ export default async function Page() {
     const description = (
       <>
         <p className={styles.description}>
-                  I&apos;m Waleed Tariq, a Senior Financial Analyst with a
-        background in healthcare finance, strategic pricing, and data analytics
-        across some of the world&apos;s largest healthcare organizations
-                  ecosystems. My work focuses on optimizing financial operations and pricing strategies—developing
-        analytical frameworks, cost-benefit models, and data-driven
-          solutions that enhance operational efficiency, cost management, and strategic decision-making.
+          I&apos;m Waleed Tariq, a Senior Financial Analyst with a background in
+          healthcare finance, strategic pricing, and data analytics across some
+          of the world&apos;s largest healthcare organizations ecosystems. My
+          work focuses on optimizing financial operations and pricing
+          strategies—developing analytical frameworks, cost-benefit models, and
+          data-driven solutions that enhance operational efficiency, cost
+          management, and strategic decision-making.
         </p>
         <p className={styles.description}>
           I&apos;ve led high-impact initiatives at companies like Microsoft,
@@ -141,7 +142,7 @@ export default async function Page() {
 
     return (
       <main className={styles.errorContainer}>
-                  <h1>Waleed Tariq</h1>
+        <h1>Waleed Tariq</h1>
         <p>Unable to load Bluesky profile. Please try again later.</p>
       </main>
     );

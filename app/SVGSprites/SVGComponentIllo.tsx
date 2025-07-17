@@ -12,7 +12,7 @@ export const SVGComponentIllo = (
         x="1"
         y="1"
       />
-      
+
       {/* Title Bar */}
       <rect
         x="1"
@@ -22,20 +22,55 @@ export const SVGComponentIllo = (
         fill="var(--color-background-secondary)"
         rx="8"
       />
-      
+
       {/* Window Controls */}
       <circle cx="18" cy="16" r="5" fill="#FF5F57" />
       <circle cx="38" cy="16" r="5" fill="#FFBD2E" />
       <circle cx="58" cy="16" r="5" fill="#28CA42" />
-      
+
       {/* File Tabs */}
-      <rect x="80" y="6" width="70" height="18" fill="var(--color-background-primary)" rx="3" />
-      <rect x="85" y="10" width="60" height="6" fill="var(--color-foreground-primary)" rx="2" />
-      <rect x="85" y="18" width="20" height="3" fill="var(--color-foreground-tertiary)" rx="1" />
-      
-      <rect x="155" y="6" width="70" height="18" fill="var(--color-background-tertiary)" rx="3" />
-      <rect x="160" y="10" width="55" height="6" fill="var(--color-foreground-secondary)" rx="2" />
-      
+      <rect
+        x="80"
+        y="6"
+        width="70"
+        height="18"
+        fill="var(--color-background-primary)"
+        rx="3"
+      />
+      <rect
+        x="85"
+        y="10"
+        width="60"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="2"
+      />
+      <rect
+        x="85"
+        y="18"
+        width="20"
+        height="3"
+        fill="var(--color-foreground-tertiary)"
+        rx="1"
+      />
+
+      <rect
+        x="155"
+        y="6"
+        width="70"
+        height="18"
+        fill="var(--color-background-tertiary)"
+        rx="3"
+      />
+      <rect
+        x="160"
+        y="10"
+        width="55"
+        height="6"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+
       {/* Line Numbers Column */}
       <rect
         x="12"
@@ -44,53 +79,250 @@ export const SVGComponentIllo = (
         height="135"
         fill="var(--color-background-tertiary)"
       />
-      
+
       {/* Line Numbers */}
-      <text x="20" y="50" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">1</text>
-      <text x="20" y="62" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">2</text>
-      <text x="20" y="74" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">3</text>
-      <text x="20" y="86" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">4</text>
-      <text x="20" y="98" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">5</text>
-      <text x="20" y="110" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">6</text>
-      <text x="20" y="122" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">7</text>
-      <text x="20" y="134" fill="var(--color-foreground-tertiary)" fontSize="8" textAnchor="middle">8</text>
-      
+      <text
+        x="20"
+        y="50"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="8"
+        textAnchor="middle"
+      >
+        1
+      </text>
+      <text
+        x="20"
+        y="62"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="8"
+        textAnchor="middle"
+      >
+        2
+      </text>
+      <text
+        x="20"
+        y="74"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="8"
+        textAnchor="middle"
+      >
+        3
+      </text>
+      <text
+        x="20"
+        y="86"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="8"
+        textAnchor="middle"
+      >
+        4
+      </text>
+      <text
+        x="20"
+        y="98"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="8"
+        textAnchor="middle"
+      >
+        5
+      </text>
+      <text
+        x="20"
+        y="110"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="8"
+        textAnchor="middle"
+      >
+        6
+      </text>
+      <text
+        x="20"
+        y="122"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="8"
+        textAnchor="middle"
+      >
+        7
+      </text>
+      <text
+        x="20"
+        y="134"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="8"
+        textAnchor="middle"
+      >
+        8
+      </text>
+
       {/* Code Content with better syntax highlighting */}
       {/* Line 1: function declaration */}
-      <rect x="50" y="46" width="40" height="4" fill="var(--color-foreground-accent)" rx="1" />
-      <rect x="95" y="46" width="60" height="4" fill="var(--color-foreground-primary)" rx="1" />
-      <rect x="160" y="46" width="8" height="4" fill="var(--color-foreground-secondary)" rx="1" />
-      <rect x="175" y="46" width="20" height="4" fill="var(--color-foreground-tertiary)" rx="1" />
-      
+      <rect
+        x="50"
+        y="46"
+        width="40"
+        height="4"
+        fill="var(--color-foreground-accent)"
+        rx="1"
+      />
+      <rect
+        x="95"
+        y="46"
+        width="60"
+        height="4"
+        fill="var(--color-foreground-primary)"
+        rx="1"
+      />
+      <rect
+        x="160"
+        y="46"
+        width="8"
+        height="4"
+        fill="var(--color-foreground-secondary)"
+        rx="1"
+      />
+      <rect
+        x="175"
+        y="46"
+        width="20"
+        height="4"
+        fill="var(--color-foreground-tertiary)"
+        rx="1"
+      />
+
       {/* Line 2: indented variable */}
-      <rect x="58" y="58" width="30" height="4" fill="var(--color-foreground-secondary)" rx="1" />
-      <rect x="93" y="58" width="80" height="4" fill="var(--color-foreground-primary)" rx="1" />
-      <rect x="178" y="58" width="40" height="4" fill="var(--color-foreground-accent)" rx="1" />
-      
+      <rect
+        x="58"
+        y="58"
+        width="30"
+        height="4"
+        fill="var(--color-foreground-secondary)"
+        rx="1"
+      />
+      <rect
+        x="93"
+        y="58"
+        width="80"
+        height="4"
+        fill="var(--color-foreground-primary)"
+        rx="1"
+      />
+      <rect
+        x="178"
+        y="58"
+        width="40"
+        height="4"
+        fill="var(--color-foreground-accent)"
+        rx="1"
+      />
+
       {/* Line 3: conditional */}
-      <rect x="58" y="70" width="20" height="4" fill="var(--color-foreground-accent)" rx="1" />
-      <rect x="83" y="70" width="45" height="4" fill="var(--color-foreground-primary)" rx="1" />
-      <rect x="133" y="70" width="15" height="4" fill="var(--color-foreground-secondary)" rx="1" />
-      <rect x="153" y="70" width="35" height="4" fill="var(--color-foreground-primary)" rx="1" />
-      
+      <rect
+        x="58"
+        y="70"
+        width="20"
+        height="4"
+        fill="var(--color-foreground-accent)"
+        rx="1"
+      />
+      <rect
+        x="83"
+        y="70"
+        width="45"
+        height="4"
+        fill="var(--color-foreground-primary)"
+        rx="1"
+      />
+      <rect
+        x="133"
+        y="70"
+        width="15"
+        height="4"
+        fill="var(--color-foreground-secondary)"
+        rx="1"
+      />
+      <rect
+        x="153"
+        y="70"
+        width="35"
+        height="4"
+        fill="var(--color-foreground-primary)"
+        rx="1"
+      />
+
       {/* Line 4: nested code */}
-      <rect x="66" y="82" width="50" height="4" fill="var(--color-foreground-primary)" rx="1" />
-      <rect x="121" y="82" width="25" height="4" fill="var(--color-foreground-secondary)" rx="1" />
-      <rect x="151" y="82" width="30" height="4" fill="var(--color-foreground-accent)" rx="1" />
-      
+      <rect
+        x="66"
+        y="82"
+        width="50"
+        height="4"
+        fill="var(--color-foreground-primary)"
+        rx="1"
+      />
+      <rect
+        x="121"
+        y="82"
+        width="25"
+        height="4"
+        fill="var(--color-foreground-secondary)"
+        rx="1"
+      />
+      <rect
+        x="151"
+        y="82"
+        width="30"
+        height="4"
+        fill="var(--color-foreground-accent)"
+        rx="1"
+      />
+
       {/* Line 5: return statement */}
-      <rect x="58" y="94" width="35" height="4" fill="var(--color-foreground-accent)" rx="1" />
-      <rect x="98" y="94" width="70" height="4" fill="var(--color-foreground-primary)" rx="1" />
-      
+      <rect
+        x="58"
+        y="94"
+        width="35"
+        height="4"
+        fill="var(--color-foreground-accent)"
+        rx="1"
+      />
+      <rect
+        x="98"
+        y="94"
+        width="70"
+        height="4"
+        fill="var(--color-foreground-primary)"
+        rx="1"
+      />
+
       {/* Line 6: closing brace */}
-      <rect x="50" y="106" width="8" height="4" fill="var(--color-foreground-secondary)" rx="1" />
-      
+      <rect
+        x="50"
+        y="106"
+        width="8"
+        height="4"
+        fill="var(--color-foreground-secondary)"
+        rx="1"
+      />
+
       {/* Line 7: empty line (just cursor) */}
-      
+
       {/* Line 8: export statement */}
-      <rect x="50" y="130" width="40" height="4" fill="var(--color-foreground-accent)" rx="1" />
-      <rect x="95" y="130" width="50" height="4" fill="var(--color-foreground-primary)" rx="1" />
-      
+      <rect
+        x="50"
+        y="130"
+        width="40"
+        height="4"
+        fill="var(--color-foreground-accent)"
+        rx="1"
+      />
+      <rect
+        x="95"
+        y="130"
+        width="50"
+        height="4"
+        fill="var(--color-foreground-primary)"
+        rx="1"
+      />
+
       {/* Active cursor */}
       <rect
         x="110"
@@ -99,7 +331,7 @@ export const SVGComponentIllo = (
         height="10"
         fill="var(--color-foreground-accent)"
       />
-      
+
       {/* Minimap */}
       <rect
         x="290"
@@ -110,11 +342,39 @@ export const SVGComponentIllo = (
         stroke="var(--color-border-subtle)"
         strokeWidth="1"
       />
-      <rect x="292" y="40" width="20" height="2" fill="var(--color-foreground-tertiary)" opacity="0.6" />
-      <rect x="292" y="45" width="18" height="2" fill="var(--color-foreground-tertiary)" opacity="0.6" />
-      <rect x="292" y="50" width="21" height="2" fill="var(--color-foreground-tertiary)" opacity="0.6" />
-      <rect x="292" y="55" width="19" height="2" fill="var(--color-foreground-tertiary)" opacity="0.6" />
-      
+      <rect
+        x="292"
+        y="40"
+        width="20"
+        height="2"
+        fill="var(--color-foreground-tertiary)"
+        opacity="0.6"
+      />
+      <rect
+        x="292"
+        y="45"
+        width="18"
+        height="2"
+        fill="var(--color-foreground-tertiary)"
+        opacity="0.6"
+      />
+      <rect
+        x="292"
+        y="50"
+        width="21"
+        height="2"
+        fill="var(--color-foreground-tertiary)"
+        opacity="0.6"
+      />
+      <rect
+        x="292"
+        y="55"
+        width="19"
+        height="2"
+        fill="var(--color-foreground-tertiary)"
+        opacity="0.6"
+      />
+
       {/* Status Bar */}
       <rect
         x="1"
@@ -123,10 +383,38 @@ export const SVGComponentIllo = (
         height="29"
         fill="var(--color-background-secondary)"
       />
-      <rect x="15" y="180" width="50" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
-      <rect x="80" y="180" width="40" height="6" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="140" y="180" width="60" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
-      <rect x="260" y="180" width="30" height="6" fill="var(--color-foreground-secondary)" rx="2" />
+      <rect
+        x="15"
+        y="180"
+        width="50"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+      <rect
+        x="80"
+        y="180"
+        width="40"
+        height="6"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="140"
+        y="180"
+        width="60"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+      <rect
+        x="260"
+        y="180"
+        width="30"
+        height="6"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
     </symbol>
     <symbol viewBox="0 0 350 250" id="input">
       {/* Spreadsheet Window */}
@@ -140,7 +428,7 @@ export const SVGComponentIllo = (
         x="1"
         y="1"
       />
-      
+
       {/* Title Bar */}
       <rect
         x="1"
@@ -158,7 +446,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-primary)"
         rx="4"
       />
-      
+
       {/* Toolbar */}
       <rect
         x="1"
@@ -191,7 +479,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-secondary)"
         rx="2"
       />
-      
+
       {/* Formula Bar */}
       <rect
         x="1"
@@ -218,7 +506,7 @@ export const SVGComponentIllo = (
         fill="var(--color-background-secondary)"
         rx="2"
       />
-      
+
       {/* Column Headers */}
       <rect
         x="40"
@@ -265,14 +553,59 @@ export const SVGComponentIllo = (
         stroke="var(--color-border-subtle)"
         strokeWidth="1"
       />
-      
+
       {/* Column Labels */}
-      <text x="70" y="79" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle" fontWeight="600">A</text>
-      <text x="130" y="79" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle" fontWeight="600">B</text>
-      <text x="190" y="79" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle" fontWeight="600">C</text>
-      <text x="250" y="79" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle" fontWeight="600">D</text>
-      <text x="310" y="79" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle" fontWeight="600">E</text>
-      
+      <text
+        x="70"
+        y="79"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+        fontWeight="600"
+      >
+        A
+      </text>
+      <text
+        x="130"
+        y="79"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+        fontWeight="600"
+      >
+        B
+      </text>
+      <text
+        x="190"
+        y="79"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+        fontWeight="600"
+      >
+        C
+      </text>
+      <text
+        x="250"
+        y="79"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+        fontWeight="600"
+      >
+        D
+      </text>
+      <text
+        x="310"
+        y="79"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+        fontWeight="600"
+      >
+        E
+      </text>
+
       {/* Row Headers */}
       <rect
         x="10"
@@ -337,114 +670,695 @@ export const SVGComponentIllo = (
         stroke="var(--color-border-subtle)"
         strokeWidth="1"
       />
-      
+
       {/* Row Numbers */}
-      <text x="25" y="99" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle">1</text>
-      <text x="25" y="119" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle">2</text>
-      <text x="25" y="139" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle">3</text>
-      <text x="25" y="159" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle">4</text>
-      <text x="25" y="179" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle">5</text>
-      <text x="25" y="199" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle">6</text>
-      <text x="25" y="219" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle">7</text>
-      
+      <text
+        x="25"
+        y="99"
+        fill="var(--color-foreground-primary)"
+        fontSize="10"
+        textAnchor="middle"
+      >
+        1
+      </text>
+      <text
+        x="25"
+        y="119"
+        fill="var(--color-foreground-primary)"
+        fontSize="10"
+        textAnchor="middle"
+      >
+        2
+      </text>
+      <text
+        x="25"
+        y="139"
+        fill="var(--color-foreground-primary)"
+        fontSize="10"
+        textAnchor="middle"
+      >
+        3
+      </text>
+      <text
+        x="25"
+        y="159"
+        fill="var(--color-foreground-primary)"
+        fontSize="10"
+        textAnchor="middle"
+      >
+        4
+      </text>
+      <text
+        x="25"
+        y="179"
+        fill="var(--color-foreground-primary)"
+        fontSize="10"
+        textAnchor="middle"
+      >
+        5
+      </text>
+      <text
+        x="25"
+        y="199"
+        fill="var(--color-foreground-primary)"
+        fontSize="10"
+        textAnchor="middle"
+      >
+        6
+      </text>
+      <text
+        x="25"
+        y="219"
+        fill="var(--color-foreground-primary)"
+        fontSize="10"
+        textAnchor="middle"
+      >
+        7
+      </text>
+
       {/* Data Cells - Row 1 (Headers) */}
-      <rect x="40" y="86" width="60" height="20" fill="var(--color-background-secondary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="100" y="86" width="60" height="20" fill="var(--color-background-secondary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="160" y="86" width="60" height="20" fill="var(--color-background-secondary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="220" y="86" width="60" height="20" fill="var(--color-background-secondary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="280" y="86" width="60" height="20" fill="var(--color-background-secondary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      
+      <rect
+        x="40"
+        y="86"
+        width="60"
+        height="20"
+        fill="var(--color-background-secondary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="100"
+        y="86"
+        width="60"
+        height="20"
+        fill="var(--color-background-secondary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="160"
+        y="86"
+        width="60"
+        height="20"
+        fill="var(--color-background-secondary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="220"
+        y="86"
+        width="60"
+        height="20"
+        fill="var(--color-background-secondary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="280"
+        y="86"
+        width="60"
+        height="20"
+        fill="var(--color-background-secondary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+
       {/* Header Content */}
-      <rect x="45" y="91" width="30" height="6" fill="var(--color-foreground-primary)" rx="2" />
-      <rect x="105" y="91" width="25" height="6" fill="var(--color-foreground-primary)" rx="2" />
-      <rect x="165" y="91" width="35" height="6" fill="var(--color-foreground-primary)" rx="2" />
-      <rect x="225" y="91" width="20" height="6" fill="var(--color-foreground-primary)" rx="2" />
-      <rect x="285" y="91" width="40" height="6" fill="var(--color-foreground-primary)" rx="2" />
-      
+      <rect
+        x="45"
+        y="91"
+        width="30"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="2"
+      />
+      <rect
+        x="105"
+        y="91"
+        width="25"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="2"
+      />
+      <rect
+        x="165"
+        y="91"
+        width="35"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="2"
+      />
+      <rect
+        x="225"
+        y="91"
+        width="20"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="2"
+      />
+      <rect
+        x="285"
+        y="91"
+        width="40"
+        height="6"
+        fill="var(--color-foreground-primary)"
+        rx="2"
+      />
+
       {/* Data Cells - Row 2 */}
-      <rect x="40" y="106" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="100" y="106" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="160" y="106" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="220" y="106" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="280" y="106" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      
+      <rect
+        x="40"
+        y="106"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="100"
+        y="106"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="160"
+        y="106"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="220"
+        y="106"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="280"
+        y="106"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+
       {/* Row 2 Content */}
-      <rect x="45" y="111" width="35" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="105" y="111" width="15" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="165" y="111" width="25" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="225" y="111" width="30" height="5" fill="var(--color-foreground-accent)" rx="2" />
-      <rect x="285" y="111" width="20" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      
+      <rect
+        x="45"
+        y="111"
+        width="35"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="105"
+        y="111"
+        width="15"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="165"
+        y="111"
+        width="25"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="225"
+        y="111"
+        width="30"
+        height="5"
+        fill="var(--color-foreground-accent)"
+        rx="2"
+      />
+      <rect
+        x="285"
+        y="111"
+        width="20"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+
       {/* Data Cells - Row 3 */}
-      <rect x="40" y="126" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="100" y="126" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="160" y="126" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="220" y="126" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="280" y="126" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      
+      <rect
+        x="40"
+        y="126"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="100"
+        y="126"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="160"
+        y="126"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="220"
+        y="126"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="280"
+        y="126"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+
       {/* Row 3 Content */}
-      <rect x="45" y="131" width="40" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="105" y="131" width="20" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="165" y="131" width="30" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="225" y="131" width="25" height="5" fill="var(--color-foreground-accent)" rx="2" />
-      <rect x="285" y="131" width="35" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      
+      <rect
+        x="45"
+        y="131"
+        width="40"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="105"
+        y="131"
+        width="20"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="165"
+        y="131"
+        width="30"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="225"
+        y="131"
+        width="25"
+        height="5"
+        fill="var(--color-foreground-accent)"
+        rx="2"
+      />
+      <rect
+        x="285"
+        y="131"
+        width="35"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+
       {/* Data Cells - Row 4 (Selected) */}
-      <rect x="40" y="146" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="100" y="146" width="60" height="20" fill="var(--color-background-accent)" stroke="var(--color-foreground-accent)" strokeWidth="2" />
-      <rect x="160" y="146" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="220" y="146" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="280" y="146" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      
+      <rect
+        x="40"
+        y="146"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="100"
+        y="146"
+        width="60"
+        height="20"
+        fill="var(--color-background-accent)"
+        stroke="var(--color-foreground-accent)"
+        strokeWidth="2"
+      />
+      <rect
+        x="160"
+        y="146"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="220"
+        y="146"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="280"
+        y="146"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+
       {/* Row 4 Content */}
-      <rect x="45" y="151" width="25" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="105" y="151" width="18" height="5" fill="var(--color-foreground-primary)" rx="2" />
-      <rect x="165" y="151" width="20" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="225" y="151" width="35" height="5" fill="var(--color-foreground-accent)" rx="2" />
-      <rect x="285" y="151" width="25" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      
+      <rect
+        x="45"
+        y="151"
+        width="25"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="105"
+        y="151"
+        width="18"
+        height="5"
+        fill="var(--color-foreground-primary)"
+        rx="2"
+      />
+      <rect
+        x="165"
+        y="151"
+        width="20"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="225"
+        y="151"
+        width="35"
+        height="5"
+        fill="var(--color-foreground-accent)"
+        rx="2"
+      />
+      <rect
+        x="285"
+        y="151"
+        width="25"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+
       {/* Data Cells - Row 5 */}
-      <rect x="40" y="166" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="100" y="166" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="160" y="166" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="220" y="166" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="280" y="166" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      
+      <rect
+        x="40"
+        y="166"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="100"
+        y="166"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="160"
+        y="166"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="220"
+        y="166"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="280"
+        y="166"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+
       {/* Row 5 Content */}
-      <rect x="45" y="171" width="30" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="105" y="171" width="25" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="165" y="171" width="35" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="225" y="171" width="20" height="5" fill="var(--color-foreground-accent)" rx="2" />
-      <rect x="285" y="171" width="40" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      
+      <rect
+        x="45"
+        y="171"
+        width="30"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="105"
+        y="171"
+        width="25"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="165"
+        y="171"
+        width="35"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="225"
+        y="171"
+        width="20"
+        height="5"
+        fill="var(--color-foreground-accent)"
+        rx="2"
+      />
+      <rect
+        x="285"
+        y="171"
+        width="40"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+
       {/* Data Cells - Row 6 */}
-      <rect x="40" y="186" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="100" y="186" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="160" y="186" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="220" y="186" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="280" y="186" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      
+      <rect
+        x="40"
+        y="186"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="100"
+        y="186"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="160"
+        y="186"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="220"
+        y="186"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="280"
+        y="186"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+
       {/* Row 6 Content */}
-      <rect x="45" y="191" width="20" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="105" y="191" width="30" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="165" y="191" width="15" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="225" y="191" width="40" height="5" fill="var(--color-foreground-accent)" rx="2" />
-      <rect x="285" y="191" width="30" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      
+      <rect
+        x="45"
+        y="191"
+        width="20"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="105"
+        y="191"
+        width="30"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="165"
+        y="191"
+        width="15"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="225"
+        y="191"
+        width="40"
+        height="5"
+        fill="var(--color-foreground-accent)"
+        rx="2"
+      />
+      <rect
+        x="285"
+        y="191"
+        width="30"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+
       {/* Data Cells - Row 7 */}
-      <rect x="40" y="206" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="100" y="206" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="160" y="206" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="220" y="206" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="280" y="206" width="60" height="20" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      
+      <rect
+        x="40"
+        y="206"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="100"
+        y="206"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="160"
+        y="206"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="220"
+        y="206"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="280"
+        y="206"
+        width="60"
+        height="20"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+
       {/* Row 7 Content */}
-      <rect x="45" y="211" width="35" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="105" y="211" width="20" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="165" y="211" width="25" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      <rect x="225" y="211" width="30" height="5" fill="var(--color-foreground-accent)" rx="2" />
-      <rect x="285" y="211" width="25" height="5" fill="var(--color-foreground-secondary)" rx="2" />
-      
+      <rect
+        x="45"
+        y="211"
+        width="35"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="105"
+        y="211"
+        width="20"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="165"
+        y="211"
+        width="25"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+      <rect
+        x="225"
+        y="211"
+        width="30"
+        height="5"
+        fill="var(--color-foreground-accent)"
+        rx="2"
+      />
+      <rect
+        x="285"
+        y="211"
+        width="25"
+        height="5"
+        fill="var(--color-foreground-secondary)"
+        rx="2"
+      />
+
       {/* Status Bar */}
       <rect
         x="1"
@@ -453,9 +1367,30 @@ export const SVGComponentIllo = (
         height="23"
         fill="var(--color-background-secondary)"
       />
-      <rect x="10" y="232" width="40" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
-      <rect x="60" y="232" width="30" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
-      <rect x="280" y="232" width="50" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
+      <rect
+        x="10"
+        y="232"
+        width="40"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+      <rect
+        x="60"
+        y="232"
+        width="30"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+      <rect
+        x="280"
+        y="232"
+        width="50"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
     </symbol>
     <symbol viewBox="0 0 320 280" id="modal">
       {/* Calendar Window */}
@@ -469,7 +1404,7 @@ export const SVGComponentIllo = (
         x="1"
         y="1"
       />
-      
+
       {/* Header */}
       <rect
         x="1"
@@ -479,7 +1414,7 @@ export const SVGComponentIllo = (
         fill="var(--color-background-secondary)"
         rx="8"
       />
-      
+
       {/* Navigation Arrows */}
       <rect
         x="15"
@@ -497,7 +1432,7 @@ export const SVGComponentIllo = (
         fill="var(--color-background-tertiary)"
         rx="4"
       />
-      
+
       {/* Month/Year Display */}
       <rect
         x="120"
@@ -507,7 +1442,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-primary)"
         rx="4"
       />
-      
+
       {/* Day Headers */}
       <rect
         x="1"
@@ -516,134 +1451,882 @@ export const SVGComponentIllo = (
         height="25"
         fill="var(--color-background-tertiary)"
       />
-      
+
       {/* Day Labels */}
-      <text x="35" y="57" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle" fontWeight="600">S</text>
-      <text x="80" y="57" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle" fontWeight="600">M</text>
-      <text x="125" y="57" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle" fontWeight="600">T</text>
-      <text x="170" y="57" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle" fontWeight="600">W</text>
-      <text x="215" y="57" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle" fontWeight="600">T</text>
-      <text x="260" y="57" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle" fontWeight="600">F</text>
-      <text x="305" y="57" fill="var(--color-foreground-primary)" fontSize="10" textAnchor="middle" fontWeight="600">S</text>
-      
+      <text
+        x="35"
+        y="57"
+        fill="var(--color-foreground-primary)"
+        fontSize="10"
+        textAnchor="middle"
+        fontWeight="600"
+      >
+        S
+      </text>
+      <text
+        x="80"
+        y="57"
+        fill="var(--color-foreground-primary)"
+        fontSize="10"
+        textAnchor="middle"
+        fontWeight="600"
+      >
+        M
+      </text>
+      <text
+        x="125"
+        y="57"
+        fill="var(--color-foreground-primary)"
+        fontSize="10"
+        textAnchor="middle"
+        fontWeight="600"
+      >
+        T
+      </text>
+      <text
+        x="170"
+        y="57"
+        fill="var(--color-foreground-primary)"
+        fontSize="10"
+        textAnchor="middle"
+        fontWeight="600"
+      >
+        W
+      </text>
+      <text
+        x="215"
+        y="57"
+        fill="var(--color-foreground-primary)"
+        fontSize="10"
+        textAnchor="middle"
+        fontWeight="600"
+      >
+        T
+      </text>
+      <text
+        x="260"
+        y="57"
+        fill="var(--color-foreground-primary)"
+        fontSize="10"
+        textAnchor="middle"
+        fontWeight="600"
+      >
+        F
+      </text>
+      <text
+        x="305"
+        y="57"
+        fill="var(--color-foreground-primary)"
+        fontSize="10"
+        textAnchor="middle"
+        fontWeight="600"
+      >
+        S
+      </text>
+
       {/* Week 1 */}
-      <rect x="10" y="66" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="55" y="66" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="100" y="66" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="145" y="66" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="190" y="66" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="235" y="66" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="280" y="66" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      
+      <rect
+        x="10"
+        y="66"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="55"
+        y="66"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="100"
+        y="66"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="145"
+        y="66"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="190"
+        y="66"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="235"
+        y="66"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="280"
+        y="66"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+
       {/* Week 1 Numbers */}
-      <text x="27" y="84" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">29</text>
-      <text x="72" y="84" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">30</text>
-      <text x="117" y="84" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">1</text>
-      <text x="162" y="84" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">2</text>
-      <text x="207" y="84" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">3</text>
-      <text x="252" y="84" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">4</text>
-      <text x="297" y="84" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">5</text>
-      
+      <text
+        x="27"
+        y="84"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        29
+      </text>
+      <text
+        x="72"
+        y="84"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        30
+      </text>
+      <text
+        x="117"
+        y="84"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        1
+      </text>
+      <text
+        x="162"
+        y="84"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        2
+      </text>
+      <text
+        x="207"
+        y="84"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        3
+      </text>
+      <text
+        x="252"
+        y="84"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        4
+      </text>
+      <text
+        x="297"
+        y="84"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        5
+      </text>
+
       {/* Week 2 */}
-      <rect x="10" y="96" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="55" y="96" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="100" y="96" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="145" y="96" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="190" y="96" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="235" y="96" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="280" y="96" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      
+      <rect
+        x="10"
+        y="96"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="55"
+        y="96"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="100"
+        y="96"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="145"
+        y="96"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="190"
+        y="96"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="235"
+        y="96"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="280"
+        y="96"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+
       {/* Week 2 Numbers */}
-      <text x="27" y="114" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">6</text>
-      <text x="72" y="114" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">7</text>
-      <text x="117" y="114" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">8</text>
-      <text x="162" y="114" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">9</text>
-      <text x="207" y="114" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">10</text>
-      <text x="252" y="114" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">11</text>
-      <text x="297" y="114" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">12</text>
-      
+      <text
+        x="27"
+        y="114"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        6
+      </text>
+      <text
+        x="72"
+        y="114"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        7
+      </text>
+      <text
+        x="117"
+        y="114"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        8
+      </text>
+      <text
+        x="162"
+        y="114"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        9
+      </text>
+      <text
+        x="207"
+        y="114"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        10
+      </text>
+      <text
+        x="252"
+        y="114"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        11
+      </text>
+      <text
+        x="297"
+        y="114"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        12
+      </text>
+
       {/* Week 3 */}
-      <rect x="10" y="126" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="55" y="126" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="100" y="126" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="145" y="126" width="35" height="30" fill="var(--color-background-accent)" stroke="var(--color-foreground-accent)" strokeWidth="2" />
-      <rect x="190" y="126" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="235" y="126" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="280" y="126" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      
+      <rect
+        x="10"
+        y="126"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="55"
+        y="126"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="100"
+        y="126"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="145"
+        y="126"
+        width="35"
+        height="30"
+        fill="var(--color-background-accent)"
+        stroke="var(--color-foreground-accent)"
+        strokeWidth="2"
+      />
+      <rect
+        x="190"
+        y="126"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="235"
+        y="126"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="280"
+        y="126"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+
       {/* Week 3 Numbers */}
-      <text x="27" y="144" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">13</text>
-      <text x="72" y="144" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">14</text>
-      <text x="117" y="144" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">15</text>
-      <text x="162" y="144" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle" fontWeight="600">16</text>
-      <text x="207" y="144" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">17</text>
-      <text x="252" y="144" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">18</text>
-      <text x="297" y="144" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">19</text>
-      
+      <text
+        x="27"
+        y="144"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        13
+      </text>
+      <text
+        x="72"
+        y="144"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        14
+      </text>
+      <text
+        x="117"
+        y="144"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        15
+      </text>
+      <text
+        x="162"
+        y="144"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+        fontWeight="600"
+      >
+        16
+      </text>
+      <text
+        x="207"
+        y="144"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        17
+      </text>
+      <text
+        x="252"
+        y="144"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        18
+      </text>
+      <text
+        x="297"
+        y="144"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        19
+      </text>
+
       {/* Event Indicator on 16th */}
       <circle cx="167" cy="150" r="2" fill="var(--color-foreground-accent)" />
-      
+
       {/* Week 4 */}
-      <rect x="10" y="156" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="55" y="156" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="100" y="156" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="145" y="156" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="190" y="156" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="235" y="156" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="280" y="156" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      
+      <rect
+        x="10"
+        y="156"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="55"
+        y="156"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="100"
+        y="156"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="145"
+        y="156"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="190"
+        y="156"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="235"
+        y="156"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="280"
+        y="156"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+
       {/* Week 4 Numbers */}
-      <text x="27" y="174" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">20</text>
-      <text x="72" y="174" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">21</text>
-      <text x="117" y="174" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">22</text>
-      <text x="162" y="174" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">23</text>
-      <text x="207" y="174" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">24</text>
-      <text x="252" y="174" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">25</text>
-      <text x="297" y="174" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">26</text>
-      
+      <text
+        x="27"
+        y="174"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        20
+      </text>
+      <text
+        x="72"
+        y="174"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        21
+      </text>
+      <text
+        x="117"
+        y="174"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        22
+      </text>
+      <text
+        x="162"
+        y="174"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        23
+      </text>
+      <text
+        x="207"
+        y="174"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        24
+      </text>
+      <text
+        x="252"
+        y="174"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        25
+      </text>
+      <text
+        x="297"
+        y="174"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        26
+      </text>
+
       {/* Event Indicators */}
       <circle cx="77" cy="180" r="2" fill="var(--color-foreground-secondary)" />
-      <circle cx="252" cy="180" r="2" fill="var(--color-foreground-secondary)" />
-      
+      <circle
+        cx="252"
+        cy="180"
+        r="2"
+        fill="var(--color-foreground-secondary)"
+      />
+
       {/* Week 5 */}
-      <rect x="10" y="186" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="55" y="186" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="100" y="186" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="145" y="186" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="190" y="186" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="235" y="186" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="280" y="186" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      
+      <rect
+        x="10"
+        y="186"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="55"
+        y="186"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="100"
+        y="186"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="145"
+        y="186"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="190"
+        y="186"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="235"
+        y="186"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="280"
+        y="186"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+
       {/* Week 5 Numbers */}
-      <text x="27" y="204" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">27</text>
-      <text x="72" y="204" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">28</text>
-      <text x="117" y="204" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">29</text>
-      <text x="162" y="204" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">30</text>
-      <text x="207" y="204" fill="var(--color-foreground-primary)" fontSize="12" textAnchor="middle">31</text>
-      <text x="252" y="204" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">1</text>
-      <text x="297" y="204" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">2</text>
-      
+      <text
+        x="27"
+        y="204"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        27
+      </text>
+      <text
+        x="72"
+        y="204"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        28
+      </text>
+      <text
+        x="117"
+        y="204"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        29
+      </text>
+      <text
+        x="162"
+        y="204"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        30
+      </text>
+      <text
+        x="207"
+        y="204"
+        fill="var(--color-foreground-primary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        31
+      </text>
+      <text
+        x="252"
+        y="204"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        1
+      </text>
+      <text
+        x="297"
+        y="204"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        2
+      </text>
+
       {/* Week 6 */}
-      <rect x="10" y="216" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="55" y="216" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="100" y="216" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="145" y="216" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="190" y="216" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="235" y="216" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      <rect x="280" y="216" width="35" height="30" fill="var(--color-background-primary)" stroke="var(--color-border-subtle)" strokeWidth="1" />
-      
+      <rect
+        x="10"
+        y="216"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="55"
+        y="216"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="100"
+        y="216"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="145"
+        y="216"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="190"
+        y="216"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="235"
+        y="216"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+      <rect
+        x="280"
+        y="216"
+        width="35"
+        height="30"
+        fill="var(--color-background-primary)"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="1"
+      />
+
       {/* Week 6 Numbers */}
-      <text x="27" y="234" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">3</text>
-      <text x="72" y="234" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">4</text>
-      <text x="117" y="234" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">5</text>
-      <text x="162" y="234" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">6</text>
-      <text x="207" y="234" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">7</text>
-      <text x="252" y="234" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">8</text>
-      <text x="297" y="234" fill="var(--color-foreground-tertiary)" fontSize="12" textAnchor="middle">9</text>
-      
+      <text
+        x="27"
+        y="234"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        3
+      </text>
+      <text
+        x="72"
+        y="234"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        4
+      </text>
+      <text
+        x="117"
+        y="234"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        5
+      </text>
+      <text
+        x="162"
+        y="234"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        6
+      </text>
+      <text
+        x="207"
+        y="234"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        7
+      </text>
+      <text
+        x="252"
+        y="234"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        8
+      </text>
+      <text
+        x="297"
+        y="234"
+        fill="var(--color-foreground-tertiary)"
+        fontSize="12"
+        textAnchor="middle"
+      >
+        9
+      </text>
+
       {/* Today Indicator (circle around current day) */}
-      <circle cx="162" cy="144" r="12" fill="none" stroke="var(--color-foreground-accent)" strokeWidth="2" />
-      
+      <circle
+        cx="162"
+        cy="144"
+        r="12"
+        fill="none"
+        stroke="var(--color-foreground-accent)"
+        strokeWidth="2"
+      />
+
       {/* Mini Calendar Controls */}
       <rect
         x="1"
@@ -652,9 +2335,30 @@ export const SVGComponentIllo = (
         height="33"
         fill="var(--color-background-secondary)"
       />
-      <rect x="15" y="255" width="60" height="15" fill="var(--color-foreground-tertiary)" rx="4" />
-      <rect x="90" y="255" width="40" height="15" fill="var(--color-foreground-tertiary)" rx="4" />
-      <rect x="245" y="255" width="60" height="15" fill="var(--color-foreground-tertiary)" rx="4" />
+      <rect
+        x="15"
+        y="255"
+        width="60"
+        height="15"
+        fill="var(--color-foreground-tertiary)"
+        rx="4"
+      />
+      <rect
+        x="90"
+        y="255"
+        width="40"
+        height="15"
+        fill="var(--color-foreground-tertiary)"
+        rx="4"
+      />
+      <rect
+        x="245"
+        y="255"
+        width="60"
+        height="15"
+        fill="var(--color-foreground-tertiary)"
+        rx="4"
+      />
     </symbol>
     <symbol viewBox="0 0 300 200" id="toggleButtonGroup">
       {/* Camera Icon Background */}
@@ -668,7 +2372,7 @@ export const SVGComponentIllo = (
         x="1"
         y="1"
       />
-      
+
       {/* Main Camera Body */}
       <rect
         x="50"
@@ -680,7 +2384,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-primary)"
         strokeWidth="3"
       />
-      
+
       {/* Camera Top Section */}
       <rect
         x="80"
@@ -692,7 +2396,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-primary)"
         strokeWidth="2"
       />
-      
+
       {/* Viewfinder Hump */}
       <rect
         x="120"
@@ -704,7 +2408,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-primary)"
         strokeWidth="2"
       />
-      
+
       {/* Main Lens */}
       <circle
         cx="150"
@@ -714,7 +2418,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-primary)"
         strokeWidth="3"
       />
-      
+
       {/* Lens Inner Ring */}
       <circle
         cx="150"
@@ -724,7 +2428,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-tertiary)"
         strokeWidth="2"
       />
-      
+
       {/* Lens Center */}
       <circle
         cx="150"
@@ -734,7 +2438,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-secondary)"
         strokeWidth="2"
       />
-      
+
       {/* Lens Aperture Blades */}
       <path
         d="M150 105 L165 120 L150 135 L135 120 Z"
@@ -742,7 +2446,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-primary)"
         strokeWidth="1"
       />
-      
+
       {/* Flash */}
       <rect
         x="200"
@@ -754,15 +2458,10 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-primary)"
         strokeWidth="2"
       />
-      
+
       {/* Flash Bulb */}
-      <circle
-        cx="212"
-        cy="92"
-        r="4"
-        fill="var(--color-foreground-accent)"
-      />
-      
+      <circle cx="212" cy="92" r="4" fill="var(--color-foreground-accent)" />
+
       {/* Shutter Button */}
       <circle
         cx="190"
@@ -772,13 +2471,8 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-primary)"
         strokeWidth="2"
       />
-      <circle
-        cx="190"
-        cy="65"
-        r="5"
-        fill="var(--color-foreground-secondary)"
-      />
-      
+      <circle cx="190" cy="65" r="5" fill="var(--color-foreground-secondary)" />
+
       {/* Mode Dial */}
       <circle
         cx="110"
@@ -788,7 +2482,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-primary)"
         strokeWidth="2"
       />
-      
+
       {/* Mode Dial Markings */}
       <path
         d="M110 53 L110 58 M122 65 L117 65 M110 77 L110 72 M98 65 L103 65"
@@ -796,15 +2490,10 @@ export const SVGComponentIllo = (
         strokeWidth="1.5"
         strokeLinecap="round"
       />
-      
+
       {/* Mode Dial Pointer */}
-      <circle
-        cx="110"
-        cy="57"
-        r="2"
-        fill="var(--color-foreground-accent)"
-      />
-      
+      <circle cx="110" cy="57" r="2" fill="var(--color-foreground-accent)" />
+
       {/* LCD Screen */}
       <rect
         x="70"
@@ -816,7 +2505,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-primary)"
         strokeWidth="1"
       />
-      
+
       {/* LCD Content */}
       <rect
         x="75"
@@ -834,7 +2523,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-primary)"
         rx="1"
       />
-      
+
       {/* Control Buttons */}
       <circle
         cx="200"
@@ -852,7 +2541,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-primary)"
         strokeWidth="1"
       />
-      
+
       {/* Lens Brand Text */}
       <rect
         x="135"
@@ -862,7 +2551,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-primary)"
         rx="2"
       />
-      
+
       {/* Camera Strap Lugs */}
       <rect
         x="45"
@@ -884,7 +2573,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-primary)"
         strokeWidth="1"
       />
-      
+
       {/* Lens Reflection */}
       <ellipse
         cx="140"
@@ -907,7 +2596,7 @@ export const SVGComponentIllo = (
         x="1"
         y="1"
       />
-      
+
       {/* Header */}
       <rect
         x="1"
@@ -925,7 +2614,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-primary)"
         rx="4"
       />
-      
+
       {/* Add Task Button */}
       <rect
         x="220"
@@ -935,7 +2624,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-accent)"
         rx="8"
       />
-      
+
       {/* Task List Container */}
       <rect
         x="10"
@@ -947,7 +2636,7 @@ export const SVGComponentIllo = (
         strokeWidth="1"
         rx="4"
       />
-      
+
       {/* Task Item 1 - Completed */}
       <rect
         x="15"
@@ -995,13 +2684,8 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-tertiary)"
       />
       {/* Priority - Low */}
-      <circle
-        cx="260"
-        cy="70"
-        r="4"
-        fill="var(--color-foreground-secondary)"
-      />
-      
+      <circle cx="260" cy="70" r="4" fill="var(--color-foreground-secondary)" />
+
       {/* Task Item 2 - Active */}
       <rect
         x="15"
@@ -1034,13 +2718,8 @@ export const SVGComponentIllo = (
         rx="2"
       />
       {/* Priority - High */}
-      <circle
-        cx="260"
-        cy="105"
-        r="4"
-        fill="var(--color-foreground-accent)"
-      />
-      
+      <circle cx="260" cy="105" r="4" fill="var(--color-foreground-accent)" />
+
       {/* Task Item 3 - Active */}
       <rect
         x="15"
@@ -1088,7 +2767,7 @@ export const SVGComponentIllo = (
         r="4"
         fill="var(--color-foreground-secondary)"
       />
-      
+
       {/* Task Item 4 - Active with Tag */}
       <rect
         x="15"
@@ -1130,13 +2809,8 @@ export const SVGComponentIllo = (
         rx="5"
       />
       {/* Priority - High */}
-      <circle
-        cx="260"
-        cy="175"
-        r="4"
-        fill="var(--color-foreground-accent)"
-      />
-      
+      <circle cx="260" cy="175" r="4" fill="var(--color-foreground-accent)" />
+
       {/* Task Item 5 - Active */}
       <rect
         x="15"
@@ -1184,7 +2858,7 @@ export const SVGComponentIllo = (
         r="4"
         fill="var(--color-foreground-secondary)"
       />
-      
+
       {/* Progress Bar */}
       <rect
         x="15"
@@ -1202,7 +2876,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-accent)"
         rx="3"
       />
-      
+
       {/* Progress Text */}
       <rect
         x="225"
@@ -1223,7 +2897,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-border-bold)"
         strokeWidth="2"
       />
-      
+
       {/* Activity Rings - Clean circular progress rings */}
       {/* Outer Ring - Move Goal (Red) */}
       <circle
@@ -1245,7 +2919,7 @@ export const SVGComponentIllo = (
         strokeDasharray="315 125"
         transform="rotate(-90 100 100)"
       />
-      
+
       {/* Middle Ring - Exercise Goal (Green) */}
       <circle
         cx="100"
@@ -1266,7 +2940,7 @@ export const SVGComponentIllo = (
         strokeDasharray="250 114"
         transform="rotate(-90 100 100)"
       />
-      
+
       {/* Inner Ring - Stand Goal (Blue) */}
       <circle
         cx="100"
@@ -1287,7 +2961,7 @@ export const SVGComponentIllo = (
         strokeDasharray="200 89"
         transform="rotate(-90 100 100)"
       />
-      
+
       {/* Center Time Display */}
       <text
         x="100"
@@ -1299,7 +2973,7 @@ export const SVGComponentIllo = (
       >
         10:30
       </text>
-      
+
       {/* Center Stats */}
       <text
         x="100"
@@ -1323,7 +2997,7 @@ export const SVGComponentIllo = (
         x="1"
         y="1"
       />
-      
+
       {/* Header */}
       <rect
         x="1"
@@ -1341,7 +3015,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-primary)"
         rx="4"
       />
-      
+
       {/* Heart Rate Section */}
       <rect
         x="15"
@@ -1369,7 +3043,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-accent)"
         rx="4"
       />
-      
+
       {/* ECG Wave */}
       <path
         d="M 60 70 L 70 70 L 75 60 L 80 80 L 85 50 L 90 70 L 100 70 L 105 60 L 110 80 L 115 50 L 120 70 L 130 70 L 135 60 L 140 80 L 145 50 L 150 70 L 160 70 L 165 60 L 170 80 L 175 50 L 180 70 L 190 70"
@@ -1379,7 +3053,7 @@ export const SVGComponentIllo = (
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      
+
       {/* Blood Pressure Section */}
       <rect
         x="15"
@@ -1415,7 +3089,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-tertiary)"
         rx="4"
       />
-      
+
       {/* BP Indicator */}
       <rect
         x="90"
@@ -1433,7 +3107,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-secondary)"
         rx="2"
       />
-      
+
       {/* Temperature Section */}
       <rect
         x="155"
@@ -1461,7 +3135,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-secondary)"
         rx="4"
       />
-      
+
       {/* Temperature Gauge */}
       <rect
         x="220"
@@ -1485,7 +3159,7 @@ export const SVGComponentIllo = (
         r="4"
         fill="var(--color-foreground-secondary)"
       />
-      
+
       {/* Oxygen Saturation Section */}
       <rect
         x="15"
@@ -1513,7 +3187,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-accent)"
         rx="4"
       />
-      
+
       {/* Pulse Wave */}
       <path
         d="M 60 175 L 70 175 L 75 170 L 80 180 L 85 165 L 90 175 L 100 175 L 105 170 L 110 180 L 115 165 L 120 175 L 130 175"
@@ -1523,7 +3197,7 @@ export const SVGComponentIllo = (
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      
+
       {/* Respiratory Rate Section */}
       <rect
         x="155"
@@ -1551,7 +3225,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-tertiary)"
         rx="4"
       />
-      
+
       {/* Breathing Pattern */}
       <path
         d="M 200 175 Q 210 165 220 175 Q 230 165 240 175 Q 250 165 260 175 Q 270 165 275 175"
@@ -1573,7 +3247,7 @@ export const SVGComponentIllo = (
         x="1"
         y="1"
       />
-      
+
       {/* Header */}
       <rect
         x="1"
@@ -1583,7 +3257,7 @@ export const SVGComponentIllo = (
         fill="var(--color-background-secondary)"
         rx="8"
       />
-      
+
       {/* Stock Symbol */}
       <rect
         x="15"
@@ -1593,7 +3267,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-primary)"
         rx="4"
       />
-      
+
       {/* Price */}
       <rect
         x="85"
@@ -1603,15 +3277,8 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-accent)"
         rx="4"
       />
-      <rect
-        x="85"
-        y="18"
-        width="50"
-        height="6"
-        fill="#28CA42"
-        rx="3"
-      />
-      
+      <rect x="85" y="18" width="50" height="6" fill="#28CA42" rx="3" />
+
       {/* Time Period Buttons */}
       <rect
         x="200"
@@ -1645,7 +3312,7 @@ export const SVGComponentIllo = (
         fill="var(--color-background-tertiary)"
         rx="4"
       />
-      
+
       {/* Chart Area */}
       <rect
         x="20"
@@ -1656,20 +3323,90 @@ export const SVGComponentIllo = (
         stroke="var(--color-border-subtle)"
         strokeWidth="1"
       />
-      
+
       {/* Grid Lines */}
-      <line x1="20" y1="65" x2="300" y2="65" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
-      <line x1="20" y1="85" x2="300" y2="85" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
-      <line x1="20" y1="105" x2="300" y2="105" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
-      <line x1="20" y1="125" x2="300" y2="125" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
-      <line x1="20" y1="145" x2="300" y2="145" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
-      
-      <line x1="50" y1="45" x2="50" y2="155" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
-      <line x1="100" y1="45" x2="100" y2="155" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
-      <line x1="150" y1="45" x2="150" y2="155" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
-      <line x1="200" y1="45" x2="200" y2="155" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
-      <line x1="250" y1="45" x2="250" y2="155" stroke="var(--color-border-subtle)" strokeWidth="0.5" />
-      
+      <line
+        x1="20"
+        y1="65"
+        x2="300"
+        y2="65"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="0.5"
+      />
+      <line
+        x1="20"
+        y1="85"
+        x2="300"
+        y2="85"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="0.5"
+      />
+      <line
+        x1="20"
+        y1="105"
+        x2="300"
+        y2="105"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="0.5"
+      />
+      <line
+        x1="20"
+        y1="125"
+        x2="300"
+        y2="125"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="0.5"
+      />
+      <line
+        x1="20"
+        y1="145"
+        x2="300"
+        y2="145"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="0.5"
+      />
+
+      <line
+        x1="50"
+        y1="45"
+        x2="50"
+        y2="155"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="0.5"
+      />
+      <line
+        x1="100"
+        y1="45"
+        x2="100"
+        y2="155"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="0.5"
+      />
+      <line
+        x1="150"
+        y1="45"
+        x2="150"
+        y2="155"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="0.5"
+      />
+      <line
+        x1="200"
+        y1="45"
+        x2="200"
+        y2="155"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="0.5"
+      />
+      <line
+        x1="250"
+        y1="45"
+        x2="250"
+        y2="155"
+        stroke="var(--color-border-subtle)"
+        strokeWidth="0.5"
+      />
+
       {/* Stock Trend Line */}
       <path
         d="M 30 130 L 45 125 L 60 135 L 75 115 L 90 110 L 105 120 L 120 105 L 135 95 L 150 85 L 165 90 L 180 75 L 195 70 L 210 65 L 225 70 L 240 60 L 255 55 L 270 65 L 285 70"
@@ -1679,31 +3416,157 @@ export const SVGComponentIllo = (
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      
+
       {/* Volume Bars */}
-      <rect x="25" y="140" width="4" height="12" fill="var(--color-foreground-tertiary)" opacity="0.6" />
-      <rect x="35" y="135" width="4" height="17" fill="var(--color-foreground-tertiary)" opacity="0.6" />
-      <rect x="45" y="130" width="4" height="22" fill="var(--color-foreground-tertiary)" opacity="0.6" />
-      <rect x="55" y="145" width="4" height="7" fill="var(--color-foreground-tertiary)" opacity="0.6" />
-      <rect x="65" y="138" width="4" height="14" fill="var(--color-foreground-tertiary)" opacity="0.6" />
-      <rect x="75" y="142" width="4" height="10" fill="var(--color-foreground-tertiary)" opacity="0.6" />
-      <rect x="85" y="125" width="4" height="27" fill="var(--color-foreground-tertiary)" opacity="0.6" />
-      <rect x="95" y="140" width="4" height="12" fill="var(--color-foreground-tertiary)" opacity="0.6" />
-      
+      <rect
+        x="25"
+        y="140"
+        width="4"
+        height="12"
+        fill="var(--color-foreground-tertiary)"
+        opacity="0.6"
+      />
+      <rect
+        x="35"
+        y="135"
+        width="4"
+        height="17"
+        fill="var(--color-foreground-tertiary)"
+        opacity="0.6"
+      />
+      <rect
+        x="45"
+        y="130"
+        width="4"
+        height="22"
+        fill="var(--color-foreground-tertiary)"
+        opacity="0.6"
+      />
+      <rect
+        x="55"
+        y="145"
+        width="4"
+        height="7"
+        fill="var(--color-foreground-tertiary)"
+        opacity="0.6"
+      />
+      <rect
+        x="65"
+        y="138"
+        width="4"
+        height="14"
+        fill="var(--color-foreground-tertiary)"
+        opacity="0.6"
+      />
+      <rect
+        x="75"
+        y="142"
+        width="4"
+        height="10"
+        fill="var(--color-foreground-tertiary)"
+        opacity="0.6"
+      />
+      <rect
+        x="85"
+        y="125"
+        width="4"
+        height="27"
+        fill="var(--color-foreground-tertiary)"
+        opacity="0.6"
+      />
+      <rect
+        x="95"
+        y="140"
+        width="4"
+        height="12"
+        fill="var(--color-foreground-tertiary)"
+        opacity="0.6"
+      />
+
       {/* Y-axis Labels */}
-      <rect x="5" y="60" width="12" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
-      <rect x="5" y="80" width="12" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
-      <rect x="5" y="100" width="12" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
-      <rect x="5" y="120" width="12" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
-      <rect x="5" y="140" width="12" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
-      
+      <rect
+        x="5"
+        y="60"
+        width="12"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+      <rect
+        x="5"
+        y="80"
+        width="12"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+      <rect
+        x="5"
+        y="100"
+        width="12"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+      <rect
+        x="5"
+        y="120"
+        width="12"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+      <rect
+        x="5"
+        y="140"
+        width="12"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+
       {/* X-axis Labels */}
-      <rect x="40" y="160" width="20" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
-      <rect x="90" y="160" width="20" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
-      <rect x="140" y="160" width="20" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
-      <rect x="190" y="160" width="20" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
-      <rect x="240" y="160" width="20" height="6" fill="var(--color-foreground-tertiary)" rx="2" />
-      
+      <rect
+        x="40"
+        y="160"
+        width="20"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+      <rect
+        x="90"
+        y="160"
+        width="20"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+      <rect
+        x="140"
+        y="160"
+        width="20"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+      <rect
+        x="190"
+        y="160"
+        width="20"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+      <rect
+        x="240"
+        y="160"
+        width="20"
+        height="6"
+        fill="var(--color-foreground-tertiary)"
+        rx="2"
+      />
+
       {/* Current Price Indicator */}
       <circle
         cx="285"
@@ -1726,7 +3589,7 @@ export const SVGComponentIllo = (
         x="1"
         y="1"
       />
-      
+
       {/* Court Boundary */}
       <rect
         x="10"
@@ -1737,7 +3600,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-tertiary)"
         strokeWidth="2"
       />
-      
+
       {/* Center Line */}
       <rect
         x="150"
@@ -1746,7 +3609,7 @@ export const SVGComponentIllo = (
         height="160"
         fill="var(--color-foreground-tertiary)"
       />
-      
+
       {/* Center Circle */}
       <circle
         cx="150"
@@ -1756,13 +3619,8 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-tertiary)"
         strokeWidth="2"
       />
-      <circle
-        cx="150"
-        cy="100"
-        r="3"
-        fill="var(--color-foreground-primary)"
-      />
-      
+      <circle cx="150" cy="100" r="3" fill="var(--color-foreground-primary)" />
+
       {/* Left Side */}
       {/* Left Backboard */}
       <rect
@@ -1781,7 +3639,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-background-inverse)"
         strokeWidth="2"
       />
-      
+
       {/* Left Key/Paint */}
       <rect
         x="10"
@@ -1792,7 +3650,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-tertiary)"
         strokeWidth="2"
       />
-      
+
       {/* Left Free Throw Circle */}
       <circle
         cx="58"
@@ -1802,7 +3660,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-tertiary)"
         strokeWidth="2"
       />
-      
+
       {/* Left Three-Point Line */}
       <path
         d="M 10 50 Q 80 60 80 100 Q 80 140 10 150"
@@ -1810,7 +3668,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-tertiary)"
         strokeWidth="2"
       />
-      
+
       {/* Right Side */}
       {/* Right Backboard */}
       <rect
@@ -1829,7 +3687,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-background-inverse)"
         strokeWidth="2"
       />
-      
+
       {/* Right Key/Paint */}
       <rect
         x="242"
@@ -1840,7 +3698,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-tertiary)"
         strokeWidth="2"
       />
-      
+
       {/* Right Free Throw Circle */}
       <circle
         cx="242"
@@ -1850,7 +3708,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-tertiary)"
         strokeWidth="2"
       />
-      
+
       {/* Right Three-Point Line */}
       <path
         d="M 290 50 Q 220 60 220 100 Q 220 140 290 150"
@@ -1858,7 +3716,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-tertiary)"
         strokeWidth="2"
       />
-      
+
       {/* Basketball */}
       <circle
         cx="180"
@@ -1873,7 +3731,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-primary)"
         strokeWidth="1"
       />
-      
+
       {/* Score Display */}
       <rect
         x="120"
@@ -1913,7 +3771,7 @@ export const SVGComponentIllo = (
         x="1"
         y="1"
       />
-      
+
       {/* Outer Court Boundary */}
       <rect
         x="30"
@@ -1924,7 +3782,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-tertiary)"
         strokeWidth="2"
       />
-      
+
       {/* Left and Right Service Courts */}
       {/* Left Singles Sideline */}
       <rect
@@ -1942,7 +3800,7 @@ export const SVGComponentIllo = (
         height="130"
         fill="var(--color-foreground-tertiary)"
       />
-      
+
       {/* Net */}
       <rect
         x="139"
@@ -1961,7 +3819,7 @@ export const SVGComponentIllo = (
         fill="var(--color-foreground-accent)"
         rx="2"
       />
-      
+
       {/* Service Lines */}
       {/* Left Short Service Line */}
       <rect
@@ -1995,7 +3853,7 @@ export const SVGComponentIllo = (
         height="2"
         fill="var(--color-foreground-tertiary)"
       />
-      
+
       {/* Center Service Lines */}
       {/* Left Center Service Line */}
       <rect
@@ -2013,7 +3871,7 @@ export const SVGComponentIllo = (
         height="62"
         fill="var(--color-foreground-tertiary)"
       />
-      
+
       {/* Rackets */}
       <ellipse
         cx="70"
@@ -2031,7 +3889,7 @@ export const SVGComponentIllo = (
         height="12"
         fill="var(--color-foreground-primary)"
       />
-      
+
       <ellipse
         cx="210"
         cy="135"
@@ -2048,7 +3906,7 @@ export const SVGComponentIllo = (
         height="12"
         fill="var(--color-foreground-primary)"
       />
-      
+
       {/* Shuttlecock */}
       <ellipse
         cx="160"
@@ -2062,7 +3920,7 @@ export const SVGComponentIllo = (
         stroke="var(--color-foreground-primary)"
         strokeWidth="0.8"
       />
-      
+
       {/* Score Display */}
       <rect
         x="110"

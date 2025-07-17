@@ -21,7 +21,6 @@ export default function Navbar({ pages }: NavbarProps) {
   const [slider, setSlider] = useState(false);
   const [theme, setTheme] = useState('dark');
   const pathname = usePathname();
-  
 
   const router = useTransitionRouter();
   const slideInOut = useCallback(() => {
@@ -111,17 +110,18 @@ export default function Navbar({ pages }: NavbarProps) {
           </div>
         </Link>
         <ul className={styles.navLinks}>
-          {pages && pages.map((page) => (
-            <li key={page.name}>
-              <a
-                onClick={(e) => hanldeRouteChange(e, `/${page.path}`)}
-                href={`/${page.path}`}
-                className={pathname === `/${page.path}` ? styles.active : ''}
-              >
-                {page.name}
-              </a>
-            </li>
-          ))}
+          {pages &&
+            pages.map((page) => (
+              <li key={page.name}>
+                <a
+                  onClick={(e) => hanldeRouteChange(e, `/${page.path}`)}
+                  href={`/${page.path}`}
+                  className={pathname === `/${page.path}` ? styles.active : ''}
+                >
+                  {page.name}
+                </a>
+              </li>
+            ))}
           <li>
             <Popover>
               <Popover.Trigger>
@@ -130,55 +130,63 @@ export default function Navbar({ pages }: NavbarProps) {
                 </Button>
               </Popover.Trigger>
               <Popover.Content>
-                <div style={{
-                  background: 'var(--color-background-secondary)',
-                  color: 'var(--color-foreground-primary)',
-                  padding: '1.5rem',
-                  fontSize: '16px',
-                  borderRadius: '8px'
-                }}>
+                <div
+                  style={{
+                    background: 'var(--color-background-secondary)',
+                    color: 'var(--color-foreground-primary)',
+                    padding: '1.5rem',
+                    fontSize: '16px',
+                    borderRadius: '8px',
+                  }}
+                >
                   {/* Navigation Links */}
-                  {pages && pages.map((page) => (
-                    <div 
-                      key={`mobile-${page.name}`}
-                      style={{
-                        padding: '12px 0',
-                        margin: '4px 0',
-                        cursor: 'pointer',
-                        transition: 'all 0.2s ease'
-                      }}
-                    >
-                      <a
-                        onClick={(e) => hanldeRouteChange(e, `/${page.path}`)}
-                        href={`/${page.path}`}
+                  {pages &&
+                    pages.map((page) => (
+                      <div
+                        key={`mobile-${page.name}`}
                         style={{
-                          color: 'var(--color-foreground-accent)',
-                          textDecoration: 'none',
-                          display: 'block',
-                          fontWeight: pathname === `/${page.path}` ? '600' : '400',
-                          fontFamily: 'var(--font-nohemi)',
-                          fontSize: '16px',
-                          transition: 'color 0.2s ease',
-                          opacity: pathname === `/${page.path}` ? '1' : '0.8'
+                          padding: '12px 0',
+                          margin: '4px 0',
+                          cursor: 'pointer',
+                          transition: 'all 0.2s ease',
                         }}
                       >
-                        {page.name}
-                      </a>
-                    </div>
-                  ))}
-                  
+                        <a
+                          onClick={(e) => hanldeRouteChange(e, `/${page.path}`)}
+                          href={`/${page.path}`}
+                          style={{
+                            color: 'var(--color-foreground-accent)',
+                            textDecoration: 'none',
+                            display: 'block',
+                            fontWeight:
+                              pathname === `/${page.path}` ? '600' : '400',
+                            fontFamily: 'var(--font-nohemi)',
+                            fontSize: '16px',
+                            transition: 'color 0.2s ease',
+                            opacity: pathname === `/${page.path}` ? '1' : '0.8',
+                          }}
+                        >
+                          {page.name}
+                        </a>
+                      </div>
+                    ))}
+
                   {/* Separator */}
-                  <div style={{
-                    height: '1px', 
-                    background: 'var(--color-border-subtle)', 
-                    margin: '1.5rem 0'
-                  }}></div>
-                  
+                  <div
+                    style={{
+                      height: '1px',
+                      background: 'var(--color-border-subtle)',
+                      margin: '1.5rem 0',
+                    }}
+                  ></div>
+
                   {/* Settings */}
-                  <div style={{
-                    padding: '8px 0', 
-                    margin: '8px 0'
-                  }}>
+                  <div
+                    style={{
+                      padding: '8px 0',
+                      margin: '8px 0',
+                    }}
+                  >
                     <ToggleSwitch
                       checked={prefersReducedMotion}
                       onChange={handlePrefersReducedMotion}
@@ -186,11 +194,13 @@ export default function Navbar({ pages }: NavbarProps) {
                       Reduce motion
                     </ToggleSwitch>
                   </div>
-                  
-                  <div style={{
-                    padding: '8px 0', 
-                    margin: '8px 0'
-                  }}>
+
+                  <div
+                    style={{
+                      padding: '8px 0',
+                      margin: '8px 0',
+                    }}
+                  >
                     <ToggleSwitch checked={slider} onChange={handleTheme}>
                       Use {theme} theme
                     </ToggleSwitch>

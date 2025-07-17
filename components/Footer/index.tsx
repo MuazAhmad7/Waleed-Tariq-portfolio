@@ -1,7 +1,8 @@
-import { 
-  faLinkedin 
-} from '@fortawesome/free-brands-svg-icons';
-import { faFileAlt as faFileAltRegular, faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import {
+  faFileAlt as faFileAltRegular,
+  faEnvelope,
+} from '@fortawesome/free-regular-svg-icons';
 import styles from './index.module.css';
 import Marquee from './marquee';
 const Footer = () => {

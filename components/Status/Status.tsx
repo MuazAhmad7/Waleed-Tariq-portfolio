@@ -10,7 +10,12 @@ type StatusProps = {
   hoverText?: string;
 };
 
-const Status: React.FC<StatusProps> = ({ status, children, href, hoverText }) => {
+const Status: React.FC<StatusProps> = ({
+  status,
+  children,
+  href,
+  hoverText,
+}) => {
   const renderAnimatedText = (text: string, isHover: boolean = false) => {
     return text.split('').map((char, index) => (
       <span
@@ -24,7 +29,9 @@ const Status: React.FC<StatusProps> = ({ status, children, href, hoverText }) =>
   };
 
   const content = (
-    <div className={`${Styles.status} ${Styles[status]} ${href ? Styles.clickable : ''}`}>
+    <div
+      className={`${Styles.status} ${Styles[status]} ${href ? Styles.clickable : ''}`}
+    >
       <svg
         width="14"
         height="14"
@@ -49,7 +56,11 @@ const Status: React.FC<StatusProps> = ({ status, children, href, hoverText }) =>
   );
 
   if (href) {
-    return <a href={href} className={Styles.statusLink}>{content}</a>;
+    return (
+      <a href={href} className={Styles.statusLink}>
+        {content}
+      </a>
+    );
   }
 
   return content;

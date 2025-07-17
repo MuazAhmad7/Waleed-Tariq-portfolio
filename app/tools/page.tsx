@@ -1,9 +1,9 @@
-import { 
-  faCertificate, 
-  faGraduationCap, 
-  faCode, 
-  faProjectDiagram, 
-  faCodeBranch
+import {
+  faCertificate,
+  faGraduationCap,
+  faCode,
+  faProjectDiagram,
+  faCodeBranch,
 } from '@fortawesome/free-solid-svg-icons';
 import styles from './page.module.scss';
 
@@ -42,13 +42,30 @@ const CertificationsPage = () => {
       icon: faGraduationCap,
       title: 'Apache Maven Certification',
       status: (
-        <span className={`${styles.badge} ${styles.completed}`}>
-          Completed
-        </span>
+        <span className={`${styles.badge} ${styles.completed}`}>Completed</span>
       ),
       desc: (
         <>
-          Comprehensive certification covering <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>Apache Maven</span> build automation tool, including project structure, dependency management, build lifecycle, and plugin configuration for <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>Java projects</span>.
+          Comprehensive certification covering{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            Apache Maven
+          </span>{' '}
+          build automation tool, including project structure, dependency
+          management, build lifecycle, and plugin configuration for{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            Java projects
+          </span>
+          .
         </>
       ),
       note: 'Demonstrates proficiency in Maven for enterprise Java development, including multi-module projects, dependency resolution, and build optimization.',
@@ -58,65 +75,143 @@ const CertificationsPage = () => {
       icon: faGraduationCap,
       title: 'Apache Maven Introduction Starter Certification',
       status: (
-        <span className={`${styles.badge} ${styles.completed}`}>
-          Completed
-        </span>
+        <span className={`${styles.badge} ${styles.completed}`}>Completed</span>
       ),
       desc: (
         <>
-          Foundational certification covering <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>Maven basics</span>, project setup, basic commands, and core concepts for <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>Java build automation</span>.
+          Foundational certification covering{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            Maven basics
+          </span>
+          , project setup, basic commands, and core concepts for{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            Java build automation
+          </span>
+          .
         </>
       ),
       note: 'Certification establishing fundamental understanding of Maven build tool and its role in Java development workflows.',
-      viewLink: '/Certifications/Apache Maven Introduction Starter Certifcation.pdf',
+      viewLink:
+        '/Certifications/Apache Maven Introduction Starter Certifcation.pdf',
     },
     {
       icon: faCodeBranch,
       title: 'Git Essentials, Bitbucket and Sourcetree Certification',
       status: (
-        <span className={`${styles.badge} ${styles.completed}`}>
-          Completed
-        </span>
+        <span className={`${styles.badge} ${styles.completed}`}>Completed</span>
       ),
       desc: (
         <>
-          Comprehensive certification covering <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>Git version control</span> fundamentals, <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>Bitbucket</span> repository management, and <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>Sourcetree GUI</span> operations for effective code collaboration.
+          Comprehensive certification covering{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            Git version control
+          </span>{' '}
+          fundamentals,{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            Bitbucket
+          </span>{' '}
+          repository management, and{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            Sourcetree GUI
+          </span>{' '}
+          operations for effective code collaboration.
         </>
       ),
       note: 'Covers essential Git workflows, branching strategies, merge conflicts, and team collaboration using Atlassian tools.',
-      viewLink: '/Certifications/Git Essentials, Bitbucket and Sourcetree Certification.pdf',
+      viewLink:
+        '/Certifications/Git Essentials, Bitbucket and Sourcetree Certification.pdf',
     },
     {
       icon: faProjectDiagram,
-      title: 'Object Oriented Analysis, Design & Programming with UML Certification',
+      title:
+        'Object Oriented Analysis, Design & Programming with UML Certification',
       status: (
-        <span className={`${styles.badge} ${styles.completed}`}>
-          Completed
-        </span>
+        <span className={`${styles.badge} ${styles.completed}`}>Completed</span>
       ),
       desc: (
         <>
-          Advanced certification covering <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>object-oriented analysis</span> and design principles, <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>UML modeling</span>, and practical application in software development projects.
+          Advanced certification covering{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            object-oriented analysis
+          </span>{' '}
+          and design principles,{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            UML modeling
+          </span>
+          , and practical application in software development projects.
         </>
       ),
       note: 'Demonstrates expertise in OOP concepts, design patterns, UML diagrams, and systematic approach to software architecture and design.',
-      viewLink: '/Certifications/Object Oriented Analysis, Design & Programming with UML Certification.pdf',
+      viewLink:
+        '/Certifications/Object Oriented Analysis, Design & Programming with UML Certification.pdf',
     },
     {
       icon: faCode,
       title: 'UML and Object-Oriented Design Foundations Certification',
       status: (
-        <span className={`${styles.badge} ${styles.completed}`}>
-          Completed
-        </span>
+        <span className={`${styles.badge} ${styles.completed}`}>Completed</span>
       ),
       desc: (
         <>
-          Foundational certification in <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>Unified Modeling Language (UML)</span> and object-oriented design principles, covering <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>class diagrams</span>, use cases, and design methodology.
+          Foundational certification in{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            Unified Modeling Language (UML)
+          </span>{' '}
+          and object-oriented design principles, covering{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            class diagrams
+          </span>
+          , use cases, and design methodology.
         </>
       ),
       note: 'Establishes core understanding of UML notation, object-oriented design principles, and systematic approach to software modeling.',
-      viewLink: '/Certifications/UML and Object-Oriented Design Foundations Certification.pdf',
+      viewLink:
+        '/Certifications/UML and Object-Oriented Design Foundations Certification.pdf',
     },
     {
       icon: faGraduationCap,
@@ -128,12 +223,49 @@ const CertificationsPage = () => {
       ),
       desc: (
         <>
-          Advanced certification program focusing on strategic <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>project management methodologies</span>, IT infrastructure, and <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>digital transformation leadership</span>. Curriculum includes <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>Agile/Scrum frameworks</span>, risk management, and emerging technology integration.
+          Advanced certification program focusing on strategic{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            project management methodologies
+          </span>
+          , IT infrastructure, and{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            digital transformation leadership
+          </span>
+          . Curriculum includes{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            Agile/Scrum frameworks
+          </span>
+          , risk management, and emerging technology integration.
         </>
       ),
       note: (
         <>
-          Currently enrolled in this <span style={{ color: 'var(--color-foreground-accent)', fontWeight: '600' }}>Harvard University</span> program, developing expertise in modern project management and IT leadership practices.
+          Currently enrolled in this{' '}
+          <span
+            style={{
+              color: 'var(--color-foreground-accent)',
+              fontWeight: '600',
+            }}
+          >
+            Harvard University
+          </span>{' '}
+          program, developing expertise in modern project management and IT
+          leadership practices.
         </>
       ),
       viewLink: null,
@@ -142,14 +274,12 @@ const CertificationsPage = () => {
 
   return (
     <section className="content">
-      <h1 className="heading-01">
-        Professional Certifications
-      </h1>
+      <h1 className="heading-01">Professional Certifications</h1>
       <p>
-        A collection of professional certifications earned in software development, 
-        build automation, version control, and object-oriented design. These certifications 
-        demonstrate proficiency in essential tools and methodologies used in modern 
-        software development practices.
+        A collection of professional certifications earned in software
+        development, build automation, version control, and object-oriented
+        design. These certifications demonstrate proficiency in essential tools
+        and methodologies used in modern software development practices.
       </p>
       <div className={styles['tool-grid']}>
         {certifications.map((cert) => (
@@ -157,34 +287,38 @@ const CertificationsPage = () => {
             <div className={styles['tool-header']}>{cert.status}</div>
             <h3 style={{ margin: 0 }}>{cert.title}</h3>
             <div></div>
-            <div style={{ marginBottom: '1rem', width: '100%', lineHeight: '1.6' }}>
+            <div
+              style={{ marginBottom: '1rem', width: '100%', lineHeight: '1.6' }}
+            >
               {cert.desc}
             </div>
-            <blockquote style={{ 
-              opacity: 0.9, 
-              width: '100%', 
-              marginBottom: '1rem',
-              padding: '0.75rem',
-              backgroundColor: 'var(--color-background-tertiary)',
-              borderLeft: '3px solid var(--color-foreground-accent)',
-              borderRadius: '0.25rem',
-              fontStyle: 'italic'
-            }}>
+            <blockquote
+              style={{
+                opacity: 0.9,
+                width: '100%',
+                marginBottom: '1rem',
+                padding: '0.75rem',
+                backgroundColor: 'var(--color-background-tertiary)',
+                borderLeft: '3px solid var(--color-foreground-accent)',
+                borderRadius: '0.25rem',
+                fontStyle: 'italic',
+              }}
+            >
               {cert.note}
             </blockquote>
             {cert.viewLink && (
-              <a 
-                href={cert.viewLink} 
-                target="_blank" 
+              <a
+                href={cert.viewLink}
+                target="_blank"
                 rel="noopener noreferrer"
-                style={{ 
-                  display: 'inline-flex', 
-                  alignItems: 'center', 
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
                   gap: '0.5rem',
                   color: 'var(--color-foreground-accent)',
                   textDecoration: 'none',
                   fontWeight: '500',
-                  marginTop: 'auto'
+                  marginTop: 'auto',
                 }}
               >
                 View Certificate →

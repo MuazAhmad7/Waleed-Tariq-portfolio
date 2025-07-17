@@ -23,10 +23,10 @@ export default function page() {
             style={{ height: size, width: size }}
           />
         </Link>
-                  <div className={Styles.flag}>
-            <h5>Waleed Tariq</h5>
-            <p className={Styles.flagText}>Senior Financial Analyst</p>
-            <p>Healthcare Finance & Data Analytics</p>
+        <div className={Styles.flag}>
+          <h5>Waleed Tariq</h5>
+          <p className={Styles.flagText}>Senior Financial Analyst</p>
+          <p>Healthcare Finance & Data Analytics</p>
         </div>
       </div>
     </section>

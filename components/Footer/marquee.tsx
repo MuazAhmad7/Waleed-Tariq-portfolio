@@ -17,9 +17,14 @@ type MarqueeProps = {
   isCustomImage?: boolean;
 };
 
-const Marquee: React.FC<MarqueeProps> = ({ title, icon, url, isCustomImage = false }) => {
+const Marquee: React.FC<MarqueeProps> = ({
+  title,
+  icon,
+  url,
+  isCustomImage = false,
+}) => {
   const marqueeRef = useRef(null); // Create a ref for the marquee element
-  
+
   // Debug logging
   if (title === 'GameGrid') {
     console.log('GameGrid marquee props:', { title, icon, url, isCustomImage });
@@ -29,17 +34,17 @@ const Marquee: React.FC<MarqueeProps> = ({ title, icon, url, isCustomImage = fal
       <p className={`heading-04 ${Styles.socialLinkTitle}`}>
         {title.toUpperCase()}
         {isCustomImage ? (
-          <Image 
-            src={icon as string} 
-            alt={title} 
-            width={48} 
-            height={48} 
-            style={{ 
+          <Image
+            src={icon as string}
+            alt={title}
+            width={48}
+            height={48}
+            style={{
               objectFit: 'contain',
               maxWidth: '48px',
               maxHeight: '48px',
-              verticalAlign: 'middle'
-            }} 
+              verticalAlign: 'middle',
+            }}
           />
         ) : (
           <Icon width={48} height={48} icon={icon as IconDefinition} />

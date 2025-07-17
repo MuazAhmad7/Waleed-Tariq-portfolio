@@ -1,7 +1,12 @@
 'use client';
 
 import styles from './page.module.css';
-import { faEnvelope, faPhone, faMapMarkerAlt, faCalendar } from '@fortawesome/free-solid-svg-icons';
+import {
+  faEnvelope,
+  faPhone,
+  faMapMarkerAlt,
+  faCalendar,
+} from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import Icon from '@/components/Icon';
 import { InlineWidget } from 'react-calendly';
@@ -51,9 +56,9 @@ export default function ContactPage() {
               <Icon icon={faLinkedin} />
             </div>
             <h3>LinkedIn</h3>
-            <a 
-              href="https://www.linkedin.com/in/waleedtariq1/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/waleedtariq1/"
+              target="_blank"
               rel="noopener noreferrer"
               className={styles.contactLink}
             >
@@ -66,21 +71,24 @@ export default function ContactPage() {
               <Icon icon={faCalendar} />
             </div>
             <h3>Schedule a Meeting</h3>
-            <p className={styles.contactText}>Book a time that works for both of us</p>
+            <p className={styles.contactText}>
+              Book a time that works for both of us
+            </p>
           </div>
         </div>
 
         <div id="calendar" className={styles.schedulingSection}>
           <h2>Schedule a Meeting</h2>
           <p>
-            Ready to discuss opportunities? Book a convenient time for us to connect and explore how we can work together.
+            Ready to discuss opportunities? Book a convenient time for us to
+            connect and explore how we can work together.
           </p>
           <div className={styles.calendlyWrapper}>
-            <InlineWidget 
-              url="https://calendly.com/wbtariq10/30min" 
+            <InlineWidget
+              url="https://calendly.com/wbtariq10/30min"
               styles={{
                 height: '630px',
-                width: '100%'
+                width: '100%',
               }}
             />
           </div>
@@ -89,7 +97,8 @@ export default function ContactPage() {
         <div className={styles.ctaSection}>
           <h2>Prefer email?</h2>
           <p>
-            If scheduling doesn't work for you right now, feel free to reach out directly via email.
+            If scheduling doesn't work for you right now, feel free to reach out
+            directly via email.
           </p>
           <a href="mailto:wbtariq10@gmail.com" className={styles.primaryButton}>
             Send me an email
@@ -98,4 +107,4 @@ export default function ContactPage() {
       </div>
     </div>
   );
-} 
+}

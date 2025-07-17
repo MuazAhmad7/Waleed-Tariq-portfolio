@@ -67,8 +67,6 @@
   margin: 0 auto;
 }
 
-
-
 .quip {
   position: relative;
   min-height: unset;
@@ -87,8 +85,9 @@
 .whoIAm {
   position: relative;
   padding: 12vh 0;
-  background: linear-gradient(135deg, 
-    var(--color-background-primary) 0%, 
+  background: linear-gradient(
+    135deg,
+    var(--color-background-primary) 0%,
     var(--color-background-secondary) 50%,
     var(--color-background-primary) 100%
   );
@@ -102,8 +101,17 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -111,8 +119,9 @@
 .skillsSection {
   position: relative;
   padding: 12vh 0;
-  background: linear-gradient(135deg, 
-    var(--color-background-secondary) 0%, 
+  background: linear-gradient(
+    135deg,
+    var(--color-background-secondary) 0%,
     var(--color-background-primary) 50%,
     var(--color-background-secondary) 100%
   );
@@ -126,8 +135,17 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
-              radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  background:
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -135,8 +153,9 @@
 .currentWork {
   position: relative;
   padding: 12vh 0;
-  background: linear-gradient(135deg, 
-    var(--color-background-primary) 0%, 
+  background: linear-gradient(
+    135deg,
+    var(--color-background-primary) 0%,
     var(--color-background-secondary) 30%,
     var(--color-background-primary) 70%,
     var(--color-background-secondary) 100%
@@ -151,7 +170,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 50%
+  );
   pointer-events: none;
 }
 
@@ -254,12 +277,20 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, var(--color-foreground-accent), transparent);
+  background: linear-gradient(
+    90deg,
+    var(--color-foreground-accent),
+    transparent
+  );
   opacity: 0.6;
 }
 
 .emphasis {
-  background: linear-gradient(120deg, var(--color-foreground-accent), var(--color-foreground-primary));
+  background: linear-gradient(
+    120deg,
+    var(--color-foreground-accent),
+    var(--color-foreground-primary)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -277,7 +308,7 @@
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 
+  box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.1),
     0 10px 20px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
@@ -290,8 +321,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.1) 0%, 
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
     transparent 50%,
     rgba(0, 0, 0, 0.1) 100%
   );
@@ -354,8 +386,6 @@
   margin-bottom: 3rem;
 }
 
-
-
 /* Cursor Mask Effect Styles */
 .maskContainer {
   position: absolute;
@@ -399,27 +429,29 @@
   overflow: hidden;
 }
 
-
-
 .maskReveal {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, 
-    #22c55e 0%, 
-    #16a34a 50%,
-    #15803d 100%
-  );
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%);
   color: #000000;
   font-weight: 700;
   border-radius: 16px;
   padding: 2rem;
   z-index: 2;
   pointer-events: none;
-  -webkit-mask-image: radial-gradient(circle 0px at 0px 0px, black 100%, transparent 100%);
-  mask-image: radial-gradient(circle 0px at 0px 0px, black 100%, transparent 100%);
+  -webkit-mask-image: radial-gradient(
+    circle 0px at 0px 0px,
+    black 100%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    circle 0px at 0px 0px,
+    black 100%,
+    transparent 100%
+  );
   opacity: 1;
 }
 
@@ -554,14 +586,18 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--color-foreground-accent), transparent);
+  background: linear-gradient(
+    90deg,
+    var(--color-foreground-accent),
+    transparent
+  );
   opacity: 0.7;
 }
 
 .projectCard:hover {
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 
+  box-shadow:
     0 25px 50px rgba(0, 0, 0, 0.15),
     0 15px 30px rgba(0, 0, 0, 0.1);
 }
@@ -602,27 +638,27 @@
     grid-template-columns: 1fr;
     gap: 4rem;
   }
-  
+
   .sectionHeader {
     justify-content: center;
     text-align: center;
   }
-  
+
   .typewriterContainer {
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;
   }
-  
+
   .projectsGrid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .maskContainer {
     cursor: default;
   }
-  
+
   .maskReveal {
     -webkit-mask-image: none !important;
     mask-image: none !important;
@@ -636,41 +672,39 @@
   .currentWork {
     padding: 8vh 0;
   }
-  
+
   .sectionContent {
     padding: 0 1rem;
     gap: 3rem;
   }
-  
+
   .sectionNumber {
     font-size: 3rem;
   }
-  
+
   .sectionTitle {
     font-size: var(--heading-03);
   }
-  
+
   .typewriterContainer {
     padding: 1rem;
   }
-  
+
   .projectCard {
     padding: 2rem;
   }
-  
+
   .skillsContainer {
     gap: 2rem;
   }
-  
+
   .skillCategory {
     padding: 1.5rem;
   }
-  
+
   .maskReveal {
     padding: 1.5rem;
   }
-  
-
 }
 
 /* Cursor Indicator */
@@ -679,8 +713,9 @@
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  background: radial-gradient(circle, 
-    rgba(255, 255, 255, 0.1) 0%, 
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
     rgba(255, 255, 255, 0.05) 30%,
     transparent 70%
   );
@@ -690,5 +725,3 @@
   transform: translate(-50%, -50%);
   backdrop-filter: blur(1px);
 }
-
-

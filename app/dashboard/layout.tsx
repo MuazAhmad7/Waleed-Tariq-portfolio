@@ -4,7 +4,13 @@ import { headers } from 'next/headers';
 
 import { createClient } from '@/utils/supabase/server';
 
-import { faThLarge, faNewspaper, faFlask, faIdCard, faSlidersH } from '@fortawesome/free-solid-svg-icons';
+import {
+  faThLarge,
+  faNewspaper,
+  faFlask,
+  faIdCard,
+  faSlidersH,
+} from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import Icon from '@/components/Icon';
 

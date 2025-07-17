@@ -2,21 +2,22 @@ import React from 'react';
 import { Editor } from '@tiptap/react';
 import styles from './Toolbar.module.scss';
 import Icon from '../Icon';
-import { byPrefixAndName } from '@awesome.me/kit-0ba7f5fefb/icons';
-const faBold = byPrefixAndName['far']['bold'];
-const faItalic = byPrefixAndName['far']['italic'];
-const faUnderline = byPrefixAndName['far']['toilet-paper-under'];
-const faStrikethrough = byPrefixAndName['far']['strikethrough'];
-const faAlignLeft = byPrefixAndName['far']['align-left'];
-const faAlignCenter = byPrefixAndName['far']['align-center'];
-const faAlignRight = byPrefixAndName['far']['align-right'];
-const faListUl = byPrefixAndName['far']['list-ul'];
-const faListOl = byPrefixAndName['far']['list-ol'];
-const faTable = byPrefixAndName['far']['table-list'];
-const faQuoteLeft = byPrefixAndName['far']['quote-left-alt'];
-const faMinus = byPrefixAndName['far']['minus'];
-const faUndo = byPrefixAndName['far']['undo'];
-const faRedo = byPrefixAndName['far']['redo'];
+import { 
+  faBold, 
+  faItalic, 
+  faUnderline, 
+  faStrikethrough,
+  faAlignLeft,
+  faAlignCenter,
+  faAlignRight,
+  faListUl,
+  faListOl,
+  faTable,
+  faQuoteLeft,
+  faMinus,
+  faUndo,
+  faRedo
+} from '@fortawesome/free-solid-svg-icons';
 
 type ToolbarProps = {
   editor: Editor | null;

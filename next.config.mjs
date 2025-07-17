@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compiler: {},
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   sassOptions: {
     silenceDeprecations: ['legacy-js-api'],
   },

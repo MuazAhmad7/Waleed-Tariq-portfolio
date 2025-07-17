@@ -4,17 +4,14 @@ import styles from './Postcard.module.scss';
 import Image from 'next/image';
 import Icon from '../Icon';
 import {
-  byPrefixAndName,
-  IconDefinition,
-} from '@awesome.me/kit-0ba7f5fefb/icons';
+  faHeart,
+  faComments,
+  faRetweet,
+  faExternalLink
+} from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import Link from 'next/link';
 
-const faHeart = byPrefixAndName['far']['heart'] as IconDefinition;
-const faComments = byPrefixAndName['far']['comments-alt'] as IconDefinition;
-const faRetweet = byPrefixAndName['far']['retweet-alt'] as IconDefinition;
-const faExternalLink = byPrefixAndName['far'][
-  'external-link'
-] as IconDefinition;
 interface PostcardContextType {
   postId: string;
   author: {

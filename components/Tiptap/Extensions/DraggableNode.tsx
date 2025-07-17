@@ -2,9 +2,9 @@ import React from 'react';
 import { NodeViewWrapper, NodeViewContent } from '@tiptap/react';
 import styles from './DraggableNodeView.module.scss';
 import Icon from '@/components/Icon';
-import { byPrefixAndName } from '@awesome.me/kit-0ba7f5fefb/icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-const faGripVertical = byPrefixAndName['far']['bars-sort'];
+const faGripVertical = faBars;
 
 const createSlug = (text: string) =>
   text

@@ -1,7 +1,13 @@
-import { Profile } from '@/types';
 import Avatar from '../Avatar';
 import Link from 'next/link';
 import styles from './styles.module.css';
+
+type Profile = {
+  full_name?: string;
+  avatar_url?: string;
+  username?: string;
+};
+
 const ProfileFlag = ({ profile }: { profile: Profile }) => {
   if (!profile) {
     return null;

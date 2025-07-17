@@ -6,18 +6,15 @@ import { useGSAP } from '@gsap/react';
 import { ReducedMotionProvider, InteractionProvider } from '@/context';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { User } from '@supabase/supabase-js';
 
 type TemplateProps = {
   children: React.ReactNode;
-  user: User;
 };
 
-const Template: React.FC<TemplateProps> = ({ children, user }) => {
+const Template: React.FC<TemplateProps> = ({ children }) => {
   const ref = useRef(null);
   const handleSelectionChange = useRef(null);
 
-  const id = user?.id || null;
   /**
    * Top-level navigation pages for the main Navbar.
    * @type {{ name: string; path: string; admin: boolean }[]}
@@ -28,6 +25,7 @@ const Template: React.FC<TemplateProps> = ({ children, user }) => {
     { name: 'Certifications', path: 'tools', admin: false },
     { name: 'Contact Me', path: 'contact', admin: false },
   ];
+
   useEffect(() => {
     if (!handleSelectionChange.current) {
       handleSelectionChange.current = () => {
@@ -93,7 +91,7 @@ const Template: React.FC<TemplateProps> = ({ children, user }) => {
   return (
     <ReducedMotionProvider>
       <InteractionProvider>
-        <Navbar id={id} pages={pages} />
+        <Navbar id={null} pages={pages} />
         <main ref={ref}>{children}</main>
         <Footer />
       </InteractionProvider>

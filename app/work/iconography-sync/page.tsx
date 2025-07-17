@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Styles from '../../articles/[slug]/styles.module.css';
+import Styles from '../work-page.module.css';
 
 const Page: React.FC = () => {
   const images = {

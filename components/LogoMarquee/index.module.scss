@@ -2,16 +2,17 @@
   position: relative;
   width: 100%;
   min-height: 20vh;
+  overflow: hidden; /* Add overflow hidden to container */
 }
 
 .marquee {
   position: absolute;
   top: 50%;
+  left: 0; /* Start from the left edge */
   display: flex;
-  gap: var(--size-06);
+  gap: var(--size-08); /* Increased from var(--size-06) for more spacing */
   align-items: center;
-  overflow: hidden;
-  width: fit-content;
+  width: fit-content; /* Revert to fit-content to maintain natural spacing */
   padding-right: var(--size-09);
   padding-left: var(--size-09);
   color: var(--color-foreground-primary);
@@ -20,19 +21,29 @@
   transform: translateY(-50%);
 }
 
+.box {
+  flex-shrink: 0; /* Prevent boxes from shrinking */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .box .logo {
-  max-height: 180px; /* Increased from 150px */
+  max-height: 220px; /* Increased from 180px to make logos bigger */
+  width: auto;
+  flex-shrink: 0; /* Prevent logos from shrinking */
 }
 
 /* Make specific logos bigger - target by use href */
 .logo use[href='#gamegrid'] {
-  transform: scale(1.5); /* 300px / 180px = 1.67 scale factor */
+  transform: scale(1.5); /* Keep the GameGrid scaling */
   transform-origin: center;
 }
 
 /* United Health Group logo - no filters needed with new logo */
 
 .cover {
+  position: absolute; /* Add position absolute */
   top: 0;
   left: 0;
   width: 100%;
@@ -43,20 +54,22 @@
     var(--color-background-transparent) 20% 80%,
     var(--color-background-primary) 100%
   );
+  pointer-events: none; /* Allow interaction with logos beneath */
+  z-index: 1; /* Ensure cover is on top */
 }
 
 @media (width <= 768px) {
   .marquee {
-    gap: var(--size-03);
+    gap: var(--size-05); /* Increased from var(--size-03) for better mobile spacing */
   }
 
   .box .logo {
-    max-height: 100px; /* Increased from 80px */
+    max-height: 120px; /* Increased from 100px for mobile */
   }
 
   /* Make specific logos bigger on mobile too */
   .logo use[href='#gamegrid'] {
-    transform: scale(1.2); /* 150px / 100px = 1.5 scale factor */
+    transform: scale(1.2); /* Keep mobile GameGrid scaling */
     transform-origin: center;
   }
 }

@@ -320,8 +320,9 @@ export default function Page() {
               <span>2017-2021</span>
             </h3>
             <h4>
-              <span style={{ whiteSpace: 'nowrap' }}>NCAA Division I</span>{' '}
-              Badminton, Rutgers University <span>New Brunswick, NJ</span>
+              <span className={styles.smallerTitle}>NCAA Division I Badminton</span>
+              <span>Rutgers University</span>
+              <span>New Brunswick, NJ</span>
             </h4>
             <div className="content">
               <div>
@@ -379,7 +380,7 @@ export default function Page() {
         className={`content ${styles.skillsSection} ${styles.fadeInSection}`}
       >
         <h3>Skills</h3>
-        <div className="three-up">
+        <div className={styles.skillsGrid}>
           <div className={styles.skillCategory}>
             <h4>Data Analysis & Visualization</h4>
             <ul>

@@ -1,6 +1,41 @@
 // Work page animations and hover effects
 .experiencePage {
+  // Override global experience grid for better layout on large screens
   .experienceList {
+    @media (min-width: 1000px) {
+      li {
+        display: grid;
+        // Give more space to company/location column: date | company | description
+        grid-template-columns: 160px 280px 1fr;
+        gap: 2.5rem;
+        align-items: start;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      li {
+        // Even more space on very large screens
+        grid-template-columns: 180px 320px 1fr;
+        gap: 3rem;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      li {
+        // Ultra-wide screens need even more space
+        grid-template-columns: 200px 400px 1fr;
+        gap: 3.5rem;
+      }
+    }
+
+    @media (min-width: 2400px) {
+      li {
+        // For 2560px+ screens, give maximum space to prevent wrapping
+        grid-template-columns: 220px 480px 1fr;
+        gap: 4rem;
+      }
+    }
+
     .experienceItem {
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -12,7 +47,58 @@
           transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
       }
+
+      // Improved layout for larger screens - keep original font size
+      @media (min-width: 1000px) {
+        h4 {
+          line-height: 1.3; // Tighter line height for better fit
+          
+          span {
+            display: block; // Force each span to new line
+            font-size: var(--body-02); // Smaller location text
+            color: var(--color-foreground-secondary);
+            font-weight: var(--font-weight-regular);
+            margin-top: 0.25rem;
+          }
+
+          // Special styling for multiple spans (like NCAA entry)
+          span:first-of-type:not(.smallerTitle) {
+            font-size: var(--body-01); // Slightly larger for institution name
+            color: var(--color-foreground-primary);
+            font-weight: var(--font-weight-medium);
+          }
+        }
+      }
+
+      // Better mobile layout
+      @media (max-width: 999px) {
+        h4 {
+          span {
+            display: inline;
+            
+            &::before {
+              content: " • ";
+              color: var(--color-foreground-secondary);
+              margin: 0 0.5rem;
+            }
+
+            &.smallerTitle::before {
+              display: none; // No bullet for the title span
+            }
+          }
+        }
+      }
     }
+  }
+
+  // Smaller title styling for NCAA entry
+  .smallerTitle {
+    display: block !important;
+    font-size: var(--body-01) !important; // Smaller than h4 default
+    color: var(--color-foreground-primary) !important;
+    font-weight: var(--font-weight-medium) !important;
+    margin-top: 0 !important;
+    white-space: nowrap; // Keep it on one line
   }
 
   .keyAchievements {
@@ -52,10 +138,152 @@
     }
   }
 
+  // FORCE override the global three-up grid with maximum specificity
   .skillsSection {
+    .three-up {
+      @media (max-width: 768px) {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
+        grid-template-rows: none !important;
+        gap: 0 !important;
+        
+        .skillCategory {
+          width: 100% !important;
+          max-width: 100% !important;
+          flex: 0 0 auto !important;
+          grid-column: unset !important;
+          margin-bottom: var(--size-08) !important;
+          padding: var(--size-06) !important;
+          background: rgba(255, 255, 255, 0.02) !important;
+          border-radius: var(--radius-02) !important;
+          border: 1px solid rgba(255, 255, 255, 0.05) !important;
+          
+          &:last-child {
+            margin-bottom: 0 !important;
+          }
+          
+          h4 {
+            font-size: var(--heading-04) !important;
+            line-height: 1.3 !important;
+            margin-bottom: var(--size-05) !important;
+            color: var(--color-foreground-accent) !important;
+            font-weight: var(--font-weight-medium) !important;
+          }
+
+          ul {
+            margin: 0 !important;
+            padding-left: 0 !important;
+            list-style: none !important;
+            
+            li {
+              font-size: var(--body-02) !important;
+              line-height: 1.6 !important;
+              margin-bottom: var(--size-04) !important;
+              padding-left: var(--size-06) !important;
+              position: relative !important;
+              
+              &::before {
+                content: '→' !important;
+                position: absolute !important;
+                left: 0 !important;
+                color: var(--color-foreground-accent) !important;
+                font-weight: bold !important;
+              }
+              
+              strong {
+                font-size: var(--body-01) !important;
+                display: block !important;
+                margin-bottom: var(--size-02) !important;
+                color: var(--color-foreground-primary) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Custom skills grid that we can control completely
+  .skillsGrid {
+    // Desktop: 3 columns
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--size-06);
+
+    // Tablet: 2 columns
+    @media (min-width: 769px) and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--size-07);
+    }
+
+    // Mobile: Single column (flex layout)
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+
+  .skillsSection {
+
     .skillCategory {
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       box-shadow: none !important;
+
+      // Mobile typography improvements - full width stacked layout
+      @media (max-width: 768px) {
+        width: 100% !important;
+        flex: none !important;
+        margin-bottom: var(--size-08) !important; // Large spacing between categories
+        padding: var(--size-06) !important; // More generous padding
+        background: rgba(255, 255, 255, 0.02) !important; // Subtle background
+        border-radius: var(--radius-02) !important;
+        border: 1px solid rgba(255, 255, 255, 0.05) !important;
+        
+        &:last-child {
+          margin-bottom: 0 !important; // Remove margin from last item
+        }
+        
+        h4 {
+          font-size: var(--heading-04) !important; // Keep original heading size
+          line-height: 1.3 !important;
+          margin-bottom: var(--size-05) !important;
+          color: var(--color-foreground-accent) !important;
+          font-weight: var(--font-weight-medium) !important;
+        }
+
+        ul {
+          margin: 0 !important;
+          padding-left: 0 !important; // Remove left padding
+          list-style: none !important; // Remove bullets
+          
+          li {
+            font-size: var(--body-02) !important; // Larger, more readable text
+            line-height: 1.6 !important;
+            margin-bottom: var(--size-04) !important; // More spacing between items
+            padding-left: var(--size-06) !important;
+            position: relative !important;
+            
+            // Custom bullet
+            &::before {
+              content: '→' !important;
+              position: absolute !important;
+              left: 0 !important;
+              color: var(--color-foreground-accent) !important;
+              font-weight: bold !important;
+              margin-right: var(--size-03) !important;
+            }
+            
+            strong {
+              font-size: var(--body-01) !important;
+              display: block !important;
+              margin-bottom: var(--size-02) !important;
+              color: var(--color-foreground-primary) !important;
+            }
+          }
+        }
+      }
 
       &:hover {
         transform: translateY(-3px);
@@ -105,6 +333,15 @@
         h4 {
           color: #22c55e;
           transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+      }
+
+      // Keep original font size for NCAA entry too
+      &:nth-child(2) {
+        @media (min-width: 1000px) {
+          h4 {
+            line-height: 1.25; // Just tighten line height slightly
+          }
         }
       }
     }
@@ -191,4 +428,25 @@
 
 .pulseOnHover:hover {
   animation: pulse 0.6s ease-in-out;
+}
+
+// FINAL OVERRIDE - Maximum specificity to force mobile vertical layout for skills
+.experiencePage .skillsSection .three-up {
+  @media (max-width: 768px) {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+    grid-template-rows: none !important;
+    grid-auto-flow: unset !important;
+    gap: 0 !important;
+  }
+}
+
+// Also target the global class directly with high specificity
+.skillsSection .three-up {
+  @media (max-width: 768px) {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: none !important;
+  }
 }

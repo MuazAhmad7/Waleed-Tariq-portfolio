@@ -1,5 +1,4 @@
 'use client';
-import { useTransitionRouter } from 'next-view-transitions';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './index.module.css';
@@ -22,50 +21,13 @@ export default function Navbar({ pages }: NavbarProps) {
   const [theme, setTheme] = useState('dark');
   const pathname = usePathname();
 
-  const router = useTransitionRouter();
-  const slideInOut = useCallback(() => {
-    document.documentElement.animate(
-      [
-        { opacity: 1, transform: 'translatex(0)' },
-        { opacity: 0.0, transform: 'translatex(-35%)' },
-      ],
-      {
-        duration: 500,
-        easing: 'cubic-bezier(0.8, 0, 0.15, 1)',
-        fill: 'forwards',
-        pseudoElement: '::view-transition-old(main)',
-      }
-    );
-    document.documentElement.animate(
-      [
-        // { opacity: 0, clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)" },
-        // { opacity: 1, clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)" },
-        { opacity: 0, transform: 'translatex(35%)' },
-        { opacity: 1, transform: 'translatex(0)' },
-      ],
-      {
-        duration: 500,
-        easing: 'cubic-bezier(0.8, 0, 0.176, 1)',
-        fill: 'forwards',
-        pseudoElement: '::view-transition-new(main)',
-      }
-    );
-  }, []);
-  const hanldeRouteChange = (
-    event: React.MouseEvent<HTMLAnchorElement>,
-    route: string
-  ) => {
-    event.preventDefault();
-    router.push(route, {
-      onTransitionReady: slideInOut,
-    });
-  };
-
   const { prefersReducedMotion, setPrefersReducedMotion } = useReducedMotion();
+  
   const handlePrefersReducedMotion = (e) => {
     const enabled = e.target.checked;
     setPrefersReducedMotion(enabled);
   };
+  
   const handleTheme = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const enabled = e.target.checked;
@@ -89,21 +51,24 @@ export default function Navbar({ pages }: NavbarProps) {
     if (prefersColorSchemeDarkQuery.matches) {
       setTheme('light');
     }
-    prefersColorSchemeDarkQuery.onchange = (e) => {
+    
+    const handleColorSchemeChange = (e: MediaQueryListEvent) => {
       setSlider(false);
       setTheme(e.matches ? 'light' : 'dark');
-      body.classList.remove(theme);
+      body?.classList.remove(theme);
+    };
+    
+    prefersColorSchemeDarkQuery.addEventListener('change', handleColorSchemeChange);
+    
+    return () => {
+      prefersColorSchemeDarkQuery.removeEventListener('change', handleColorSchemeChange);
     };
   }, [theme]);
 
   return (
     <header className={styles.navContainer}>
       <nav className={styles.nav}>
-        <Link
-          onClick={(e) => hanldeRouteChange(e, '/')}
-          href="/"
-          className="logoLink"
-        >
+        <Link href="/" className="logoLink">
           <div className={styles.logoContainer}>
             <Logo />
             <h1 className="medium logo">{`Waleed Tariq`}</h1>
@@ -113,13 +78,12 @@ export default function Navbar({ pages }: NavbarProps) {
           {pages &&
             pages.map((page) => (
               <li key={page.name}>
-                <a
-                  onClick={(e) => hanldeRouteChange(e, `/${page.path}`)}
+                <Link
                   href={`/${page.path}`}
                   className={pathname === `/${page.path}` ? styles.active : ''}
                 >
                   {page.name}
-                </a>
+                </Link>
               </li>
             ))}
           <li>
@@ -151,8 +115,7 @@ export default function Navbar({ pages }: NavbarProps) {
                           transition: 'all 0.2s ease',
                         }}
                       >
-                        <a
-                          onClick={(e) => hanldeRouteChange(e, `/${page.path}`)}
+                        <Link
                           href={`/${page.path}`}
                           style={{
                             color: 'var(--color-foreground-accent)',
@@ -167,7 +130,7 @@ export default function Navbar({ pages }: NavbarProps) {
                           }}
                         >
                           {page.name}
-                        </a>
+                        </Link>
                       </div>
                     ))}
 
@@ -209,37 +172,6 @@ export default function Navbar({ pages }: NavbarProps) {
               </Popover.Content>
             </Popover>
           </li>
-          {/* {profile && (
-            <li>
-              <Popover>
-                <Popover.Trigger>
-                  <Avatar src={avatar_url} name={full_name} size="large" />
-                </Popover.Trigger>
-                <Popover.Content>
-                  <ul className="menuList">
-                    <li>
-                      <Link onClick={(e) => hanldeRouteChange(e, "/")} className="menuItem" href={`/profile/${id}`}>
-                        Profile
-                      </Link>
-                    </li>
-                    <li>
-                      <Link onClick={(e) => hanldeRouteChange(e, "/")} className="menuItem" href="/dashboard">
-                        Dashboard
-                      </Link>
-                    </li>
-                    <li>
-                      <Link onClick={(e) => hanldeRouteChange(e, "/")} className="menuItem" href="/settings">
-                        Settings
-                      </Link>
-                    </li>
-                  </ul>
-                  <Button href="/signout" as="a">
-                    Logout
-                  </Button>
-                </Popover.Content>
-              </Popover>
-            </li>
-          )} */}
         </ul>
       </nav>
     </header>

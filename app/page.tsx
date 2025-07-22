@@ -13,7 +13,7 @@ import {
 } from 'framer-motion';
 import Image from 'next/image';
 import Typewriter from 'typewriter-effect';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useCallback } from 'react';
 import Tilt from 'react-parallax-tilt';
 import {
   MdHealthAndSafety,
@@ -38,21 +38,22 @@ export default function Home() {
   const technicalMouseX = useMotionValue(0);
   const technicalMouseY = useMotionValue(0);
 
+  // Reduced spring settings for better performance
   const strategicSmoothX = useSpring(strategicMouseX, {
-    stiffness: 500,
-    damping: 30,
+    stiffness: 300,
+    damping: 40,
   });
   const strategicSmoothY = useSpring(strategicMouseY, {
-    stiffness: 500,
-    damping: 30,
+    stiffness: 300,
+    damping: 40,
   });
   const technicalSmoothX = useSpring(technicalMouseX, {
-    stiffness: 500,
-    damping: 30,
+    stiffness: 300,
+    damping: 40,
   });
   const technicalSmoothY = useSpring(technicalMouseY, {
-    stiffness: 500,
-    damping: 30,
+    stiffness: 300,
+    damping: 40,
   });
 
   const { scrollYProgress: whoIAmProgress } = useScroll({
@@ -74,81 +75,72 @@ export default function Home() {
   const skillsY = useTransform(skillsProgress, [0, 1], [150, -150]);
   const currentWorkY = useTransform(currentWorkProgress, [0, 1], [100, -100]);
 
-  const handleStrategicMouseMove = (e: React.MouseEvent) => {
+  const handleStrategicMouseMove = useCallback((e: React.MouseEvent) => {
     if (!strategicRef.current) return;
     const rect = strategicRef.current.getBoundingClientRect();
     strategicMouseX.set(e.clientX - rect.left);
     strategicMouseY.set(e.clientY - rect.top);
-  };
+  }, [strategicMouseX, strategicMouseY]);
 
-  const handleTechnicalMouseMove = (e: React.MouseEvent) => {
+  const handleTechnicalMouseMove = useCallback((e: React.MouseEvent) => {
     if (!technicalRef.current) return;
     const rect = technicalRef.current.getBoundingClientRect();
     technicalMouseX.set(e.clientX - rect.left);
     technicalMouseY.set(e.clientY - rect.top);
-  };
+  }, [technicalMouseX, technicalMouseY]);
+
+  // Optimized mask update functions with throttling
+  const updateStrategicMask = useCallback(() => {
+    if (strategicRef.current) {
+      const maskReveal = strategicRef.current.querySelector(
+        `.${styles.maskReveal}`
+      ) as HTMLElement;
+      const x = strategicSmoothX.get();
+      const y = strategicSmoothY.get();
+
+      if (maskReveal) {
+        const radius = strategicHover ? '120px' : '0px';
+        const maskImage = `radial-gradient(circle ${radius} at ${x}px ${y}px, black 100%, transparent 100%)`;
+        maskReveal.style.webkitMaskImage = maskImage;
+        maskReveal.style.maskImage = maskImage;
+      }
+
+      // Update cursor indicator position
+      if (strategicRef.current) {
+        strategicRef.current.style.setProperty('--cursor-x', `${x}px`);
+        strategicRef.current.style.setProperty('--cursor-y', `${y}px`);
+      }
+    }
+  }, [strategicHover, strategicSmoothX, strategicSmoothY]);
+
+  const updateTechnicalMask = useCallback(() => {
+    if (technicalRef.current) {
+      const maskReveal = technicalRef.current.querySelector(
+        `.${styles.maskReveal}`
+      ) as HTMLElement;
+      const x = technicalSmoothX.get();
+      const y = technicalSmoothY.get();
+
+      if (maskReveal) {
+        const radius = technicalHover ? '120px' : '0px';
+        const maskImage = `radial-gradient(circle ${radius} at ${x}px ${y}px, black 100%, transparent 100%)`;
+        maskReveal.style.webkitMaskImage = maskImage;
+        maskReveal.style.maskImage = maskImage;
+      }
+
+      // Update cursor indicator position
+      if (technicalRef.current) {
+        technicalRef.current.style.setProperty('--cursor-x', `${x}px`);
+        technicalRef.current.style.setProperty('--cursor-y', `${y}px`);
+      }
+    }
+  }, [technicalHover, technicalSmoothX, technicalSmoothY]);
 
   useEffect(() => {
-    const updateStrategicMask = () => {
-      if (strategicRef.current) {
-        const maskReveal = strategicRef.current.querySelector(
-          `.${styles.maskReveal}`
-        ) as HTMLElement;
-        const x = strategicSmoothX.get();
-        const y = strategicSmoothY.get();
-
-        if (maskReveal) {
-          if (strategicHover) {
-            maskReveal.style.webkitMaskImage = `radial-gradient(circle 120px at ${x}px ${y}px, black 100%, transparent 100%)`;
-            maskReveal.style.maskImage = `radial-gradient(circle 120px at ${x}px ${y}px, black 100%, transparent 100%)`;
-          } else {
-            maskReveal.style.webkitMaskImage = `radial-gradient(circle 0px at ${x}px ${y}px, black 100%, transparent 100%)`;
-            maskReveal.style.maskImage = `radial-gradient(circle 0px at ${x}px ${y}px, black 100%, transparent 100%)`;
-          }
-        }
-
-        // Update cursor indicator position
-        if (strategicRef.current) {
-          strategicRef.current.style.setProperty('--cursor-x', `${x}px`);
-          strategicRef.current.style.setProperty('--cursor-y', `${y}px`);
-        }
-      }
-    };
-
-    const updateTechnicalMask = () => {
-      if (technicalRef.current) {
-        const maskReveal = technicalRef.current.querySelector(
-          `.${styles.maskReveal}`
-        ) as HTMLElement;
-        const x = technicalSmoothX.get();
-        const y = technicalSmoothY.get();
-
-        if (maskReveal) {
-          if (technicalHover) {
-            maskReveal.style.webkitMaskImage = `radial-gradient(circle 120px at ${x}px ${y}px, black 100%, transparent 100%)`;
-            maskReveal.style.maskImage = `radial-gradient(circle 120px at ${x}px ${y}px, black 100%, transparent 100%)`;
-          } else {
-            maskReveal.style.webkitMaskImage = `radial-gradient(circle 0px at ${x}px ${y}px, black 100%, transparent 100%)`;
-            maskReveal.style.maskImage = `radial-gradient(circle 0px at ${x}px ${y}px, black 100%, transparent 100%)`;
-          }
-        }
-
-        // Update cursor indicator position
-        if (technicalRef.current) {
-          technicalRef.current.style.setProperty('--cursor-x', `${x}px`);
-          technicalRef.current.style.setProperty('--cursor-y', `${y}px`);
-        }
-      }
-    };
-
-    const unsubscribeStrategicX =
-      strategicSmoothX.onChange(updateStrategicMask);
-    const unsubscribeStrategicY =
-      strategicSmoothY.onChange(updateStrategicMask);
-    const unsubscribeTechnicalX =
-      technicalSmoothX.onChange(updateTechnicalMask);
-    const unsubscribeTechnicalY =
-      technicalSmoothY.onChange(updateTechnicalMask);
+    const unsubscribeStrategicX = strategicSmoothX.on('change', updateStrategicMask);
+    const unsubscribeStrategicY = strategicSmoothY.on('change', updateStrategicMask);
+    const unsubscribeTechnicalX = technicalSmoothX.on('change', updateTechnicalMask);
+    const unsubscribeTechnicalY = technicalSmoothY.on('change', updateTechnicalMask);
 
     return () => {
       unsubscribeStrategicX();
@@ -156,14 +148,7 @@ export default function Home() {
       unsubscribeTechnicalX();
       unsubscribeTechnicalY();
     };
-  }, [
-    strategicHover,
-    technicalHover,
-    strategicSmoothX,
-    strategicSmoothY,
-    technicalSmoothX,
-    technicalSmoothY,
-  ]);
+  }, [updateStrategicMask, updateTechnicalMask, strategicSmoothX, strategicSmoothY, technicalSmoothX, technicalSmoothY]);
 
   const ldJson = {
     '@context': 'https://schema.org',

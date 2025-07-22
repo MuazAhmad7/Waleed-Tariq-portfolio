@@ -13,7 +13,6 @@ type TemplateProps = {
 
 const Template: React.FC<TemplateProps> = ({ children }) => {
   const ref = useRef(null);
-  const handleSelectionChange = useRef(null);
 
   /**
    * Top-level navigation pages for the main Navbar.
@@ -25,58 +24,6 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
     { name: 'Certifications', path: 'tools', admin: false },
     { name: 'Contact Me', path: 'contact', admin: false },
   ];
-
-  useEffect(() => {
-    if (!handleSelectionChange.current) {
-      handleSelectionChange.current = () => {
-        const selection = document.getSelection();
-        if (selection && '' === selection.toString()) {
-          const rootElement = document.body;
-          let isDarkTheme = window.matchMedia(
-            '(prefers-color-scheme: dark)'
-          ).matches;
-          const bodyClassOverride = rootElement.classList;
-          if (bodyClassOverride.contains('light')) {
-            isDarkTheme = false;
-          }
-          if (bodyClassOverride.contains('dark')) {
-            isDarkTheme = true;
-          }
-
-          const colors = [
-            'red',
-            'orange',
-            'yellow',
-            'green',
-            'teal',
-            'blue',
-            'violet',
-          ];
-          const newColorIndex = Math.floor(Math.random() * colors.length);
-          const color = colors[newColorIndex];
-          const val = isDarkTheme ? ['200', '700'] : ['700', '200'];
-          const foreground = `var(--color-core-${color}-${val[0]})`;
-          const background = `var(--color-core-${color}-${val[1]})`;
-          rootElement.style.setProperty(
-            '--color-foreground-highlight',
-            foreground
-          );
-          rootElement.style.setProperty(
-            '--color-background-highlight',
-            background
-          );
-        }
-      };
-    }
-    document.addEventListener('selectionchange', handleSelectionChange.current);
-
-    return () => {
-      document.removeEventListener(
-        'selectionchange',
-        handleSelectionChange.current
-      );
-    };
-  }, []);
 
   // Temporarily disabled GSAP animation to fix navbar duplication
   // useGSAP(() => {

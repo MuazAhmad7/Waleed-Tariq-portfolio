@@ -48,39 +48,62 @@ export const GameGridLogo: React.FC = () => {
     });
   }, []);
 
-  // Animate in/out based on scroll position
+  // Continuous looping animation when in view
   useEffect(() => {
     if (!logoRef.current) return;
 
-    const tl = gsap.timeline();
+    let loopTimeline: gsap.core.Timeline;
 
     if (isInView) {
-      // Animate in
-      tl.to(
-        gridLinesRef.current?.children || [],
+      // Animate text in once and keep it visible - slower entrance
+      const textTl = gsap.timeline({ delay: 0.5 });
+      textTl.to(
+        logoTextRef.current?.children || [],
         {
-          strokeDashoffset: 0,
+          y: 0,
           opacity: 1,
-          duration: 1,
-          stagger: 0.1,
+          duration: 1.2,
+          stagger: 0.15,
           ease: 'power2.out',
         }
-      )
-        // Animate text appearing
+      );
+
+      // Create a looping timeline for grid lines only
+      loopTimeline = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+      
+      loopTimeline
+        // Build the grid
         .to(
-          logoTextRef.current?.children || [],
+          gridLinesRef.current?.children || [],
           {
-            y: 0,
+            strokeDashoffset: 0,
             opacity: 1,
-            duration: 0.6,
-            stagger: 0.05,
+            duration: 1,
+            stagger: 0.1,
             ease: 'power2.out',
-          },
-          '-=0.2'
+          }
+        )
+        // Hold for a moment
+        .to({}, { duration: 2 })
+        // Fade out grid lines only
+        .to(
+          gridLinesRef.current?.children || [],
+          {
+            strokeDashoffset: 1000,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.05,
+            ease: 'power2.in',
+          }
         );
     } else {
-      // Animate out (reverse)
-      tl.to(
+      // Stop the loop and animate out when not in view
+      if (loopTimeline) {
+        loopTimeline.kill();
+      }
+      
+      const exitTl = gsap.timeline();
+      exitTl.to(
         logoTextRef.current?.children || [],
         {
           y: 20,
@@ -102,6 +125,13 @@ export const GameGridLogo: React.FC = () => {
           '-=0.2'
         );
     }
+
+    // Cleanup function
+    return () => {
+      if (loopTimeline) {
+        loopTimeline.kill();
+      }
+    };
   }, [isInView]);
 
   return (

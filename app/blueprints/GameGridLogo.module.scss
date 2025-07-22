@@ -38,13 +38,7 @@
   width: auto;
   height: auto;
   border-radius: 20px;
-  filter: blur(8px);
-  transition: filter 0.3s ease;
   cursor: pointer;
-
-  &:hover {
-    filter: blur(0px);
-  }
 }
 
 .logo {

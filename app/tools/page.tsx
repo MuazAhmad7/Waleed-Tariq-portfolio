@@ -144,7 +144,7 @@ const CertificationsPage = () => {
       ),
       note: 'Covers essential Git workflows, branching strategies, merge conflicts, and team collaboration using Atlassian tools.',
       viewLink:
-        '/Certifications/Git Essentials, Bitbucket and Sourcetree Certification.pdf',
+        '/Certifications/Git%20Essentials,%20Bitbucket%20and%20Sourcetree%20Certification.pdf',
     },
     {
       icon: faProjectDiagram,
@@ -178,7 +178,7 @@ const CertificationsPage = () => {
       ),
       note: 'Demonstrates expertise in OOP concepts, design patterns, UML diagrams, and systematic approach to software architecture and design.',
       viewLink:
-        '/Certifications/Object Oriented Analysis, Design & Programming with UML Certification.pdf',
+        '/Certifications/Object%20Oriented%20Analysis,%20Design%20&%20Programming%20with%20UML%20Certification.pdf',
     },
     {
       icon: faCode,

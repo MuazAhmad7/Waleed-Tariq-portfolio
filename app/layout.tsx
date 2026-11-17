@@ -22,22 +22,25 @@ const inter = localFont({
 });
 
 export const metadata = {
-  title: 'Portfolio | Design & Development',
-  description: 'A portfolio showcasing design and development work.',
+  title: 'Waleed Tariq | IT Project Lead & GameGrid Founder',
+  description:
+    'IT Project Lead at International Financial Group, founder of GameGrid and CJML, and Johns Hopkins MBA candidate.',
   icons: {
     icon: '/shuttlecock1.png',
     shortcut: '/shuttlecock1.png',
     apple: '/shuttlecock1.png',
   },
   openGraph: {
-    title: 'Portfolio | Design & Development',
-    description: 'A portfolio showcasing design and development work.',
+    title: 'Waleed Tariq | IT Project Lead & GameGrid Founder',
+    description:
+      'IT Project Lead at International Financial Group, founder of GameGrid and CJML, and Johns Hopkins MBA candidate.',
     images: ['/emarald.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portfolio | Design & Development',
-    description: 'A portfolio showcasing design and development work.',
+    title: 'Waleed Tariq | IT Project Lead & GameGrid Founder',
+    description:
+      'IT Project Lead at International Financial Group, founder of GameGrid and CJML, and Johns Hopkins MBA candidate.',
     images: ['/emarald.png'],
   },
 };

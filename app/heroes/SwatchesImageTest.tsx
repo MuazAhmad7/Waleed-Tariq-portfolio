@@ -235,8 +235,9 @@ const ImageSwatchWave = () => {
         <div className={Style.textContent}>
           <h2 className={Style.leagueTitle}>Central Jersey Muslim League</h2>
           <p className={Style.leagueDescription}>
-            A thriving community of <strong>100+ players</strong> across <strong>12+ teams</strong>, bringing 
-            together passion for basketball and building lasting friendships through sport.
+            A thriving community of <strong>1,500+ players</strong> over three seasons, bringing
+            together passion for basketball, building lasting friendships, and raising{' '}
+            <strong>$80,000+ a year</strong> for charity.
           </p>
           <p className={Style.leagueQuote}>
             "More than just a game — it's where community comes alive."

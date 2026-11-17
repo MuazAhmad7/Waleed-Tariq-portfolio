@@ -1,5 +1,266 @@
 import styles from './page.module.scss';
 
+// Content mirrors public/WaleedTariq-resume.pdf — update both together.
+
+type Role = {
+  years: string;
+  org: string;
+  /** Rendered as a small title line above `org` (e.g. a team within a school). */
+  subtitle?: string;
+  location: string;
+  title: string;
+  dates: string;
+  summary?: string;
+  achievements: string[];
+};
+
+type Education = {
+  year: string;
+  school: string;
+  location: string;
+  label: 'Degree' | 'Program';
+  credential: string;
+  note?: string;
+  description?: string;
+};
+
+type Award = {
+  year?: string;
+  name: string;
+  description: string;
+};
+
+const education: Education[] = [
+  {
+    year: '2027',
+    school: 'Johns Hopkins University - Carey Business School',
+    location: 'Baltimore, MD',
+    label: 'Degree',
+    credential:
+      'Master of Business Administration in AI for Business, Finance and Marketing',
+    note: 'Expected June 2027',
+  },
+  {
+    year: 'Current',
+    school: 'Harvard University',
+    location: 'Cambridge, MA',
+    label: 'Program',
+    credential: 'Certification of Project Management & Information Technology',
+    note: 'Currently Enrolled',
+    description:
+      'Advanced certification program focusing on strategic project management methodologies, IT infrastructure, and digital transformation leadership. Curriculum includes Agile/Scrum frameworks, risk management, and emerging technology integration.',
+  },
+  {
+    year: '2021',
+    school: 'Rutgers University',
+    location: 'New Brunswick, NJ',
+    label: 'Degree',
+    credential:
+      'Bachelor of Science in Biology & Business/Health Administration',
+    note: 'May 2021',
+  },
+];
+
+const professional: Role[] = [
+  {
+    years: '2026-Present',
+    org: 'International Financial Group',
+    location: 'Jersey City, NJ',
+    title: 'IT Project Lead',
+    dates: 'May 2026 - Present',
+    achievements: [
+      'Manage all work for an entire product workstream reporting directly to the Chairman, owning scope, timelines, and execution across engineering, QA, and business teams from intake through production release',
+      'Lead IT Portfolio Reviews with C-Suite executives, presenting roadmap status, delivery risks, and resource tradeoffs to secure executive alignment on investment priorities',
+      'Own product roadmap and delivery for SPRQ, prioritizing 7+ features and enhancements per quarter across underwriting, rating, document management, and policy workflows',
+      'Analyze defects, production incidents, adoption trends, and workflow data to drive prioritized enhancements, contributing to a 40% reduction in recurring issues and manual processing',
+    ],
+  },
+  {
+    years: '2024-Present',
+    org: 'GameGrid Technologies',
+    location: 'Lewes, DE',
+    title: 'Founder & Product Lead',
+    dates: 'April 2024 - Present',
+    summary:
+      'Sports-tech startup building live stat tracking and league management tools for local leagues.',
+    achievements: [
+      'Own relationships across 100+ key stakeholders including team captains, league organizers, and internal operations leads, serving as the primary point of contact for onboarding, product adoption, and partner engagement',
+      'Built AI trackers that reduce manual workload by 42% and enhance delivery of player insights across 7 partner leagues',
+    ],
+  },
+  {
+    years: '2024-2025',
+    org: 'Quest Diagnostics',
+    location: 'New York, NY',
+    title: 'IT Project Manager (Contract)',
+    dates: 'December 2024 - February 2025',
+    achievements: [
+      'Supported management of a $3.5B+ strategic accounts portfolio, partnering with account executives, payer clients (Cigna, UnitedHealthcare), and internal product and finance leadership',
+    ],
+  },
+  {
+    years: '2023-2024',
+    org: 'Prudential Financial',
+    location: 'Newark, NJ',
+    title: 'Project Manager',
+    dates: 'February 2023 - April 2024',
+    achievements: [
+      'Delivered $100M+ programs across 10+ fintech workstreams by directing execution across engineering teams, business stakeholders, and external technology partners',
+      'Coordinated communication across 250+ stakeholders including product leaders, engineering teams, finance partners, and executive leadership to align on delivery timelines and platform enhancements',
+      'Improved on-time delivery by ~20% by resolving planning bottlenecks across 15 partner teams and 8+ business units',
+    ],
+  },
+  {
+    years: '2021-2023',
+    org: 'UnitedHealth Group',
+    location: 'San Antonio, TX',
+    title: 'Project Management Associate',
+    dates: 'June 2021 - February 2023',
+    achievements: [
+      'Worked directly with 20+ vendors, healthcare providers, and internal ops teams to track auditory performance metrics',
+      'Used AWS/Azure-backed datasets to better understand demand and improve forecasting across large datasets',
+    ],
+  },
+];
+
+const leadership: Role[] = [
+  {
+    years: '2023-Present',
+    org: 'CJML Nonprofit',
+    location: 'New Jersey',
+    title: 'Founder',
+    dates: 'May 2023 - Present',
+    achievements: [
+      'Scaled league participation to 1,500+ players in 3 seasons by building annual recruitment and competition frameworks',
+      'Generated $80,000+ annually in charitable proceeds by securing 25+ sponsorships for recurring state-wide events',
+    ],
+  },
+  {
+    years: '2017-2021',
+    subtitle: 'NCAA Division I Badminton',
+    org: 'Rutgers University',
+    location: 'New Brunswick, NJ',
+    title: 'Head Captain',
+    dates: 'September 2017 - June 2021',
+    achievements: [
+      'Led Rutgers to its first-ever Top 3 national finish, earning a Silver Medal at the 2019 Division I Eastern Collegiate Tournament',
+    ],
+  },
+];
+
+const skills: { category: string; items: React.ReactNode[] }[] = [
+  {
+    category: 'Technical',
+    items: [
+      'Excel (Pivot Tables, VLOOKUP)',
+      'Tableau, Power BI',
+      'Alteryx, KNIME',
+      'Epic EHR, Figma',
+      'Financial Modeling',
+    ],
+  },
+  {
+    category: 'Programming & Software',
+    items: [
+      'Java, Python, SQL',
+      'Salesforce, SAP, NetSuite',
+      'Git, Bitbucket, Apache Maven',
+      'UML, Agile (Scrum, Jira)',
+    ],
+  },
+  {
+    category: 'Cloud Platforms',
+    items: [
+      'Microsoft Azure, Amazon Web Services',
+      'Google Cloud, OCI',
+      'Snowflake, Databricks',
+    ],
+  },
+  {
+    category: 'Languages',
+    items: [
+      <>
+        <strong>Fluent:</strong> English, Urdu
+      </>,
+      <>
+        <strong>Proficient:</strong> Arabic, French, Spanish
+      </>,
+    ],
+  },
+];
+
+const awards: Award[] = [
+  {
+    year: '2019',
+    name: 'Rutgers University Athlete of The Year',
+    description:
+      'Awarded for athletic performance and leadership as Head Captain of the NCAA Division I Badminton team.',
+  },
+  {
+    name: 'UnitedHealth Group National Top 3 Analyst',
+    description:
+      'Ranked among the top 3 analysts nationally at UnitedHealth Group.',
+  },
+  {
+    name: 'Deloitte Case Competition',
+    description: 'Finalist.',
+  },
+  {
+    name: 'Accenture Case Competition',
+    description: '3rd Place.',
+  },
+  {
+    name: 'Beta Gamma Sigma Honor Society',
+    description: 'Top 10% rank.',
+  },
+];
+
+function RoleItem({ role, className }: { role: Role; className: string }) {
+  return (
+    <li className={className}>
+      <h3 className="dateYear">
+        <span>{role.years}</span>
+      </h3>
+      <h4>
+        {role.subtitle ? (
+          <>
+            <span className={styles.smallerTitle}>{role.subtitle}</span>
+            <span>{role.org}</span>
+          </>
+        ) : (
+          <>{role.org} </>
+        )}
+        <span>{role.location}</span>
+      </h4>
+      <div className="content">
+        <div>
+          <div>
+            <h5>Role</h5>
+            <p>
+              <strong>{role.title}</strong>
+            </p>
+            <p>
+              <em>{role.dates}</em>
+            </p>
+          </div>
+        </div>
+        {role.summary && <p>{role.summary}</p>}
+        <h5>Key Achievements</h5>
+        <div className={`three-up ${styles.keyAchievements}`}>
+          {role.achievements.map((achievement) => (
+            <p
+              key={achievement}
+              className={`${styles.achievement} ${styles.pulseOnHover}`}
+            >
+              {achievement}
+            </p>
+          ))}
+        </div>
+      </div>
+    </li>
+  );
+}
+
 export default function Page() {
   return (
     <div className={styles.experiencePage}>
@@ -8,8 +269,8 @@ export default function Page() {
           <h2>Professional Experience</h2>
           <p>
             A comprehensive overview of my professional journey, education, and
-            key achievements in business analysis, project management, and
-            strategic leadership.
+            key achievements in IT project leadership, product delivery, and
+            community building.
           </p>
         </div>
       </section>
@@ -20,87 +281,35 @@ export default function Page() {
       >
         <h3>Education</h3>
         <ul className={`experience ${styles.experienceList}`}>
-          <li className={`${styles.experienceItem} ${styles.educationItem}`}>
-            <h3 className="dateYear">
-              <span>2027</span>
-            </h3>
-            <h4>
-              The Johns Hopkins University - Carey Business School{' '}
-              <span>Baltimore, MD</span>
-            </h4>
-            <div className="content">
-              <div>
+          {education.map((item) => (
+            <li
+              key={item.school}
+              className={`${styles.experienceItem} ${styles.educationItem}`}
+            >
+              <h3 className="dateYear">
+                <span>{item.year}</span>
+              </h3>
+              <h4>
+                {item.school} <span>{item.location}</span>
+              </h4>
+              <div className="content">
                 <div>
-                  <h5>Degree</h5>
-                  <p>
-                    <strong>Master of Business Administration</strong>
-                  </p>
-                  <p>
-                    <em>MBA Candidate, Class of 2027</em>
-                  </p>
+                  <div>
+                    <h5>{item.label}</h5>
+                    <p>
+                      <strong>{item.credential}</strong>
+                    </p>
+                    {item.note && (
+                      <p>
+                        <em>{item.note}</em>
+                      </p>
+                    )}
+                  </div>
                 </div>
+                {item.description && <p>{item.description}</p>}
               </div>
-              <p>May 2026 &ndash; December 2027</p>
-            </div>
-          </li>
-          <li className={`${styles.experienceItem} ${styles.educationItem}`}>
-            <h3 className="dateYear">
-              <span>Current</span>
-            </h3>
-            <h4>
-              Harvard University <span>Cambridge, MA</span>
-            </h4>
-            <div className="content">
-              <div>
-                <div>
-                  <h5>Program</h5>
-                  <p>
-                    <strong>
-                      Certification of Project Management & Information
-                      Technology
-                    </strong>
-                  </p>
-                  <p>
-                    <em>Currently Enrolled</em>
-                  </p>
-                </div>
-              </div>
-              <p>
-                Advanced certification program focusing on strategic project
-                management methodologies, IT infrastructure, and digital
-                transformation leadership. Curriculum includes Agile/Scrum
-                frameworks, risk management, and emerging technology
-                integration.
-              </p>
-            </div>
-          </li>
-          <li className={`${styles.experienceItem} ${styles.educationItem}`}>
-            <h3 className="dateYear">
-              <span>2021</span>
-            </h3>
-            <h4>
-              Rutgers University <span>New Brunswick, NJ</span>
-            </h4>
-            <div className="content">
-              <div>
-                <div>
-                  <h5>Degree</h5>
-                  <p>
-                    <strong>
-                      Bachelor of Science in Biology & Business/Health
-                      Administration
-                    </strong>
-                  </p>
-                </div>
-              </div>
-              <p>
-                Dual-concentration program combining scientific rigor with
-                business acumen, specializing in healthcare administration and
-                strategic management. Graduated with honors while serving as
-                Head Captain of NCAA Division I Badminton team.
-              </p>
-            </div>
-          </li>
+            </li>
+          ))}
         </ul>
       </section>
 
@@ -111,169 +320,13 @@ export default function Page() {
       >
         <h3>Professional Experience</h3>
         <ul className={`experience ${styles.experienceList}`}>
-          <li className={styles.experienceItem}>
-            <h3 className="dateYear">
-              <span>2024-2025</span>
-            </h3>
-            <h4>
-              Quest Diagnostics <span>New York, NY</span>
-            </h4>
-            <div className="content">
-              <div>
-                <div>
-                  <h5>Role</h5>
-                  <p>
-                    <strong>
-                      Senior Financial Analyst, Strategic Pricing (Contract)
-                    </strong>
-                  </p>
-                  <p>
-                    <em>December 2024 - March 2025</em>
-                  </p>
-                </div>
-              </div>
-              <h5>Key Achievements</h5>
-              <div className={`three-up ${styles.keyAchievements}`}>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Spearheaded pricing optimization for a $3.5B+ healthcare
-                  service portfolio, improving gross margin by 18%
-                </p>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Automated financial data pipelines via ETL integrations,
-                  reducing reporting turnaround by 81%
-                </p>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Enhanced Power BI dashboard performance, increasing user
-                  engagement by 40%
-                </p>
-              </div>
-              <p>
-                Led pricing optimization initiatives for a multi-billion dollar
-                healthcare service portfolio, leveraging SQL and SAP S/4HANA to
-                build sophisticated multi-scenario financial models.
-                Collaborated cross-functionally with Product, Legal, and
-                Go-to-Market teams to align payor contract strategy with
-                alternative reimbursement models and value-based care metrics.
-              </p>
-              <p>
-                Identified and resolved backend processing bottlenecks in Power
-                BI dashboards that were causing significant delays in analytics
-                requests. Implemented SAP and ETL automation solutions to
-                streamline data pipelines, dramatically reducing turnaround
-                times and improving user experience across the organization.
-              </p>
-            </div>
-          </li>
-          <li className={styles.experienceItem}>
-            <h3 className="dateYear">
-              <span>2023-2024</span>
-            </h3>
-            <h4>
-              Prudential Financial <span>Newark, NJ</span>
-            </h4>
-            <div className="content">
-              <div>
-                <div>
-                  <h5>Role</h5>
-                  <p>
-                    <strong>Project Manager</strong>
-                  </p>
-                  <p>
-                    <em>February 2023 - April 2024</em>
-                  </p>
-                </div>
-              </div>
-              <h5>Key Achievements</h5>
-              <div className={`three-up ${styles.keyAchievements}`}>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Directed strategic initiatives across enterprise IT portfolio
-                  supporting 250+ internal clients
-                </p>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Implemented compliance automation via SAP GRC, reducing manual
-                  updates by 35%
-                </p>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Applied operational analytics to optimize annual IT investment
-                  planning and eliminate redundant workflows
-                </p>
-              </div>
-              <p>
-                Led strategic initiatives across enterprise IT portfolio using
-                SAP PPM and Azure DevOps, providing comprehensive project
-                management support for over 250 internal clients. Focused on
-                aligning IT strategy with business objectives through
-                data-driven decision making and process optimization.
-              </p>
-              <p>
-                Implemented compliance automation solutions via SAP GRC to
-                improve audit-readiness and streamline policy management.
-                Successfully reduced manual updates in TRID policies by 35%,
-                significantly improving operational efficiency and reducing
-                compliance risk.
-              </p>
-              <p>
-                Applied operational analytics to identify inefficiencies in
-                annual IT investment planning processes. Developed strategic
-                recommendations that eliminated redundant workflows and better
-                aligned technology investments with organizational priorities.
-              </p>
-            </div>
-          </li>
-          <li className={styles.experienceItem}>
-            <h3 className="dateYear">
-              <span>2021-2023</span>
-            </h3>
-            <h4>
-              United Health Group <span>San Antonio, TX</span>
-            </h4>
-            <div className="content">
-              <div>
-                <div>
-                  <h5>Role</h5>
-                  <p>
-                    <strong>Business Process/Strategy Analyst</strong>
-                  </p>
-                  <p>
-                    <em>June 2021 - February 2023</em>
-                  </p>
-                </div>
-              </div>
-              <h5>Key Achievements</h5>
-              <div className={`three-up ${styles.keyAchievements}`}>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Developed custom financial forecasting model in SAP S/HANA,
-                  improving forecasting precision by 25%
-                </p>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Embedded with operations and actuarial teams to identify and
-                  eliminate operational bottlenecks
-                </p>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Utilized SAP Signavio Process Intelligence to optimize
-                  workflows and reduce redundancies
-                </p>
-              </div>
-              <p>
-                Developed a custom financial forecasting model in SAP S/HANA to
-                address systemic inaccuracies in revenue projections,
-                significantly improving forecasting precision and supporting
-                better business decision-making across the organization.
-              </p>
-              <p>
-                Embedded directly with operations and actuarial teams to conduct
-                comprehensive analysis of existing workflows and processes.
-                Identified critical operational bottlenecks and developed
-                strategic recommendations to eliminate redundancies and improve
-                efficiency.
-              </p>
-              <p>
-                Leveraged SAP Signavio Process Intelligence to map, analyze, and
-                optimize business processes, resulting in streamlined operations
-                and reduced operational costs across multiple business units.
-              </p>
-            </div>
-          </li>
+          {professional.map((role) => (
+            <RoleItem
+              key={role.org}
+              role={role}
+              className={styles.experienceItem}
+            />
+          ))}
         </ul>
       </section>
 
@@ -283,118 +336,13 @@ export default function Page() {
       >
         <h3>Leadership Experience</h3>
         <ul className={`experience ${styles.experienceList}`}>
-          <li className={`${styles.experienceItem} ${styles.leadershipItem}`}>
-            <h3 className="dateYear">
-              <span>2025-Present</span>
-            </h3>
-            <h4>
-              Game Grid <span>Lewes, DE</span>
-            </h4>
-            <div className="content">
-              <div>
-                <div>
-                  <h5>Role</h5>
-                  <p>
-                    <strong>Co-Founder & Managing Director</strong>
-                  </p>
-                  <p>
-                    <em>February 2025 - Present</em>
-                  </p>
-                </div>
-              </div>
-              <h5>Key Achievements</h5>
-              <div className={`three-up ${styles.keyAchievements}`}>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Launched sports-tech startup with API-first stat-tracking and
-                  scheduling engine for amateur leagues
-                </p>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Grew to 150+ active users in under one year using Firebase,
-                  SQL, and role-based admin controls
-                </p>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Designed MVP stat-tracking system enabling real-time data
-                  input across 16 basketball teams
-                </p>
-              </div>
-              <p>
-                Co-founded and launched Game Grid, a comprehensive sports-tech
-                startup providing API-first stat-tracking and scheduling
-                solutions for amateur leagues. Built the platform using modern
-                technologies including Firebase and SQL with sophisticated
-                role-based admin controls.
-              </p>
-              <p>
-                Led UX strategy development for a gamified "My Player" system
-                featuring dynamic dashboards, comprehensive player KPIs, and
-                detailed matchup history to enhance user engagement and
-                retention.
-              </p>
-              <p>
-                Designed and launched GameGrid's MVP stat-tracking system from
-                the ground up, enabling real-time data input, live score
-                updates, and automated team/player analytics, successfully
-                serving 16 basketball teams with seamless performance.
-              </p>
-            </div>
-          </li>
-          <li className={`${styles.experienceItem} ${styles.leadershipItem}`}>
-            <h3 className="dateYear">
-              <span>2017-2021</span>
-            </h3>
-            <h4>
-              <span className={styles.smallerTitle}>NCAA Division I Badminton</span>
-              <span>Rutgers University</span>
-              <span>New Brunswick, NJ</span>
-            </h4>
-            <div className="content">
-              <div>
-                <div>
-                  <h5>Role</h5>
-                  <p>
-                    <strong>Head Captain</strong>
-                  </p>
-                  <p>
-                    <em>September 2017 - June 2021</em>
-                  </p>
-                </div>
-              </div>
-              <h5>Key Achievements</h5>
-              <div className={`three-up ${styles.keyAchievements}`}>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Led Rutgers to Historic 1st ever Top 3 Placement at National
-                  Tournaments
-                </p>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Silver Medal: 2019 National Division I Eastern Collegiate
-                  Tournament
-                </p>
-                <p className={`${styles.achievement} ${styles.pulseOnHover}`}>
-                  Trained a team of 18 players with 5am sessions, endurance
-                  conditioning, and team rapport building
-                </p>
-              </div>
-              <p>
-                Served as Head Captain for Rutgers University's NCAA Division I
-                Badminton team, leading the program to unprecedented success
-                including their first-ever Top 3 placement at National
-                Tournaments.
-              </p>
-              <p>
-                Achieved historic Silver Medal at the 2019 National Division I
-                Eastern Collegiate Tournament, marking a significant milestone
-                in the program's competitive history and establishing new
-                standards of excellence.
-              </p>
-              <p>
-                Developed and implemented comprehensive training programs for 18
-                team members, including rigorous 5am training sessions,
-                specialized endurance conditioning, and team-building
-                initiatives that built resilience and fostered strong team
-                rapport.
-              </p>
-            </div>
-          </li>
+          {leadership.map((role) => (
+            <RoleItem
+              key={role.org}
+              role={role}
+              className={`${styles.experienceItem} ${styles.leadershipItem}`}
+            />
+          ))}
         </ul>
       </section>
 
@@ -404,35 +352,16 @@ export default function Page() {
       >
         <h3>Skills</h3>
         <div className={styles.skillsGrid}>
-          <div className={styles.skillCategory}>
-            <h4>Data Analysis & Visualization</h4>
-            <ul>
-              <li>Excel (Advanced: Pivot Tables, VLOOKUP, Macros)</li>
-              <li>Power BI & Tableau</li>
-              <li>Microsoft Access</li>
-              <li>SAP S/4HANA</li>
-            </ul>
-          </div>
-          <div className={styles.skillCategory}>
-            <h4>Programming & Software</h4>
-            <ul>
-              <li>Java, Python, SQL</li>
-              <li>Salesforce, Jira, Git, Bitbucket</li>
-              <li>UML, Apache Maven</li>
-              <li>Epic Systems</li>
-            </ul>
-          </div>
-          <div className={styles.skillCategory}>
-            <h4>Languages</h4>
-            <ul>
-              <li>
-                <strong>Fluent:</strong> English, Urdu
-              </li>
-              <li>
-                <strong>Proficient:</strong> Arabic, French, Spanish
-              </li>
-            </ul>
-          </div>
+          {skills.map(({ category, items }) => (
+            <div key={category} className={styles.skillCategory}>
+              <h4>{category}</h4>
+              <ul>
+                {items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -442,34 +371,20 @@ export default function Page() {
       >
         <h3>Awards & Recognition</h3>
         <ul className={`experience ${styles.experienceList}`}>
-          <li className={`${styles.experienceItem} ${styles.awardItem}`}>
-            <h3 className="dateYear">
-              <span>2021</span>
-            </h3>
-            <h4>Top 5 UnitedHealth Group Central Regional Analyst</h4>
-            <div className="content">
-              <p>
-                Recognized as one of the top 5 performing analysts in the
-                Central Regional division for exceptional performance in
-                business analysis, strategic insights, and operational
-                excellence.
-              </p>
-            </div>
-          </li>
-          <li className={`${styles.experienceItem} ${styles.awardItem}`}>
-            <h3 className="dateYear">
-              <span>2019-2021</span>
-            </h3>
-            <h4>Rutgers University Athlete of The Year</h4>
-            <div className="content">
-              <p>
-                Awarded Rutgers University Athlete of The Year for outstanding
-                athletic performance, leadership, and contribution to the
-                university's sports programs during tenure as Head Captain of
-                the NCAA Division I Badminton team.
-              </p>
-            </div>
-          </li>
+          {awards.map((award) => (
+            <li
+              key={award.name}
+              className={`${styles.experienceItem} ${styles.awardItem}`}
+            >
+              <h3 className="dateYear">
+                <span>{award.year ?? ''}</span>
+              </h3>
+              <h4>{award.name}</h4>
+              <div className="content">
+                <p>{award.description}</p>
+              </div>
+            </li>
+          ))}
         </ul>
       </section>
     </div>

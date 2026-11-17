@@ -49,23 +49,23 @@ const Page: React.FC = () => {
 
               <div className={styles.narrative}>
                 <p className={styles.leadText}>
-                  My journey in community building began with the{' '}
+                  My journey in community building began with founding the{' '}
                   <strong>Central Jersey Muslim League (CJML)</strong>, a local
                   basketball league that has grown into something extraordinary.
                 </p>
 
                 <div className={styles.statsHighlight}>
                   <div className={styles.statItem}>
-                    <span className={styles.statNumber}>100+</span>
+                    <span className={styles.statNumber}>1,500+</span>
                     <span className={styles.statLabel}>Players</span>
                   </div>
                   <div className={styles.statItem}>
-                    <span className={styles.statNumber}>12+</span>
-                    <span className={styles.statLabel}>Teams</span>
+                    <span className={styles.statNumber}>$80K+</span>
+                    <span className={styles.statLabel}>Raised Yearly</span>
                   </div>
                   <div className={styles.statItem}>
-                    <span className={styles.statNumber}>1</span>
-                    <span className={styles.statLabel}>Community</span>
+                    <span className={styles.statNumber}>25+</span>
+                    <span className={styles.statLabel}>Sponsors</span>
                   </div>
                 </div>
               </div>

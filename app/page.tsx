@@ -16,7 +16,7 @@ import Typewriter from 'typewriter-effect';
 import { useRef, useState, useEffect, useCallback } from 'react';
 import Tilt from 'react-parallax-tilt';
 import {
-  MdHealthAndSafety,
+  MdAccountBalance,
   MdRocket,
   MdSchool,
   MdGpsFixed,
@@ -26,7 +26,11 @@ import {
 // Kept outside the component: typewriter-effect v3 restarts typing whenever
 // the options object changes, so it must stay referentially stable.
 const TYPEWRITER_OPTIONS = {
-  strings: ['Project Manager', 'Co-Founder of GameGrid', 'Innovation Catalyst'],
+  strings: [
+    'IT Project Lead',
+    'Founder of GameGrid',
+    'MBA Candidate at Johns Hopkins',
+  ],
   autoStart: true,
   loop: true,
   delay: 75,
@@ -163,8 +167,8 @@ export default function Home() {
   const ldJson = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Portfolio',
-    description: 'A portfolio showcasing design and development work.',
+    name: 'Waleed Tariq',
+    description: 'IT Project Lead at International Financial Group, founder of GameGrid and CJML, and Johns Hopkins MBA candidate.',
     url: typeof window !== 'undefined' ? window.location.origin : '',
   };
   return (
@@ -266,8 +270,8 @@ export default function Home() {
                 . I've spent the last few years leading
                 <span className={styles.emphasis}>
                   {' '}
-                  cross-functional teams at companies like Prudential and
-                  UnitedHealth Group
+                  cross-functional teams at International Financial Group,
+                  Prudential, and UnitedHealth Group
                 </span>{' '}
                 — managing timelines, aligning stakeholders, and making sure
                 ideas actually ship.
@@ -432,33 +436,33 @@ export default function Home() {
                   <ul className={styles.skillList}>
                     <li>
                       <span className={styles.skillHighlight}>
-                        Cross-functional project management
+                        Cross-functional delivery
                       </span>{' '}
-                      across enterprise IT portfolios
+                      across engineering, QA, and business teams
                     </li>
                     <li>
                       <span className={styles.skillHighlight}>
-                        Strategic pricing optimization
+                        Product roadmaps
                       </span>{' '}
-                      and financial modeling
+                      and feature prioritization
                     </li>
                     <li>
                       <span className={styles.skillHighlight}>
-                        Process automation
+                        Executive portfolio reviews
                       </span>{' '}
-                      and operational analytics
+                      and investment alignment
                     </li>
                     <li>
                       <span className={styles.skillHighlight}>
-                        Team leadership
+                        Stakeholder management
                       </span>{' '}
-                      and stakeholder alignment
+                      across partners, vendors, and leadership
                     </li>
                     <li>
                       <span className={styles.skillHighlight}>
-                        Business process optimization
+                        Financial modeling
                       </span>{' '}
-                      and workflow design
+                      and forecasting
                     </li>
                   </ul>
 
@@ -470,33 +474,33 @@ export default function Home() {
                     <ul className={styles.skillListRevealed}>
                       <li>
                         <span className={styles.skillHighlightRevealed}>
-                          Led 15+ cross-functional teams
+                          Delivered $100M+ programs
                         </span>{' '}
-                        delivering $2M+ in cost savings
+                        across 10+ fintech workstreams
                       </li>
                       <li>
                         <span className={styles.skillHighlightRevealed}>
-                          Optimized pricing strategies
+                          Led IT Portfolio Reviews
                         </span>{' '}
-                        increasing margins by 18%
+                        with C-Suite executives
                       </li>
                       <li>
                         <span className={styles.skillHighlightRevealed}>
-                          Automated 40+ manual processes
+                          Improved on-time delivery by ~20%
                         </span>{' '}
-                        saving 200+ hours/month
+                        across 15 partner teams
                       </li>
                       <li>
                         <span className={styles.skillHighlightRevealed}>
-                          Mentored 25+ team members
+                          Aligned 250+ stakeholders
                         </span>{' '}
-                        with 95% retention rate
+                        from engineering to the executive team
                       </li>
                       <li>
                         <span className={styles.skillHighlightRevealed}>
-                          Streamlined workflows
+                          Supported a $3.5B+ accounts portfolio
                         </span>{' '}
-                        reducing cycle time by 35%
+                        with payers like Cigna and UnitedHealthcare
                       </li>
                     </ul>
                   </div>
@@ -524,33 +528,33 @@ export default function Home() {
                   <ul className={styles.skillList}>
                     <li>
                       <span className={styles.skillHighlight}>
-                        Data Analysis:
+                        Data &amp; Analytics:
                       </span>{' '}
-                      SQL, Python, Excel, Power BI, Tableau
+                      SQL, Python, Excel, Power BI, Tableau, Alteryx
                     </li>
                     <li>
                       <span className={styles.skillHighlight}>
                         Enterprise Systems:
                       </span>{' '}
-                      SAP S/4HANA, SAP PPM, Azure DevOps
+                      SAP, Salesforce, NetSuite, Epic EHR
                     </li>
                     <li>
                       <span className={styles.skillHighlight}>
                         Development:
                       </span>{' '}
-                      Java, Git, Jira, API Development
+                      Java, Git, Bitbucket, Apache Maven
                     </li>
                     <li>
                       <span className={styles.skillHighlight}>
                         Project Management:
                       </span>{' '}
-                      Agile methodologies, UML, Maven
+                      Agile (Scrum, Jira), UML
                     </li>
                     <li>
                       <span className={styles.skillHighlight}>
-                        Database Management:
+                        Cloud &amp; Data:
                       </span>{' '}
-                      SQL Server, ETL processes
+                      Azure, AWS, Google Cloud, Snowflake, Databricks
                     </li>
                   </ul>
 
@@ -562,33 +566,33 @@ export default function Home() {
                     <ul className={styles.skillListRevealed}>
                       <li>
                         <span className={styles.skillHighlightRevealed}>
-                          Processed 10TB+ datasets
+                          40% fewer recurring issues
                         </span>{' '}
-                        with 99.9% accuracy
+                        through defect and workflow analysis
                       </li>
                       <li>
                         <span className={styles.skillHighlightRevealed}>
-                          Deployed enterprise solutions
+                          Prioritize 7+ features per quarter
                         </span>{' '}
-                        for 50,000+ users
+                        on the SPRQ roadmap
                       </li>
                       <li>
                         <span className={styles.skillHighlightRevealed}>
-                          Built APIs handling 1M+ requests/day
+                          Built AI trackers
                         </span>{' '}
-                        with &lt;2s response time
+                        cutting manual work 42% across 7 leagues
                       </li>
                       <li>
                         <span className={styles.skillHighlightRevealed}>
-                          Managed 200+ sprint cycles
+                          Scaled CJML to 1,500+ players
                         </span>{' '}
-                        with 98% on-time delivery
+                        in 3 seasons
                       </li>
                       <li>
                         <span className={styles.skillHighlightRevealed}>
-                          Optimized databases serving 100K+ queries/hour
+                          Raised $80,000+ a year
                         </span>{' '}
-                        efficiently
+                        for charity through 25+ sponsorships
                       </li>
                     </ul>
                   </div>
@@ -637,23 +641,21 @@ export default function Home() {
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.02 }}
             >
-              <MdHealthAndSafety className={styles.projectIcon} />
-              <h3 className={styles.projectTitle}>Quest Diagnostics</h3>
-              <p className={styles.projectRole}>
-                Senior Financial Analyst, Strategic Pricing
-              </p>
+              <MdAccountBalance className={styles.projectIcon} />
+              <h3 className={styles.projectTitle}>
+                International Financial Group
+              </h3>
+              <p className={styles.projectRole}>IT Project Lead</p>
               <p className={styles.projectDescription}>
-                Leading strategic pricing initiatives for{' '}
-                <span className={styles.highlight}>
-                  $3.5B+ healthcare service portfolios
-                </span>
-                . Managing cross-functional teams to optimize payor contract
-                strategies and implement
+                Running a full product workstream that reports directly to the
+                Chairman, and owning the{' '}
+                <span className={styles.highlight}>SPRQ product roadmap</span>{' '}
+                across underwriting, rating, document management, and policy
+                workflows, with{' '}
                 <span className={styles.emphasis}>
-                  {' '}
-                  data-driven solutions
-                </span>{' '}
-                that improve operational efficiency.
+                  IT Portfolio Reviews for the C-Suite
+                </span>
+                .
               </p>
             </motion.div>
 
@@ -667,16 +669,14 @@ export default function Home() {
             >
               <MdRocket className={styles.projectIcon} />
               <h3 className={styles.projectTitle}>GameGrid</h3>
-              <p className={styles.projectRole}>
-                Co-Founder & Managing Director
-              </p>
+              <p className={styles.projectRole}>Founder &amp; Product Lead</p>
               <p className={styles.projectDescription}>
-                Building the future of{' '}
-                <span className={styles.highlight}>sports technology</span>{' '}
-                through API-first stat-tracking and scheduling systems. Growing
-                our platform to{' '}
-                <span className={styles.emphasis}>150+ active users</span> while
-                leading product development and strategic partnerships.
+                Building{' '}
+                <span className={styles.highlight}>sports technology</span> for
+                local leagues, working with 100+ captains, organizers, and
+                partners. Built{' '}
+                <span className={styles.emphasis}>AI trackers</span> that cut
+                manual work by 42% across 7 partner leagues.
               </p>
             </motion.div>
 
@@ -689,17 +689,18 @@ export default function Home() {
               whileHover={{ y: -10, scale: 1.02 }}
             >
               <MdSchool className={styles.projectIcon} />
-              <h3 className={styles.projectTitle}>Continuous Learning</h3>
+              <h3 className={styles.projectTitle}>Johns Hopkins University</h3>
               <p className={styles.projectRole}>
-                Harvard University - Project Management & IT
+                MBA, AI for Business, Finance &amp; Marketing
               </p>
               <p className={styles.projectDescription}>
-                Currently expanding my expertise through{' '}
-                <span className={styles.highlight}>advanced coursework</span> in
-                project management and information technology, staying at the
-                forefront of{' '}
-                <span className={styles.emphasis}>industry best practices</span>
-                and emerging technologies.
+                Pursuing an MBA at the{' '}
+                <span className={styles.highlight}>Carey Business School</span>,
+                focused on applying{' '}
+                <span className={styles.emphasis}>
+                  AI across business, finance, and marketing
+                </span>
+                . Expected June 2027.
               </p>
             </motion.div>
           </motion.div>

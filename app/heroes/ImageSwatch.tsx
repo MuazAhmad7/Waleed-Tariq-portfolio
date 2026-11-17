@@ -1,4 +1,3 @@
-import { calculateContrast } from '@/utils/colorHelpers';
 import Style from './swatches.module.scss';
 import { useOverlay } from './SwatchesImageTest';
 
@@ -13,8 +12,7 @@ export const ImageSwatch: React.FC<ImageSwatchProps> = ({
   imageAlt,
   title,
 }) => {
-  const { overlayImage, setOverlayImage } = useOverlay();
-  const textColor = 'white'; // Use white text for better contrast over images
+  const { setOverlayImage } = useOverlay();
   const borderColor = 'rgba(255, 255, 255, 0.3)'; // Semi-transparent white border
 
   // Create unique pattern ID for each swatch

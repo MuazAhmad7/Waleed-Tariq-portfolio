@@ -25,10 +25,6 @@ const Marquee: React.FC<MarqueeProps> = ({
 }) => {
   const marqueeRef = useRef(null); // Create a ref for the marquee element
 
-  // Debug logging
-  if (title === 'GameGrid') {
-    console.log('GameGrid marquee props:', { title, icon, url, isCustomImage });
-  }
   const clone = (index) => (
     <div className={Styles.box} key={index}>
       <p className={`heading-04 ${Styles.socialLinkTitle}`}>

@@ -23,6 +23,16 @@ import {
   MdFlashOn,
 } from 'react-icons/md';
 
+// Kept outside the component: typewriter-effect v3 restarts typing whenever
+// the options object changes, so it must stay referentially stable.
+const TYPEWRITER_OPTIONS = {
+  strings: ['Project Manager', 'Co-Founder of GameGrid', 'Innovation Catalyst'],
+  autoStart: true,
+  loop: true,
+  delay: 75,
+  deleteSpeed: 50,
+};
+
 export default function Home() {
   const whoIAmRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
@@ -237,19 +247,7 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.7 }}
                 viewport={{ once: true }}
               >
-                <Typewriter
-                  options={{
-                    strings: [
-                      'Project Manager',
-                      'Co-Founder of GameGrid',
-                      'Innovation Catalyst',
-                    ],
-                    autoStart: true,
-                    loop: true,
-                    delay: 75,
-                    deleteSpeed: 50,
-                  }}
-                />
+                <Typewriter options={TYPEWRITER_OPTIONS} />
               </motion.div>
             </div>
 

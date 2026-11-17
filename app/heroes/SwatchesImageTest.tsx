@@ -4,7 +4,7 @@ import React, { createContext, useContext, useState, ReactNode, useEffect, useRe
 import Style from './swatches.module.scss';
 import { useInteraction } from '@/context';
 import { gsap } from 'gsap';
-import { linearInterpolation } from '@/utils';
+import { linearInterpolation, scrollDrivenX } from '@/utils';
 import { ImageSwatch } from './ImageSwatch';
 import { testImagePalette } from './TestImagePalette';
 
@@ -182,12 +182,9 @@ const ImageSwatchWave = () => {
       if (!grid) return;
       const rect = grid.getBoundingClientRect();
       const { x, hasMouseMoved } = mouse;
-      let interactionX: number;
-      if (hasMouseMoved) {
-        interactionX = x;
-      } else {
-        interactionX = rect.left + rect.width / 2 + (scroll.y * rect.width) / 2;
-      }
+      const interactionX = hasMouseMoved
+        ? x
+        : scrollDrivenX(rect, winsize.width, winsize.height);
       const mouseX = interactionX - rect.left - winsize.width;
       const mousePercent = mouseX / rect.width / 2;
       const mouseCenter = mouseX / rect.width;
@@ -215,7 +212,7 @@ const ImageSwatchWave = () => {
     return () => {
       cancelAnimationFrame(frameId);
     };
-  }, [mouse, winsize.width, gridRef, scroll.y, isInView]);
+  }, [mouse, winsize.width, winsize.height, gridRef, isInView]);
 
   return (
     <div className={`${Style.gridContainer}`}>

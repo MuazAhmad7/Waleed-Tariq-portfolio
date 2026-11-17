@@ -38,7 +38,7 @@
     outline: none;
   }
 
-  &:matches(:focus-visible, :focus) {
+  &:is(:focus-visible, :focus) {
     outline: 2px solid var(--color-foreground-accent);
     outline-offset: var(--size-02);
   }

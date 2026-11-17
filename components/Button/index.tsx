@@ -46,8 +46,8 @@ const Button: React.FC<ButtonProps> = ({
   const isDisabled = disabled ? styles.disabled : '';
   const hasOnlyIcon =
     React.Children.count(children) === 1 &&
-    typeof children === 'object' &&
-    !('props' in children && children.props.children);
+    React.isValidElement<{ children?: React.ReactNode }>(children) &&
+    !children.props.children;
 
   const combinedClassName = [
     baseClassName,

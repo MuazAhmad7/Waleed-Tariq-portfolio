@@ -22,6 +22,29 @@ export default function Page() {
         <ul className={`experience ${styles.experienceList}`}>
           <li className={`${styles.experienceItem} ${styles.educationItem}`}>
             <h3 className="dateYear">
+              <span>2027</span>
+            </h3>
+            <h4>
+              The Johns Hopkins University - Carey Business School{' '}
+              <span>Baltimore, MD</span>
+            </h4>
+            <div className="content">
+              <div>
+                <div>
+                  <h5>Degree</h5>
+                  <p>
+                    <strong>Master of Business Administration</strong>
+                  </p>
+                  <p>
+                    <em>MBA Candidate, Class of 2027</em>
+                  </p>
+                </div>
+              </div>
+              <p>May 2026 &ndash; December 2027</p>
+            </div>
+          </li>
+          <li className={`${styles.experienceItem} ${styles.educationItem}`}>
+            <h3 className="dateYear">
               <span>Current</span>
             </h3>
             <h4>

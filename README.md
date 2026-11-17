@@ -1,15 +1,30 @@
-# Personal Playground.
+# Waleed Tariq — Portfolio
 
-I use this site to experiment with different tech and different ideas. It's not following best practices, optimized, or even well thought out.
+Personal portfolio site for Waleed Tariq: experience, community work with GameGrid, certifications, and contact info.
 
-You can peruse the code, but if you have any questions, feel free to reach out to me.
+## Stack
 
-## Current tech stack
+Next.js 16 (App Router), React 19, TypeScript, Sass modules, GSAP and Framer Motion for animation.
 
-Next.js, TypeScript, Vercel, Supabase, Tiptap.dev
+## Pages
 
-To learn about supabase auth, check out the [supabase-auth](https://supabase.com/docs/guides/auth/server-side/nextjs) guide.
+| Route         | Nav label      |
+| ------------- | -------------- |
+| `/`           | Home           |
+| `/work`       | Experience     |
+| `/blueprints` | Community      |
+| `/tools`      | Certifications |
+| `/contact`    | Contact Me     |
 
-## View the site
+## Development
 
-[https://darianrosebrook.com](https://darianrosebrook.com)
+Requires Node 20.9 or newer (see `.nvmrc`).
+
+```bash
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build
+npm run lint
+```
+
+Deployed with Nixpacks (`nixpacks.toml`): `npm ci`, `npm run build`, `npm start`.

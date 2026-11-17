@@ -4,7 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
 .npmrc
 
 # testing
@@ -36,8 +35,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# test files that are named test   
-**/*test*
-
-/plans/ 
 .vscode/

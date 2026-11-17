@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
-import Link from 'next/link';
 import styles from './GameGridLogo.module.scss';
 
 export const GameGridLogo: React.FC = () => {

@@ -10,14 +10,14 @@ export const metadata = {
     title: 'Community Impact | Waleed Tariq',
     description:
       'How sports and community engagement led to the creation of GameGrid - a live stat tracking app for local basketball leagues. Made by players, for players.',
-    images: ['https://darianrosebrook.com/darianrosebrook.jpg'],
+    images: ['/emarald.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Community Impact | Waleed Tariq',
     description:
       'How sports and community engagement led to the creation of GameGrid - a live stat tracking app for local basketball leagues. Made by players, for players.',
-    images: ['https://darianrosebrook.com/darianrosebrook.jpg'],
+    images: ['/emarald.png'],
   },
 };
 import styles from './page.module.scss';

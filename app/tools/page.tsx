@@ -1,5 +1,4 @@
 import {
-  faCertificate,
   faGraduationCap,
   faCode,
   faProjectDiagram,
@@ -19,14 +18,14 @@ export const metadata = {
     title: 'Certifications | Waleed Tariq',
     description:
       'Professional certifications in software development, including Apache Maven, Git, UML, and Object-Oriented Programming.',
-    images: ['https://darianrosebrook.com/darianrosebrook.jpg'],
+    images: ['/emarald.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Certifications | Waleed Tariq',
     description:
       'Professional certifications in software development, including Apache Maven, Git, UML, and Object-Oriented Programming.',
-    images: ['https://darianrosebrook.com/darianrosebrook.jpg'],
+    images: ['/emarald.png'],
   },
 };
 

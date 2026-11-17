@@ -5,11 +5,12 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import SvgIllustration from './svgIllustration';
 import { useInteraction } from '@/context';
+import { scrollDrivenX } from '@/utils';
 
 gsap.registerPlugin(useGSAP);
 
 const Blueprints: React.FC = () => {
-  const { window: winsize, scroll, mouse } = useInteraction();
+  const { window: winsize, mouse } = useInteraction();
   const gridRef = useRef<HTMLDivElement>(null);
   const spriteRef = useRef<HTMLDivElement>(null);
 
@@ -40,13 +41,13 @@ const Blueprints: React.FC = () => {
       const rows = Array.from(gridRef.current.children) as HTMLElement[];
       const distanceModifier = 0.2;
       const { x, hasMouseMoved } = mouse;
-      let interactionX: number;
-      if (hasMouseMoved) {
-        interactionX = x;
-      } else {
-        const rect = gridRef.current.getBoundingClientRect();
-        interactionX = rect.left + rect.width / 2 + (scroll.y * rect.width) / 2;
-      }
+      const interactionX = hasMouseMoved
+        ? x
+        : scrollDrivenX(
+            gridRef.current.getBoundingClientRect(),
+            winsize.width,
+            winsize.height
+          );
       const normalizedMouseX = (interactionX / winsize.width) * 2 - 1;
       const targetTranslateX = normalizedMouseX * 12 * (winsize.width / 80);
       rows.forEach((row, index) => {
@@ -62,7 +63,7 @@ const Blueprints: React.FC = () => {
     return () => {
       cancelAnimationFrame(frameId);
     };
-  }, [mouse, winsize.width, gridRef, middleRowIndex, scroll.y, svgs.length]);
+  }, [mouse, winsize.width, winsize.height, gridRef, middleRowIndex, svgs.length]);
 
   useEffect(() => {
     const dsSprite = document.getElementById('DSSPRITE') as HTMLDivElement;
